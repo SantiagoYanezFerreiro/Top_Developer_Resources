@@ -78,48 +78,55 @@ I used a lot of Food Waste/Food Images, mainly to make the website look better a
 
 ### Home Page Mobile Layout
 
-![Home Page Mobile]()
+![Home Page Mobile](assets/images/wireframehome.png)
 
 ### Resources
 
-![Resources Page]()
+![Resources Page](assets/images/wireframehome.png)
 
 ### Resources Mobile Layout
 
-![Resources Mobile]()
+![Resources Mobile](assets/images/wireframehomemobile.png)
    
 ### Log In Page
    
-![Log In Page]()
+![Log In Page](assets/images/wireframelogin.png)
 
 ### Log In Mobile Layout
 
-![Log In Mobile]()
-
-### Log Out
-   
-![Log Out Page]()
-
-### Log Out Mobile Layout
-
-![Log Out Page Mobile]()
+![Log In Mobile](assets/images/wireframeloginmobile.png)
 
 ### Profile Page
    
-![Profile Page]()
+![Profile Page](assets/images/wireframeprofile.png)
 
 ### Profile Mobile Layout
 
-![Profile Page Mobile]()
+![Profile Page Mobile](assets/images/wireframeprofilemobile.png)
 
 ### Ad Resource Page
    
-![Ad Resource Page]()
+![Ad Resource Page](assets/images/wireframeadresource.png)
+
+### Ad Resource Page Mobile
+   
+![Ad Resource Page Mobile](assets/images/wireframeadresourcesmobile.png)
+
+### Log In Layout
+
+![Log In Page](assets/images/wireframelogin.png)
 
 ### Log In Mobile Layout
 
-![Ad Resource Mobile]()
+![Log In Page Mobile](assets/images/wireframeloginmobile.png)
 
+### Log Out
+   
+![Log Out Page](assets/images/wireframeafterlogingout.png)
+
+### Log Out Mobile Layout
+
+![Log Out Page Mobile](assets/images/wireframeafterlogingoutmobile.png)
 
 ## Modifications from the Original Wireframes
 
