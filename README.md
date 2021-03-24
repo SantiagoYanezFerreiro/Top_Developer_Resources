@@ -17,22 +17,43 @@ User have a profile page where info about their username, bio and an icon are di
 My biggest hope is that Smart Investments will give valuable information to every person interested in digital investments.
 This is an educational project only.
 
-## Customers goals:
+## User Stories
 
-New Users would like to:
+General User Goals
 
-Discover New High Quality Learning Resources
-Search Learning Resources catalog.
-Able to access all Resources data.
-Register easily and login immediately after registration.
+-Users expect the site to have a clear purpose so that they can understand what it is intended for upon entering.
 
-Returning user want to:
+-Users want to easily navigate the site and find the desired content quickly and easily.
 
-Login and view details on their account.
-Add a new assets to the database.
-Edit learning ressources in the database.
-Delete them.
-Get a confirmation message on every action.
+-Users expect the site to be responsive across all devices.
+
+-Users want to have the option to contact the site owner to have their questions/requests answered.
+
+Sign in/Signup Module.
+
+-Register easily and being able to login immediately after registration.
+
+-View/Edit personal details on their profile after having logged in. 
+
+User Action Module
+
+- Discover New High Quality Learning Resources 
+
+- Being able to do searches based on user criteria to find suited resources.
+
+- User’s ability to review learning resources from the site with info about each of them
+
+Crud Operation Module
+
+- Users should be able to add new resources to the to the site. 
+
+- Users should be able to edit their added learning resources in the site. 
+
+- Users should be able to Delete them. 
+
+- Users should be get a confirmation message on every action (Triggering email on action performed).
+
+
 
 
 ## Design
