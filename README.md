@@ -75,7 +75,7 @@ I used a lot of Food Waste/Food Images, mainly to make the website look better a
 
 ### Home Page
    
-![Home Page](https://github.com/SantiagoYanezFerreiro/Top-Developer-Resources/assets/images/wireframehome.png)
+![Home Page](https://github.com/SantiagoYanezFerreiro/Top_Developer_Resources/assets/images/wireframehome.png)
 
 ### Home Page Mobile Layout
 
