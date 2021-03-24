@@ -78,15 +78,15 @@ I used a lot of Food Waste/Food Images, mainly to make the website look better a
 
 ### Home Page Mobile Layout
 
-![Home Page Mobile](assets/images/wireframehome.png)
+![Home Page Mobile](assets/images/wireframehomemobile.png)
 
 ### Resources
 
-![Resources Page](assets/images/wireframehome.png)
+![Resources Page](assets/images/wireframeresources.png)
 
 ### Resources Mobile Layout
 
-![Resources Mobile](assets/images/wireframehomemobile.png)
+![Resources Mobile](assets/images/wireframeresourcesmobile.png)
    
 ### Log In Page
    
