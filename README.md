@@ -21,19 +21,19 @@ This is an educational project only.
 
 General User Goals
 
--Users expect the site to have a clear purpose so that they can understand what it is intended for upon entering.
+- Users expect the site to have a clear purpose so that they can understand what it is intended for upon entering.
 
--Users want to easily navigate the site and find the desired content quickly and easily.
+- Users want to easily navigate the site and find the desired content quickly and easily.
 
--Users expect the site to be responsive across all devices.
+- Users expect the site to be responsive across all devices.
 
--Users want to have the option to contact the site owner to have their questions/requests answered.
+- Users want to have the option to contact the site owner to have their questions/requests answered.
 
 Sign in/Signup Module.
 
--Register easily and being able to login immediately after registration.
+- Register easily and being able to login immediately after registration.
 
--View/Edit personal details on their profile after having logged in. 
+- View/Edit personal details on their profile after having logged in. 
 
 User Action Module
 
