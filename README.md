@@ -70,12 +70,11 @@ The Lato font is the main font of the website with Arial and sans-seriff as fall
 
 I used a lot of Food Waste/Food Images, mainly to make the website look better and as background for the content.
 
-
 ## Wireframes
 
 ### Home Page
    
-![Home Page](https://github.com/SantiagoYanezFerreiro/Top_Developer_Resources/assets/images/wireframehome.png)
+![Home Page](assets/images/wireframehome.png)
 
 ### Home Page Mobile Layout
 
