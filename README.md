@@ -1,45 +1,288 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Top Developer Resources. Milestone Project 3
 
-Welcome USER_NAME,
+![Site Logo]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+![Live Website Link]( )
 
-## Gitpod Reminders
+![GitHub Repository Link](https://github.com/SantiagoYanezFerreiro/Top-Developer-Resources)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Top Developer Resources Responsive Design]()
 
-`python3 -m http.server`
+The main purpose of this site is to provide a compilation of high quality learning materials to improve Developers' tech skills. 
+It is a website where community can share useful materials they used to develop their skills. All users can search through dataset provided by community members. 
+Registered users can create, edit or delete their own dataset. Upon registering, users can add assets to the website.  
+Only the admin has permission to delete assets. The goal of this is preventing malicious users from undoing the hard work of other users. 
+All users can read other users reviews  The user can read other users reviews and create, update and delete their own reviews. 
+User have a profile page where info about their username, bio and an icon are displayed.  
+My biggest hope is that Smart Investments will give valuable information to every person interested in digital investments.
+This is an educational project only.
 
-A blue button should appear to click: *Make Public*,
+## Customers goals:
 
-Another blue button should appear to click: *Open Browser*.
+New Users would like to:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Discover New High Quality Learning Resources
+Search Learning Resources catalog.
+Able to access all Resources data.
+Register easily and login immediately after registration.
 
-A blue button should appear to click: *Make Public*,
+Returning user want to:
 
-Another blue button should appear to click: *Open Browser*.
+Login and view details on their account.
+Add a new assets to the database.
+Edit learning ressources in the database.
+Delete them.
+Get a confirmation message on every action.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-## Updates Since The Instructional Video
+## Design
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Colour Scheme
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The two main colours used are White and Green. Black is also a common complementary color, which was mainly chosen for buttons. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Typography
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The Lato font is the main font of the website with Arial and sans-seriff as fallback. I opted for Lato because it's a sans-seriff that looks stylish and is easy to read.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Imagery
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+I used a lot of Food Waste/Food Images, mainly to make the website look better and as background for the content.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Wireframes
 
---------
+### Home Page
+   
+![Home Page](https://github.com/SantiagoYanezFerreiro/Top-Developer-Resources/assets/images/wireframehome.png)
 
-Happy coding!
+### Home Page Mobile Layout
+
+![Home Page Mobile]()
+
+### Resources
+
+![Resources Page]()
+
+### Resources Mobile Layout
+
+![Resources Mobile]()
+   
+### Log In Page
+   
+![Log In Page]()
+
+### Log In Mobile Layout
+
+![Log In Mobile]()
+
+### Log Out
+   
+![Log Out Page]()
+
+### Log Out Mobile Layout
+
+![Log Out Page Mobile]()
+
+### Profile Page
+   
+![Profile Page]()
+
+### Profile Mobile Layout
+
+![Profile Page Mobile]()
+
+### Ad Resource Page
+   
+![Ad Resource Page]()
+
+### Log In Mobile Layout
+
+![Ad Resource Mobile]()
+
+
+## Modifications from the Original Wireframes
+
+## Website Structure
+
+Sites
+
+### Home
+
+Home Page contains 3 sections:
+
+Search bar where user can search for resources.
+Call to Action for non registered Users -> Join Us Now! with the option to register.
+Latest Resources -> Latest Added Resources Displayed.
+
+### Home Page
+
+### Resources
+
+Library of Learning Resources. Used pagination of the bottom to organise them into pages.
+
+### Log In
+
+To allow users to log in . After succesfully log in, users get redirected to the profile page. A Register button for non-users can be found on this page.
+
+### Log In Link 
+
+### Register
+
+Page where is possible to create an account. A Login link is  also displayed for visitors that already have an account.
+
+### Register Link
+
+### Ad Resource
+
+Page used to add Learning Resources. All fields must be filled to complete the process. 
+The form is validated and when submited succesfully the user gets redirected to their profile page.and redirects the user to the profile page. 
+There is also a reset button to clear all info.
+
+Ad Resource Link
+
+### Profile
+
+User can see their profile details on this page User's added resources can be displayed under show learning resources button. Information can be edited and deletedd.
+Profile Link
+
+### Log Out
+
+Log Out option to close the session and go back to the home page.
+Log Out Link
+
+
+## Existing Features
+
+• **** – 
+
+• **** – 
+
+• **** – 
+
+• **** – 
+
+• **** – 
+
+• **** - 
+
+• **** - 
+
+• **** - 
+
+• **** - 
+
+## Features to Implement in the future
+
+Option to join courses from the page.
+Blog & Relevant News Section about Software Development
+
+
+## Technologies Used
+• HTML, CSS & JavaScript Programming Languages
+
+• GitPod – Used as the Development IDE.
+
+• Bootstrap4 layout to make the form responsive, used a CDN to include it in the project.
+
+• FontAwesome: Great Icons Resource.
+
+• Auto-Prefixer: Extension that adds all necessary extensions to the webite so that it works properly on all major browsers.
+
+• Unsplash: Website that offers high quality free images.
+
+• Realfavicongenerator: Used to create the Favicon.
+
+• FreeLogoDesign: Tool used to design the logo.
+
+• Balsamiq WireFrames: Outstanding Wireframe Software.
+
+• EmailJS: To make the form work and receive visitors requests.
+
+## Testing
+The code was validated with the W3C Markup, W3C CSS and JSHint Validator Services to look for syntax errors.
+The website passed all tests succesfully with no errors. An excel file with info about the tests performed was included in the repository.
+### User Story Testing 
+
+### High Level Test Classes
+![High Level Test Classes]()
+
+New Users would like to:
+
+Discover New High Quality Learning Resources
+
+Search Learning Resources catalog.
+
+Able to access all Resources data.
+
+Register easily and login immediately after registration.
+
+
+Returning user want to:
+
+Login and view details on their account.
+
+Add a new assets to the database.
+
+Edit learning ressources in the database.
+
+Delete them.
+
+Get a confirmation message on every action.
+
+### Test Results
+![Test Results]()
+
+Complete Test Info can be found here ()
+
+It is an .xlsx file and will a compatible program like excel or google docs to open the file.
+
+
+## Links and images
+All links function and all images are in the Gitpod repository.
+
+## Bugs & Problems found during Testing
+• 
+•
+
+### Further Testing
+
+## Deployment
+The website was developed using GitPod, committed to git and pushed to GitHub. It was then deployed with Github pages from its GitHub repository following these steps:
+
+• Log in into GitHub.
+
+• Select the repository and open settings.
+
+• Scroll down to the GitHub Pages section and click Master Branch. With this, the website is deployed.
+
+• Go to the GitHub pages section to get the website link.
+
+## Cloning
+
+• Type ‘cd’ in the terminal followed by the desired directory name where 
+it will get cloned.
+
+• Click on ‘Code’ (the green drop-down button on the top of the page).
+
+• Copy the last link and type and type ‘git clone’ followed by the copied name.
+
+## Content
+• Social Media Icons are from Font Awesome.
+
+• Bootstrap Navbar Documentation helped me to create the navigation menu.
+
+## Media
+• Pictures are from Unsplash.com and Google Images.
+
+• The favicon was created using the resource ![Favicon](https://realfavicongenerator.net/)
+
+## Code
+
+## Acknowledgements
+• I would like to thank my mentor Narender Singh, who was of great help in this project and was always really willing to help me and giving me useful feedback to get the most out of my project.
+
+• I checked projects from other students to get an idea of the scope of the project and as inspiration for my project.
+
+## Disclaimer
+Fictional Companny Website created as my Milestone Project 3 of the Code Institute Full Stack Program.
