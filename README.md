@@ -53,9 +53,6 @@ Crud Operation Module
 
 - Users should be get a confirmation message on every action (Triggering email on action performed).
 
-
-
-
 ## Design
 
 ### Colour Scheme
@@ -215,11 +212,24 @@ Log Out Link
 
 • **** - 
 
+## Database schema
+
+The Database consists of  3 tables:
+
+    resources
+    resource_type
+    users
+
+The tables and their fields can be seen in the following image:
+
+![Database Schema](assets/images/databaseworkschema.PNG)
+
+database schema:
+
 ## Features to Implement in the future
 
 Option to join courses from the page.
 Blog & Relevant News Section about Software Development
-
 
 ## Technologies Used
 • HTML, CSS & JavaScript Programming Languages
