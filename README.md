@@ -87,6 +87,30 @@ I used a lot of Food Waste/Food Images, mainly to make the website look better a
 ### Resources Mobile Layout
 
 ![Resources Mobile](assets/images/wireframeresourcesmobile.png)
+
+### Ad Resource Page
+   
+![Ad Resource Page](assets/images/wireframeadresource.png)
+
+### Ad Resource Page Mobile
+   
+![Ad Resource Page Mobile](assets/images/wireframeadresourcesmobile.png)
+
+### Log In Layout
+
+![Log In Page](assets/images/wireframelogin.png)
+
+### Log In Mobile Layout
+
+![Log In Page Mobile](assets/images/wireframeloginmobile.png)
+   
+### Sign Up Page
+   
+![Log In Page](assets/images/wireframeregister.png)
+   
+### Sign Up Page Mobile
+   
+![Log In Page](assets/images/wireframeregistermobile.png)
    
 ### Log In Page
    
@@ -104,22 +128,6 @@ I used a lot of Food Waste/Food Images, mainly to make the website look better a
 
 ![Profile Page Mobile](assets/images/wireframeprofilemobile.png)
 
-### Ad Resource Page
-   
-![Ad Resource Page](assets/images/wireframeadresource.png)
-
-### Ad Resource Page Mobile
-   
-![Ad Resource Page Mobile](assets/images/wireframeadresourcesmobile.png)
-
-### Log In Layout
-
-![Log In Page](assets/images/wireframelogin.png)
-
-### Log In Mobile Layout
-
-![Log In Page Mobile](assets/images/wireframeloginmobile.png)
-
 ### Log Out
    
 ![Log Out Page](assets/images/wireframeafterlogingout.png)
@@ -127,6 +135,14 @@ I used a lot of Food Waste/Food Images, mainly to make the website look better a
 ### Log Out Mobile Layout
 
 ![Log Out Page Mobile](assets/images/wireframeafterlogingoutmobile.png)
+
+### Contact Page 
+   
+![Contact Page](assets/images/wireframecontact.png)
+
+### Contact Page Mobile
+   
+![Contact Page Mobile](assets/images/wireframecontactmobile.png)
 
 ## Modifications from the Original Wireframes
 
