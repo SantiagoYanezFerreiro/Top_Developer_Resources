@@ -57,90 +57,116 @@ Crud Operation Module
 
 ### Colour Scheme
 
-The two main colours used are White and Green. Black is also a common complementary color, which was mainly chosen for buttons. 
-
 ### Typography
 
 The Lato font is the main font of the website with Arial and sans-seriff as fallback. I opted for Lato because it's a sans-seriff that looks stylish and is easy to read.
 
 ### Imagery
 
-I used a lot of Food Waste/Food Images, mainly to make the website look better and as background for the content.
+
 
 ## Wireframes
 
 ### Home Page
+
+<details><summary> Home Page (click to view)</summary>
+    ![](assets/images/wireframehome.png)
+</details>
    
-![Home Page](assets/images/wireframehome.png)
+<details><summary> Home Page Mobile Layout(click to view)</summary>
+    ![](assets/images/wireframehomemobile.png)
+</details>
 
-### Home Page Mobile Layout
-
-![Home Page Mobile](assets/images/wireframehomemobile.png)
 
 ### Resources
 
-![Resources Page](assets/images/wireframeresources.png)
+<details><summary> Resources Page(click to view)</summary>
+    ![](assets/images/wireframeresources.png)
+</details>
 
-### Resources Mobile Layout
+<details><summary> Resources Page Mobile(click to view)</summary>
+    ![](assets/images/wireframeresourcesmobile.png)
+</details>
 
-![Resources Mobile](assets/images/wireframeresourcesmobile.png)
 
 ### Ad Resource Page
+
+<details><summary> Ad Resource Page(click to view)</summary>
+    ![](assets/images/wireframeadresource.png)
+</details>
+
+<details><summary> Ad Resource Page(click to view)</summary>
+    ![](assets/images/wireframeadresourcesmobile.png)
+</details>
    
-![Ad Resource Page](assets/images/wireframeadresource.png)
 
-### Ad Resource Page Mobile
-   
-![Ad Resource Page Mobile](assets/images/wireframeadresourcesmobile.png)
+### Log In Page
 
-### Log In Layout
+<details><summary> Log In Page(click to view)</summary>
+    ![](assets/images/wireframelogin.png)
+</details>
 
-![Log In Page](assets/images/wireframelogin.png)
+<details><summary> Log In Mobile Page(click to view)</summary>
+    ![](assets/images/wireframeloginmobile.png)
+</details>
 
-### Log In Mobile Layout
-
-![Log In Page Mobile](assets/images/wireframeloginmobile.png)
-   
+ 
 ### Sign Up Page
    
-![Log In Page](assets/images/wireframeregister.png)
-   
-### Sign Up Page Mobile
-   
-![Log In Page](assets/images/wireframeregistermobile.png)
-   
+<details><summary> Sign Up Page(click to view)</summary>
+    ![](assets/images/wireframeregister.png)
+</details>
+
+<details><summary> Sign Up Page Mobile(click to view)</summary>
+    ![](assets/images/wireframeregistermobile.png)
+</details>
+
+
 ### Log In Page
+
+<details><summary> Log In Page(click to view)</summary>
+    ![](assets/images/wireframelogin.png)
+</details>
+
+<details><summary> Log In Page Mobile(click to view)</summary>
+    ![](assets/images/wireframeloginmobile.png)
+</details>
+
    
-![Log In Page](assets/images/wireframelogin.png)
-
-### Log In Mobile Layout
-
-![Log In Mobile](assets/images/wireframeloginmobile.png)
-
 ### Profile Page
-   
-![Profile Page](assets/images/wireframeprofile.png)
 
-### Profile Mobile Layout
 
-![Profile Page Mobile](assets/images/wireframeprofilemobile.png)
+<details><summary> Profile Page(click to view)</summary>
+    ![](assets/images/wireframeprofile.png)
+</details>
+
+<details><summary> Profile Page Mobile(click to view)</summary>
+    ![](assets/images/wireframeprofilemobile.png)
+</details>
+
 
 ### Log Out
+
+<details><summary> Log Out Page (After Logging Out)(click to view)</summary>
+    ![](assets/images/wireframeafterlogingout.png)
+</details>
+
+<details><summary> Log Out Page (After Logging Out) Mobile(click to view)</summary>
+    ![](assets/images/wireframeafterlogingoutmobile.png)
+</details>
    
-![Log Out Page](assets/images/wireframeafterlogingout.png)
-
-### Log Out Mobile Layout
-
-![Log Out Page Mobile](assets/images/wireframeafterlogingoutmobile.png)
 
 ### Contact Page 
-   
-![Contact Page](assets/images/wireframecontact.png)
 
-### Contact Page Mobile
-   
-![Contact Page Mobile](assets/images/wireframecontactmobile.png)
+<details><summary> Contact Page (click to view)</summary>
+    ![](assets/images/wireframecontact.png)
+</details>
 
+<details><summary> Contact Page Mobile (click to view)</summary>
+    ![](assets/images/wireframecontactmobile.png)
+</details>
+   
+   
 ## Modifications from the Original Wireframes
 
 ## Website Structure
