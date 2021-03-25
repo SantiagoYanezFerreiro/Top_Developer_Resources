@@ -1,10 +1,10 @@
 # Top Developer Resources. Milestone Project 3
 
-![Site Logo]((assets/images/logo.PNG))
+![Site Logo](https://santiagoyanezferreiro.github.io/Top_Developer_Resources/assets/images/logo.PNG)
 
 ![Live Website Link]( )
 
-![GitHub Repository Link](https://github.com/SantiagoYanezFerreiro/Top-Developer-Resources)
+[GitHub Repository Link](https://github.com/SantiagoYanezFerreiro/Top_Developer_Resources)
 
 ![Top Developer Resources Responsive Design]()
 
