@@ -9,10 +9,13 @@
 ![Top Developer Resources Responsive Design]()
 
 The main purpose of this site is to provide a compilation of high quality learning materials to improve Developers' tech skills. 
+
 It is a website where community can share useful materials they used to develop their skills. All users can search through dataset provided by community members. 
 Registered users can create, edit or delete their own dataset. Upon registering, users can add assets to the website.  
+
 Only the admin has permission to delete assets. The goal of this is preventing malicious users from undoing the hard work of other users. 
 All users can read other users reviews  The user can read other users reviews and create, update and delete their own reviews. 
+
 User have a profile page where info about their username, bio and an icon are displayed.  
 My biggest hope is that Smart Investments will give valuable information to every person interested in digital investments.
 This is an educational project only.
@@ -73,17 +76,15 @@ I have included all Wireframes in another separate file:
 
 ## Website Structure
 
-Sites
-
 ### Home
 
 Home Page contains 3 sections:
 
 Search bar where user can search for resources.
-Call to Action for non registered Users -> Join Us Now! with the option to register.
-Latest Resources -> Latest Added Resources Displayed.
 
-### Home Page
+Call to Action for non registered Users -> Join Us Now! with the option to register.
+
+Latest Resources -> Latest Added Resources Displayed.
 
 ### Resources
 
@@ -91,20 +92,17 @@ Library of Learning Resources. Used pagination of the bottom to organise them in
 
 ### Log In
 
-To allow users to log in . After succesfully log in, users get redirected to the profile page. A Register button for non-users can be found on this page.
+To allow users to log in. After succesfully having logged in, users get redirected to the profile page. A Register button for non-users can be found on this page.
 
-### Log In Link 
 
 ### Register
 
 Page where is possible to create an account. A Login link is  also displayed for visitors that already have an account.
 
-### Register Link
-
 ### Ad Resource
 
 Page used to add Learning Resources. All fields must be filled to complete the process. 
-The form is validated and when submited succesfully the user gets redirected to their profile page.and redirects the user to the profile page. 
+The form is validated and when submited succesfully the user gets redirected to their profile page. 
 There is also a reset button to clear all info.
 
 Ad Resource Link
@@ -122,31 +120,28 @@ Log Out Link
 
 ## Existing Features
 
-• **** – 
+• ****Search Box – Used by users to search for resources based on their preferences. 
 
-• **** – 
+• ****Resources – Main Elements of the site. Information about the name, type, description and a picture of every one of them is available on the site. They can also be edited and deleted.
 
-• **** – 
+• ****Sign Up –  After signing up users can access their profile and upload resources.
 
-• **** – 
+• ****Log In –  Used by users to access their accounts
 
-• **** – 
+• ****Ad Resources Page – Used by users to access learning resources that will be displayed on the site 
 
-• **** - 
+• ****Profile Page - Page that contains info about every user - Their name, email and added learning resources. 
 
-• **** - 
+• ****Contact Page - Users can contact through the form with the company regarding requests/doubts. 
 
-• **** - 
-
-• **** - 
 
 ## Database schema
 
 The Database consists of  3 tables:
 
-    resources
-    resource_type
-    users
+resources
+resource_type
+users
 
 The tables and their fields can be seen in the following image:
 
@@ -156,7 +151,8 @@ database schema:
 
 ## Features to Implement in the future
 
-Option to join courses from the page.
+Option to purchase the learning resources from the page
+Courses Recommendations based on the user profile
 Blog & Relevant News Section about Software Development
 
 ## Technologies Used
@@ -183,33 +179,45 @@ Blog & Relevant News Section about Software Development
 ## Testing
 The code was validated with the W3C Markup, W3C CSS and JSHint Validator Services to look for syntax errors.
 The website passed all tests succesfully with no errors. An excel file with info about the tests performed was included in the repository.
+
 ### User Story Testing 
 
 ### High Level Test Classes
 ![High Level Test Classes]()
 
-New Users would like to:
+#### General User Goals
 
-Discover New High Quality Learning Resources
+- Users expect the site to have a clear purpose so that they can understand what it is intended for upon entering.
 
-Search Learning Resources catalog.
+- Users want to easily navigate the site and find the desired content quickly and easily.
 
-Able to access all Resources data.
+- Users expect the site to be responsive across all devices.
 
-Register easily and login immediately after registration.
+- Users want to have the option to contact the site owner to have their questions/requests answered.
 
+#### Sign in/Signup Module.
 
-Returning user want to:
+- Register easily and being able to login immediately after registration.
 
-Login and view details on their account.
+- View/Edit personal details on their profile after having logged in. 
 
-Add a new assets to the database.
+#### User Action Module
 
-Edit learning ressources in the database.
+- Discover New High Quality Learning Resources 
 
-Delete them.
+- Being able to do searches based on user criteria to find suited resources.
 
-Get a confirmation message on every action.
+- User’s ability to review learning resources from the site with info about each of them
+
+#### CRUD Operation Module
+
+- Users should be able to add new resources to the to the site. 
+
+- Users should be able to edit their added learning resources in the site. 
+
+- Users should be able to Delete them. 
+
+- Users should be get a confirmation message on every action (Triggering email on action performed).
 
 ### Test Results
 ![Test Results]()
