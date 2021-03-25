@@ -69,13 +69,15 @@ The Lato font is the main font of the website with Arial and sans-seriff as fall
 
 ### Home Page
 
-<details><summary> Home Page (click to view)</summary>
+    <details><summary> Home Page (click to view)</summary>
+
     ![](assets/images/wireframehome.png)
-</details>
+    </details>
    
-<details><summary> Home Page Mobile Layout(click to view)</summary>
+    <details><summary> Home Page Mobile Layout(click to view)</summary>
+
     ![](assets/images/wireframehomemobile.png)
-</details>
+    </details>
 
 
 ### Resources
@@ -163,10 +165,14 @@ The Lato font is the main font of the website with Arial and sans-seriff as fall
 </details>
 
 <details><summary> Contact Page Mobile (click to view)</summary>
-    ![](assets/images/wireframecontactmobile.png)
+![](assets/images/wireframecontactmobile.png)
 </details>
    
-   
+   <details><summary>Mobile (click to view)</summary>
+    
+    ![](md_data/wireframes/mobile_login.png)
+    </details>
+
 ## Modifications from the Original Wireframes
 
 ## Website Structure
