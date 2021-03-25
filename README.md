@@ -66,6 +66,9 @@ The Lato font is the main font of the website with Arial and sans-seriff as fall
 
 ## Wireframes
 
+I have included all Wireframes in another separate file
+![Wireframes File](wireframes.md)
+
 ### Home Page
    
 ![Home Page](assets/images/wireframehome.png)
