@@ -1,6 +1,6 @@
 # Top Developer Resources. Milestone Project 3
 
-![Site Logo]()
+![Site Logo]((assets/images/logo.PNG))
 
 ![Live Website Link]( )
 
