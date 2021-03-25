@@ -71,7 +71,7 @@ The Lato font is the main font of the website with Arial and sans-seriff as fall
 
  <details><summary>Desktop (click to view)</summary>
 
-    ![](assets/images/wireframehome.png)
+![](assets/images/wireframehome.png)
  </details>
    
 ![Home Page](assets/images/wireframehome.png)
