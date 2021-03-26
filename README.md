@@ -1,6 +1,6 @@
 # Top Developer Resources. Milestone Project 3
 
-![Site Logo](https://santiagoyanezferreiro.github.io/Top_Developer_Resources/assets/images/logo.PNG)
+![Site Logo](https://santiagoyanezferreiro.github.io/Top_Developer_Resources/static/images/logo.PNG)
 
 ![Live Website Link]( )
 
@@ -145,7 +145,7 @@ users
 
 The tables and their fields can be seen in the following image:
 
-![Database Schema](assets/images/databaseworkschema.PNG)
+![Database Schema](static/images/databaseworkschema.PNG)
 
 database schema:
 
