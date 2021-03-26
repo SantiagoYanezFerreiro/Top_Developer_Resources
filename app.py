@@ -3,7 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
-from bson.objectid import objectId
+from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env 
 
@@ -22,11 +22,6 @@ mongo = PyMongo(app)
 def get_tasks():
     tasks = mongo.db.tasks.find()
     return render_template("tasks.html", tasks=tasks)
-
-@app.route("/")
-def hello():
-    return "Hello World ... again!"
-
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
