@@ -27,13 +27,22 @@
                 <ul class="navbar-nav ml-auto main-nav navbar-right">
                     <li class="nav-item"><a href="{{ url_for('get_tasks') }}">Catalog </a></li>
                     <li class="nav-item"><a href="{{ url_for('get_tasks') }}">Log In</a></li>
-                    <li class="nav-item"><a href="{{ url_for('get_tasks') }}">Register</a></li>
+                    <li class="nav-item"><a href="{{ url_for('register') }}">Register</a></li>
                     <li class="nav-item"><a href="{{ url_for('get_tasks') }}">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
       
+    <section>
+        <!-- make flash messages work-->
+        {% with messages = get_flashed_messages() %}
+            {% if mesages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="light-blue lighten-4 center-align">{{message}}</h4>
+                    </div>
+    </section>
     <h1>Top Developer Resources</h1>
     {% block content %}
     {% endblock %}
