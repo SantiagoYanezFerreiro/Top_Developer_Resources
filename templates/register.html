@@ -1,7 +1,68 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!--REGISTRATION FORM-->>
-
+<!--REGISTRATION FORM-->
+    <section id="bg_cover" class="min-vh-100 m-auto">
+        <div id="cover_caption">           
+            <!--Register form-->
+            <div class="row text-white">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                    <h1 class="display-4 py-2 text-truncate text-white">Register</h1>
+                    <div class="px-2">
+                        <form id="register_form" class="justify-content-center" method="POST" action="{{ url_for('register') }}">
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email"
+                                    required autocomplete="off">
+                            </div>
+                            <div class="form-group text-justify">
+                                <label for="username" class="sr-only">Username</label>
+                                <input type="text" name="username" id="username" minlength="5"
+                                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" placeholder="Username"
+                                    required value="{{ request.form.username }}">
+                                <small class="white-text mt-2">Between 5 and 15 characters </small>
+                            </div>
+                            <div class="form-group text-justify">
+                                <label for="password" class="sr-only">Password</label>
+                                <input type="password" name="password" id="password" minlength="5" maxlength="15"
+                                    pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" placeholder="Password" required>
+                                <small class="white-text mt-2">Between 5 and 15 characters </small>
+                            </div>
+                            <div class="form-group text-justify">
+                                <label for="user_img" class="sr-only">Choose a Picture</label>
+                                <input type="url" name="user_img" id="user_img" class="form-control" placeholder="URL Image">
+                                <small class="white-text mt-2">Select a picture hosted on a website (optional)</small>
+                            </div>
+                            <div class="form-group text-justify">
+                                <label for="user_loc" class="sr-only">Your country</label>
+                                <input type="text" name="user_loc" id="user_loc"  class="form-control" placeholder="Where are you from?" required>
+                                <small class="white-text mt-2">The name of your country</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="user_level" class="sr-only">Your Level</label>
+                                <select id="user_level" name="user_level" class="form-control" required>
+                                    <option value="" selected disabled>Select Level</option>
+                                    <option>Newbie</option>
+                                    <option>Weekender</option>
+                                    <option>Pro</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-lg btn-warning btn-color btn-block text-uppercase" value="login" type="submit">Sign
+                                in
+                            </button>
+                        </form>
+                    </div>
+                    <!--Redirect Log in page -->
+                    <div class="row">
+                        <div class="col s12">
+                            <p class="text-center mt-3">
+                                Account already created? <a href="{{ url_for('register') }}" class="btn-color" >Log In</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
