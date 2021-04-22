@@ -20,15 +20,42 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_tasks")
-def get_tasks():
-    tasks = mongo.db.tasks.find()
-    return render_template("tasks.html", tasks=tasks)
+@app.route("/home")
+def home():
+    """
+    Renders Home Page
+    """
+    return render_template("index.html")
     
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
+
+
+@app.route("/signout")
+def signout():
+    """
+    Returns user to the Log In Page
+    """
+    flash("You have logged out", 'message')
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
+@app.route("/contact")
+def contact():
+    """
+    Renders contact page
+    """
+    return render_template("contact.html")
+
+@app.errorhandler(404)
+def not_found_error(error):
+    """
+    404 error
+    """
+    return render_template('404.html', error=error), 404
 
 
 if __name__ == "__main__":

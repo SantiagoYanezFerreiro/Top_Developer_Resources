@@ -25,7 +25,7 @@
 <body>
     <header>
         <nav id="fullnavmenu" class="navbar navbar-light navbar-expand-md navmenu  filleffect">
-            <a href="{{ url_for('get_tasks') }}">
+            <a href="{{ url_for('home') }}">
                  <img src="{{ url_for('static', filename='images/logo.PNG') }}" class="" id="logo" alt="Site Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Collapsiblenav">
@@ -33,10 +33,10 @@
             </button>
             <div id="Collapsiblenav" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto main-nav navbar-right">
-                    <li class="nav-item"><a href="{{ url_for('catalog') }}">Catalog </a></li>
-                    <li class="nav-item"><a href="{{ url_for('get_tasks') }}">Log In</a></li>
+                    <li class="nav-item"><a href="{{ url_for('home') }}">Catalog </a></li>
+                    <li class="nav-item"><a href="{{ url_for('home') }}">Log In</a></li>
                     <li class="nav-item"><a href="{{ url_for('register') }}">Register</a></li>
-                    <li class="nav-item"><a href="{{ url_for('get_tasks') }}">Contact</a></li>
+                    <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -53,7 +53,7 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-    </section>>
+    </section>
     <h1>Top Developer Resources</h1>
     {% block content %}
     {% endblock %}
