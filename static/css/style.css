@@ -6,11 +6,43 @@ body{
     line-height: 1.5;
 }
 
-/*Home Page*/
+/* Home Page */
 
 #search_img{
-    background-image: url('https://cdn.tavex.pl/wp-content/uploads/2018/08/28222123/gdzie-kupic-zloto-inwestycyjne-1024x576.jpg');
+    background-image: url('../images/learning2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+.navbar{
+    padding:0px;
+}
+
+.navbar li a{
+    font-size:150%;
+    font-weight:700;
+}
+
+.nav-item{
+    margin-right:20px;
+}
+
+.nav-item:last-child{
+    margin-right:20px;
+}
+
+#logo{
+    width:80%;
+    height:80%;
+    padding:0px;
+}
+
+a, .copyright{
+    color: #000;
+    font-size:130%;
+}
+
+a:hover{
+    color: #ffc107;
 }
