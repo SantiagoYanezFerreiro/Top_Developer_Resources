@@ -5,3 +5,12 @@ body{
 .flashes h4{
     line-height: 1.5;
 }
+
+/*Home Page*/
+
+#search_img{
+    background-image: url('https://cdn.tavex.pl/wp-content/uploads/2018/08/28222123/gdzie-kupic-zloto-inwestycyjne-1024x576.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
