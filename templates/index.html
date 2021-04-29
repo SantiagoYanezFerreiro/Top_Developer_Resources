@@ -22,5 +22,12 @@
     </div>
 </div>
 </div>
+
+{% for resource in resources %}
+{{ resource.resource_category }}<br>
+{{ resource.name }}<br>
+{{ resource.description }}<br>
+{{ resource.created_by }}<br>
+{% endfor %}
 {% endblock %}
 

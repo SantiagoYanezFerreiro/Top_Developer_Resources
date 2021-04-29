@@ -17,7 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 
 mongo = PyMongo(app)
-
+ 
 
 @app.route("/")
 @app.route("/home")
@@ -25,7 +25,8 @@ def home():
     """
     Renders Home Page
     """
-    return render_template("index.html")
+    resources = mongo.db.resources.find()
+    return render_template("index.html", resources=resources)
     
 
 @app.route("/register", methods=["GET", "POST"])
