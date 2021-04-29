@@ -8,5 +8,48 @@
     <hr class="hr-light mx-4 mx-md-5">
 </div>
 
+{% for resource in resources %}
+    <div class="row offset">
+        <div class="col card bg-transparent">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <!--Card image
+                    <div class="col img-background">
+                    <img class="my-lg-auto" src="{{ resource.name }}" alt="{{ resource.name }}">
+                </div>
+                -->
+                <!--Card content-->
+                <div class="col elegant-color amber-text">
+                    <h4 class="card-title text-center my-4">{{ resource.description }}</h4>
+                    <div class="row col-form-label">
+                        <div class="col-5">
+                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Name:</p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{ resource.name }}</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Resource_category:</p>
+                        </div>
+                        <div class="col-7">
+                            <p >{{ resource.resource_category }}</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Description:</p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{ resource.description }}</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Created By:</p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{ resource.created_by }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
 {% endblock %}
 

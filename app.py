@@ -44,12 +44,22 @@ def signout():
     return redirect(url_for("login"))
 
 
+@app.route("/catalog")
+def catalog():
+    """
+    Renders contact page
+    """
+    resources = mongo.db.resources.find()
+    return render_template("catalog.html", resources=resources)
+
+
 @app.route("/contact")
 def contact():
     """
     Renders contact page
     """
     return render_template("contact.html")
+
 
 @app.errorhandler(404)
 def not_found_error(error):
