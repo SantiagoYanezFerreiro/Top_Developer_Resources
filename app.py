@@ -54,6 +54,52 @@ def register():
     return render_template("register.html")
 
 
+# fix it
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    # queries
+    query = request.form.get("query")
+    resources = list(mongo.db.resources.find({"$text": {"$search": query}}))
+    # resources_list & users are for welcome screen for users that are not log in
+    resources_list = list(mongo.db.resources.find())
+    users = list(mongo.db.users.find())
+    # check for search results
+    if len(resources) == 0:
+        flash("No results, Please try again!")
+        return redirect(url_for("home"))
+    return render_template(
+        "home.html", resources=resources, resources_list=resources_list, user_list=users)
+
+
+# Login route
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # check for existing account
+        existing_user = mongo.db.users.find_one(
+            {"email": request.form.get("email").lower()})
+        if existing_user:
+            # ensure hashed password matches user input
+            if check_password_hash(
+              existing_user["password"], request.form.get("password")):
+                session["user_email"] = request.form.get("email").lower()
+                # return first name and surname
+                flash("Welcome, {0} {1}".format(
+                    existing_user["first_name"].capitalize(),
+                    existing_user["last_name"].capitalize()))
+                return redirect(url_for(
+                    "profile", user_email=session["user_email"]))
+            else:
+                # invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+        else:
+            # username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+    return render_template("login.html")
+
+
 @app.route("/signout")
 def signout():
     """
