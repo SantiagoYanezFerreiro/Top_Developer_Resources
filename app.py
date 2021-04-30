@@ -31,6 +31,26 @@ def home():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        # check if the email is already in use
+        registered_user = mongo.db.users.find_one(
+            {"email": request.form.get("email").lower()})
+        if  registered_user:
+            flash("Email already in use")
+            return redirect(url_for("register"))
+        # Create a New Account
+        newuseraccount = {
+            "first_name": request.form.get("first_name").lower(),
+            "last_name": request.form.get("last_name").lower(),
+            "email": request.form.get("email").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        # add account to the database
+        mongo.db.users.insert_one(newuseraccount)
+        # put the new user into 'session' cookie
+        session["user_email"] = request.form.get("email").lower()
+        flash("Account Successfully Created!")
+        return redirect(url_for("profile", user_email=session["user_email"]))
     return render_template("register.html")
 
 
