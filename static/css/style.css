@@ -46,3 +46,8 @@ a, .copyright{
 a:hover{
     color: #ffc107;
 }
+
+img{
+    max-width:300px;
+    max-height:300px;
+}
