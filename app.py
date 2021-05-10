@@ -5,6 +5,8 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
+from flask_paginate import Pagination, get_page_args
 if os.path.exists("env.py"):
     import env
 
@@ -60,7 +62,7 @@ def search():
     # queries
     query = request.form.get("query")
     resources = list(mongo.db.resources.find({"$text": {"$search": query}}))
-    # resources_list & users are for welcome screen for users that are not log in
+    # resources_list & users are for welcome screen for users that are not logged in
     resources_list = list(mongo.db.resources.find())
     users = list(mongo.db.users.find())
     # check for search results
@@ -100,23 +102,117 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/signout")
-def signout():
-    """
-    Returns user to the Log In Page
-    """
-    flash("You have logged out", 'message')
-    session.pop("user")
-    return redirect(url_for("login"))
+# Logout 
+@app.route("/logout")
+def logout():
+    # remove user session and redirect to the login page
+    if 'user_email' in session:
+        flash("You logged out succesfully")
+        session.pop("user_email")
+        return redirect(url_for("home"))
+    return render_template('404.html')
 
 
+# Profile 
+@app.route("/profile/<user_email>", methods=["GET", "POST"])
+def profile(user_email):
+    if 'user_email' in session:
+        # grab all users list & the session user's email from database
+        resources = list(mongo.db.resources.find())
+        users = list(mongo.db.users.find())
+        email = mongo.db.users.find_one(
+            {"email": session["user_email"]})["email"]
+        return render_template(
+                "profile.html", user_email=email, users=users, resources=resources)
+    return redirect(url_for("home"))
+
+
+
+# Catalog 
 @app.route("/catalog")
 def catalog():
-    """
-    Renders contact page
-    """
-    resources = mongo.db.resources.find()
-    return render_template("catalog.html", resources=resources)
+    resources = list(mongo.db.resources.find())
+    # 8 items per page
+
+    def get_resources(offset=0, per_page=8):
+        return resources[offset: offset + per_page]
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    # check length
+    total = len(resources)
+    # render up to 8 resources 
+    paginate_resources = get_resources(offset=offset, per_page=per_page)
+    resourcespagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='bootstrap4')
+    return render_template("catalog.html", resources=paginate_resources, page=page,
+                           per_page=per_page, resourcespagination=resourcespagination,)
+
+
+# New resource route
+@app.route("/new_resource", methods=["GET", "POST"])
+def new_resource():
+    if 'user_email' in session:
+        # get data from html form
+        if request.method == "POST":
+            resource = {
+                "name": request.form.get("name"),
+                "resource_category": request.form.get("resource_category"),
+                "description": request.form.get("description"),
+                "created_by": session["user_email"],
+                "image": request.form.get("image"),
+                "timestamp": datetime.now()
+            }
+            # insert resource on the database
+            mongo.db.resources.insert_one(resource)
+            email = session['user_email']
+            flash("New Resource Successfully Added")
+            return redirect(url_for("profile", user_email=email))
+        # read data and sort in ascending order
+        type = mongo.db.resource_type.find().sort("type", 1)
+        return render_template("new_resource.html", type=type)
+    return redirect(url_for("home"))
+
+
+# Edit resource
+@app.route("/edit_resource/<id>", methods=["GET", "POST"])
+def edit_resource(id):
+    if 'user_email' in session:
+        # retrieve data from form
+        if request.method == "POST":
+            resource_edit = {
+                "name": request.form.get("name"),
+                "resource_category": request.form.get("resource_category"),
+                "description": request.form.get("description"),
+                "created_by": session["user_email"],
+                "image": request.form.get("image"),
+                "timestamp": datetime.now()
+            }
+            # update resource in DDBB
+            mongo.db.resources.update({"_id": ObjectId(id)}, resource_edit)
+            email = session['user_email']
+            flash("resource details updated")
+            return redirect(url_for("profile", user_email=email))
+        resource = mongo.db.resources.find_one({"_id": ObjectId(id)})
+        # read data and sort ascendingly
+        type = mongo.db.resource_type.find().sort("type", 1)
+        return render_template("edit_resource.html", resource=resource, type=type)
+    return redirect(url_for("home"))
+
+
+# Delete resource route
+@app.route("/delete_resource/<id>")
+def delete_resource(id):
+    # allow users to delete resources if they are logged in
+    if 'user_email' in session:
+        mongo.db.resources.remove({"_id": ObjectId(id)})
+        flash("resource deleted")
+        # administrators are allowed to delete all resources 
+        if session['user_email'] == "admin@resourcescatalog.info":
+            return redirect(url_for("catalog"))
+        # if user redirect to users profile
+        else:
+            return redirect(url_for(
+                "profile", user_email=session["user_email"]))
 
 
 @app.route("/contact")
@@ -133,6 +229,14 @@ def not_found_error(error):
     404 error
     """
     return render_template('404.html', error=error), 404
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    """
+    Route to 500 Error
+    """
+    return render_template('500.html', error=error), 500
 
 
 if __name__ == "__main__":
