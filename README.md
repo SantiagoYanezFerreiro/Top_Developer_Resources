@@ -237,15 +237,57 @@ All links function and all images are in the Gitpod repository.
 ### Further Testing
 
 ## Deployment
-The website was developed using GitPod, committed to git and pushed to GitHub. It was then deployed with Github pages from its GitHub repository following these steps:
+The website was developed to Heroku, while using Gitpod a a development environment and commiting all changes to GitHub., committed to git and pushed to GitHub. It was then deployed with Github pages from its GitHub following these steps:
 
-• Log in into GitHub.
+Then connected my GitHub account to Heroku and set up Automatic deployment in Heroku under Deploy section in my coinscatalog app.
 
-• Select the repository and open settings.
+To run this project follow below steps:
 
-• Scroll down to the GitHub Pages section and click Master Branch. With this, the website is deployed.
+MongoDb:
+    Setup MongoDB account, 
+    Setup atlas here
+    Create a cluster 
+    Create new Database learning_resources and add 3 collections: resources, resource_type, users.
 
-• Go to the GitHub pages section to get the website link.
+Github:
+    Create an account and Log in to GitHub, go to the Top_Developer_Resources and download it.
+    Click on Code and then on Download the ZIP file
+    Upload it to your GiHub Account
+    Another Alternative Option would be to Clone or Fork this repository into your github account
+    Run the repository from your GitHub repository clicking on the Gitpod button.
+
+Gitpod:
+
+    Create env.py file
+
+    Add env.py file to gitignore
+
+    Add details to env.py file:
+
+      import os
+      
+      os.environ.setdefault("IP", "0.0.0.0")
+      os.environ.setdefault("PORT", "5000")
+      os.environ.setdefault("SECRET_KEY", "YOURSECRETKEY")
+      os.environ.setdefault("MONGO_URI", "mongodb+srv://root:YOURPASSWORD@YOUR-CLUSTER-NAME.mongodb.net/YOUR-DATABASE-NAME?retryWrites=true&w=majority")
+      os.environ.setdefault("MONGO_DBNAME", "YOUR-DATABASE-NAME")
+
+    In terminal create a requirements.txt file by typing pip3 freeze --local > requirements.txt
+
+    In terminal create a Procfile by typing python app.py > Procfile
+
+    In terminal add files, commit and push changes to Github
+
+Deploy a project to Heroku:
+
+    Create a Heroku account and Log in on it
+    From dashboard click new > create new app
+    Add the desired name in the App name field
+    When connected, click on settings > Config Vars and add key and value pairs. Variables shoud be the same as in the env.py file
+    From Deploy open Automatic deployment and Connect to GitHub section, then click on github username and repository name
+    Heroku will receive all info from your Github repository. Wait for the succesfully completed message.
+    Click Open App from top right corner to view the app in a new window.
+
 
 ## Cloning
 
