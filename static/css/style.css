@@ -58,6 +58,12 @@ img{
     max-height:300px;
 }
 
+/*****Form****/
+
+.signupform, .loginform{
+    max-width: 500px;
+}
+
 
 /************resources******/
 
