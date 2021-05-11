@@ -8,7 +8,7 @@
 
 ![Top Developer Resources Responsive Design]()
 
-The main purpose of this site is to provide a compilation of high quality learning materials to improve Developers' tech skills. 
+Top Developer Resources is a community website where people can share the top resources they used in their Software Development Learning journey so that other people can profit from them and reach their Development goals faster (getting a job, learning a new language, etc).
 
 It is a website where community can share useful materials they used to develop their skills. All users can search through dataset provided by community members. 
 Registered users can create, edit or delete their own dataset. Upon registering, users can add assets to the website.  
@@ -17,7 +17,7 @@ Only the admin has permission to delete assets. The goal of this is preventing m
 All users can read other users reviews  The user can read other users reviews and create, update and delete their own reviews. 
 
 User have a profile page where info about their username, bio and an icon are displayed.  
-My biggest hope is that Smart Investments will give valuable information to every person interested in digital investments.
+My biggest hope is that Top Developer Resources will give valuable information to every person interested in developing their Coding Skills.
 This is an educational project only.
 
 ## User Stories
