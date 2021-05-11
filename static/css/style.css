@@ -6,6 +6,12 @@ body{
     line-height: 1.5;
 }
 
+
+.offset{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 /* Home Page */
 
 #search_img{
@@ -50,4 +56,24 @@ a:hover{
 img{
     max-width:300px;
     max-height:300px;
+}
+
+
+/************resources******/
+
+.transparent-bg{
+    background-color:transparent !important;
+}
+
+.resources-bg{
+    background-color: #0e0e0e;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.resources-bg img{
+    width: 300px;
+    height:300px;
+    top: 0;
+    bottom: 0;
 }
