@@ -1,68 +1,74 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!--REGISTRATION FORM-->
-    <section id="bg_cover" class="min-vh-100 m-auto">
-        <div id="cover_caption">           
-            <!--Register form-->
-            <div class="row text-white">
-                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-                    <h1 class="display-4 py-2 text-truncate text-white">Register</h1>
-                    <div class="px-2">
-                        <form id="register_form" class="justify-content-center" method="POST" action="{{ url_for('register') }}">
-                            <div class="form-group">
-                                <label for="email" class="sr-only">Email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Email"
-                                    required autocomplete="off">
-                            </div>
-                            <div class="form-group text-justify">
-                                <label for="username" class="sr-only">Username</label>
-                                <input type="text" name="username" id="username" minlength="5"
-                                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" placeholder="Username"
-                                    required value="{{ request.form.username }}">
-                                <small class="white-text mt-2">Between 5 and 15 characters </small>
-                            </div>
-                            <div class="form-group text-justify">
-                                <label for="password" class="sr-only">Password</label>
-                                <input type="password" name="password" id="password" minlength="5" maxlength="15"
-                                    pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" placeholder="Password" required>
-                                <small class="white-text mt-2">Between 5 and 15 characters </small>
-                            </div>
-                            <div class="form-group text-justify">
-                                <label for="user_img" class="sr-only">Choose a Picture</label>
-                                <input type="url" name="user_img" id="user_img" class="form-control" placeholder="URL Image">
-                                <small class="white-text mt-2">Select a picture hosted on a website (optional)</small>
-                            </div>
-                            <div class="form-group text-justify">
-                                <label for="user_loc" class="sr-only">Your country</label>
-                                <input type="text" name="user_loc" id="user_loc"  class="form-control" placeholder="Where are you from?" required>
-                                <small class="white-text mt-2">The name of your country</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="user_level" class="sr-only">Your Level</label>
-                                <select id="user_level" name="user_level" class="form-control" required>
-                                    <option value="" selected disabled>Select Level</option>
-                                    <option>Newbie</option>
-                                    <option>Weekender</option>
-                                    <option>Pro</option>
-                                </select>
-                            </div>
-                            <button class="btn btn-lg btn-warning btn-color btn-block text-uppercase" value="login" type="submit">Sign
-                                in
-                            </button>
-                        </form>
+<h1 class="sr-only">Register form</h1>
+<div class="row no-gutters">
+    <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
+    <div class="card col-sm-12 col-lg-10 offset-lg-1">
+        <img class="card-img-top" src="static/images/unsplash-simon-zRxLgc-o56I.jpg" alt="Form image">
+        <!-- Form from: https://mdbootstrap.com/docs/b4/jquery/components/cards/ -->
+        <form method="POST" action="{{ url_for('register') }}">
+            <div class="card-body elegant-color amber-text text-center rounded-bottom">
+                <!-- title -->
+                <h4 class="card-title">Join our community today!</h4>
+                <hr class="hr-light">
+                <!-- first name -->
+                <div class="row my-3">
+                    <div class="col-sm-5">
+                        <label for="first_name" class="col-form-label">First Name</label>
+                        <i class="fas fa-user-tie mx-3"></i>
                     </div>
-                    <!--Redirect Log in page -->
-                    <div class="row">
-                        <div class="col s12">
-                            <p class="text-center mt-3">
-                                Account already created? <a href="{{ url_for('register') }}" class="btn-color" >Log In</a>
-                            </p>
-                        </div>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" minlength="2"
+                            maxlength="20" pattern="^[a-zA-Z']{2,20}$" required>
                     </div>
                 </div>
+                <!-- last name -->
+                <div class="row my-3">
+                    <div class="col-sm-5">
+                        <label for="last_name" class="col-form-label">Last Name</label>
+                        <i class="fas fa-user-tie mx-3"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" minlength="2"
+                            maxlength="20" pattern="^[a-zA-Z']{2,20}$" required>
+                    </div>
+                </div>
+                <!-- email -->
+                <div class="row my-3">
+                    <div class="col-sm-5">
+                        <label for="email" class="col-form-label">Email address</label>
+                        <i class="fas fa-envelope mx-3"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email address" minlength="5"
+                            maxlength="35" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$" required>
+                            <!-- Regular expresion pattern from: http://www.regular-expressions.info/email.html -->
+                    </div>
+                </div>
+                <!-- password -->
+                <div class="row my-3">
+                    <div class=" col-sm-5">
+                        <label for="password" class="col-form-label">Password</label>
+                        <i class="fas fa-user-lock mx-3"></i>
+                    </div>
+                    <div class="col-sm-7">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" minlength="8"
+                            maxlength="20" pattern="^[a-zA-Z0-9._%+-]{8,15}$" aria-describedby="passwordHelpInline" required>
+                        <small id="passwordHelpInline" class="text-muted">Must be 8-20 characters long.</small>
+                    </div>
+                </div>
+                <!-- register button -->
+                <div class="row my-3">
+                    <div class="col-sm-8 offset-sm-2">
+                    <button type="submit" class="col-sm-12 btn btn-amber black-text">Register
+                        <i class="fas fa-sign-in-alt ml-3"></i>
+                    </button>
+                    </div>
+                </div>
+                <p class="card-text white-text mb-4">If you have an account please <a href="{{ url_for('login') }}">Log In</a>.</p>
             </div>
-        </div>
-    </section>
-
+        </form>
+    </div>
+</div>
 {% endblock %}
