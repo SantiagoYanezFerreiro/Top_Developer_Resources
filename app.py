@@ -128,9 +128,9 @@ def profile(user_email):
 
 
 
-# Catalog 
-@app.route("/catalog")
-def catalog():
+# resources 
+@app.route("/resources")
+def resources():
     resources = list(mongo.db.resources.find())
     # 8 items per page
 
@@ -144,7 +144,7 @@ def catalog():
     paginate_resources = get_resources(offset=offset, per_page=per_page)
     resourcespagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4')
-    return render_template("catalog.html", resources=paginate_resources, page=page,
+    return render_template("resources.html", resources=paginate_resources, page=page,
                            per_page=per_page, resourcespagination=resourcespagination,)
 
 
@@ -207,8 +207,8 @@ def delete_resource(id):
         mongo.db.resources.remove({"_id": ObjectId(id)})
         flash("resource deleted")
         # administrators are allowed to delete all resources 
-        if session['user_email'] == "admin@resourcescatalog.info":
-            return redirect(url_for("catalog"))
+        if session['user_email'] == "admin@resourcesresources.info":
+            return redirect(url_for("resources"))
         # if user redirect to users profile
         else:
             return redirect(url_for(
