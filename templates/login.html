@@ -1,7 +1,42 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-
+<div class="container">
+    <div class="row">
+        <form class="col s12 l8 offset-l2" method="POST" action="{{ url_for('signin') }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>                
+            <div class="card-panel">
+                <h1 class="main-heading">Log In</h1>
+                <!-- Name Field-->
+                <div class="row">
+                    <div class="input-field col s12 m8 offset-m2">
+                        <i class="fas fa-user-circle prefix text-darken-4"></i>
+                        <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="username" class="form-label">Username</label>
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="row">
+                    <div class="input-field col s12 m8 offset-m2">
+                        <i class="fas fa-lock prefix text-darken-4"></i>
+                        <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="password" class="form-label">Password</label>
+                    </div>
+                </div>
+                <!-- Log In Button -->
+                <div class="row">
+                    <button type="submit" class="col s12 m8 offset-m2 btn-large button-bg-color black-text text-shadow">
+                        Log In <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col s8 offset-s2">
+                        <p>Aren't you still a member? Create your Account <a href="{{ url_for('signup') }}" class="anchor-links">here.</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}
 
