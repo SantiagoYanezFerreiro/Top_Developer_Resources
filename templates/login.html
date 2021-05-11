@@ -1,42 +1,52 @@
 {% extends "base.html" %}
-
 {% block content %}
-<div class="container">
-    <div class="row">
-        <form class="col s12 l8 offset-l2" method="POST" action="{{ url_for('login') }}">
-            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>                
-            <div class="card-panel">
-                <h1 class="main-heading">Log In</h1>
-                <!-- Name Field-->
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
-                        <i class="fas fa-user-circle prefix text-darken-4"></i>
-                        <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for="username" class="form-label">Username</label>
-                    </div>
+
+<h1 class="sr-only">Log In</h1>
+<div class="row no-gutters">
+    <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
+    <div class="card col-sm-12 col-lg-10 offset-lg-1">
+        <div>
+            <img class="card-img-top" src="static/images/unsplash-simon-zRxLgc-o56I.jpg" alt="Form image">
+        </div>
+        <!-- Form from: https://mdbootstrap.com/docs/b4/jquery/components/cards/ -->
+        <form class="card-body elegant-color amber-text text-center rounded-bottom" method="POST" action="{{ url_for('login') }}">
+            <!-- title -->
+            <h4 class="card-title">Welcome back!</h4>
+            <hr class="hr-light">
+            <!-- email -->
+            <div class="row my-3">
+                <div class="col-sm-5">
+                    <label for="email" class="col-form-label">Email address</label>
+                    <i class="fas fa-envelope mx-3"></i>
                 </div>
-                <!-- Password -->
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
-                        <i class="fas fa-lock prefix text-darken-4"></i>
-                        <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for="password" class="form-label">Password</label>
-                    </div>
-                </div>
-                <!-- Log In Button -->
-                <div class="row">
-                    <button type="submit" class="col s12 m8 offset-m2 btn-large button-bg-color black-text text-shadow">
-                        Log In <i class="fas fa-sign-in-alt"></i>
-                    </button>
-                </div>
-                <div class="row">
-                    <div class="col s8 offset-s2">
-                        <p>Aren't you still a member? Create your Account <a href="{{ url_for('register') }}" class="anchor-links">here.</a></p>
-                    </div>
+                <div class="col-sm-7">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email address" minlength="5"
+                        maxlength="35" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$" required>
+                        <!-- Regular expresion pattern from: http://www.regular-expressions.info/email.html -->
                 </div>
             </div>
+            <!-- password -->
+            <div class="row my-3">
+                <div class=" col-sm-5">
+                    <label for="password" class="col-form-label">Password</label>
+                    <i class="fas fa-user-lock mx-3"></i>
+                </div>
+                <div class="col-sm-7">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" minlength="8"
+                        maxlength="20" pattern="^[a-zA-Z0-9._%+-]{8,15}$" aria-describedby="passwordHelpInline" required>
+                    <small id="passwordHelpInline" class="text-muted">Must be 8-20 characters long.</small>
+                </div>
+            </div>
+            <!-- login button -->
+            <div class="row my-3">
+                <div class="col-sm-8 offset-sm-2">
+                <button type="submit" class="col-sm-12 btn btn-amber black-text">Log In
+                    <i class="fas fa-sign-in-alt ml-3"></i>
+                </button>
+                </div>
+            </div>
+            <p class="card-text white-text mb-4">If you don't have an account please <a href="{{ url_for('register') }}">Register</a> today.</p>
         </form>
     </div>
 </div>
 {% endblock %}
-
