@@ -1,47 +1,57 @@
 {% extends "base.html" %}
-
 {% block content %}
-<div class="container">
-    <div class="row">
-        <form class="col-12" id="contact-form" onsubmit="return sendMail(this);">
-            <div class="card-panel">
-                <h1 class="main-heading">Contact Us</h1>
-                <!-- Username -->
-                <div class="row">
-                    <div class="input-field col-12 m8 offset-m2">
-                        <i class="fas fa-user-circle prefix text-darken-4"></i>
-                        <label for="name" class="form-label">Your Name</label>
-                        <input id="name" name="name" type="text" class="validate" required>
+
+<h1 class="sr-only">Contact Us</h1>
+<div class="row no-gutters">
+    <div class="card col-sm-12 col-lg-10 offset-1">
+        <div>
+            <img class="card-img-top" src="../static/images/unsplash-simon-zRxLgc-o56I.jpg" alt="Profile image">
+        </div>
+        <div class="card-body elegant-color amber-text text-center p-left text-transfer pb-0">
+            <h4 class="card-title text-capitalize">Contact us!</h4>
+            <hr class="hr-light">
+        </div>
+        <div class="card-body">
+            <form onsubmit="return sendMail(this);">
+                <div class="form-row">
+                    <div class="col col-sm-10 offset-sm-1">
+                        <!-- if user is logged in -->
+                        {% if 'user_email' in session: %}
+                            {% for data in users %}
+                                {% if data.email == user_email %}
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" name="name" id="name" value="{{ data.first_name.capitalize() }} {{ data.last_name.capitalize() }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="emailaddress">Email</label>
+                                        <input type="email" class="form-control" name="emailaddress" id="emailaddress" value="{{ data.email }}" required>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                        <!-- if the user hast not logged in -->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailaddress">Email</label>
+                            <input type="email" class="form-control" name="emailaddress" id="emailaddress" placeholder="Email" required>
+                        </div>
+                        {% endif %}
+                        <div class="form-group">
+                            <label for="comments">Message</label>
+                            <textarea class="form-control" id="comments" name="comments" rows="3" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-amber black-text">Leave Us a message <i class="fas fa-paper-plane"></i></button>
+                        </div>
                     </div>
                 </div>
-                <!-- Password -->
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
-                        <i class="fas fa-envelope prefix text-darken-4"></i>
-                        <label for="email" class="form-label">Your Email</label>
-                        <input id="email" name="email" type="email" class="validate" required>
-                    </div>
-                </div>
-                <!-- Name -->
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
-                        <i class="fas fa-comment prefix text-darken-4"></i>
-                        <label for="comments" class="form-label">Your Comments</label>
-                        <textarea id="comments" name="comments" class="validate" required></textarea>
-                    </div>
-                </div>
-                <!-- Email reponse -->
-                <div class="email-response center-align green-text">
-                </div>
-                <!-- Register -->
-                <div class="row">
-                    <button type="submit" class="col-12 offset-m2 btn-small">
-                        Submit 
-                    </button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
-{% endblock %}
 
+{% endblock %}
