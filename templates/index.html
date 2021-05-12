@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div class="rounded hoverable py-sm-5 offset my-4" id="search_img">
-<h3 class="rgba-stylish-strong px-3 py-3 mb-0 text-center">Discover world's best developer learning resources</h3>
+<div class="rounded hoverable py-sm-5 offset my-5" id="search_img">
+<h3 class="rgba-stylish-strong px-3 py-3 mb-0 text-center title">Discover world's best developer learning resources</h3>
 <div class="container rounded rgba-white-strong hoverable py-md-5 my-md-5">
     <div class="row justify-content-center py-5 my-md-3">
         <div class="col col-md-8 col-xl-6 px-0">
@@ -57,49 +57,7 @@
             journey so that other people can profit from them and reach their Development goals faster (getting a job, learning a new language, etc).
             Our aim is to create a community where developers can help each other so that everybody benefits from the experience.
         </p>
-        <span class="small-text">Got any suggestion? <a href="{{ url_for('contact') }}" class="anchor-links">Contact us</a></span>
+        <span class="small-text">Got any suggestion? <a href="{{ url_for('contact') }}" class="home-links">Contact us</a></span>
     </div>
 </div>
-
--
-<!--
-{% for resource in resources %}
-{{ resource.resource_category }}<br>
-{{ resource.name }}<br>
-{{ resource.description }}<br>
-{{ resource.created_by }}<br>
-{% endfor %}
-
-
-{% if 'user_email' not in session:%}
-<div class="container elegant-color text-white text-center rounded mb-4">
-    
-    <h3 class="font-weight-bold amber-text py-4">Join our community today!</h3>
-    <p class="w-responsive mx-auto mb-2">If you don't have an account please<a href="{{ url_for('register') }}"> Register</a> here.</p>
-    <h4 class="amber-text py-3">Latest Added Resources:</h4>
-    <div class="row">
-    
-    {% for resources in resources %}
-        {% if loop.revindex0 < 3 %} 
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 black view overlay z-depth-1">
-                <div class="mx-auto" style="height: 15rem;">
-                    <img class="my-lg-auto rounded-circle" style="width: 15rem;" src="{{ resource.image }}" alt="{{ resource.name }}">
-                </div>
-                 <div class="mask flex-center rgba-orange-light">
-                    <a class="btn btn-info btn-rounded" href="{{ url_for('register') }}">To see more please Register here</a>
-                </div>
-                <div class="card-body white">
-                   
-                    <h4 class="card-title fixed-height black-text">{{ resource.description }}</h4>
-                    <hr class="my-0">
-                </div>
-            </div>
-        </div>
-        {% endif %}
-    {% endfor %}
-    </div>
-</div>
--->
-{% endif %}
 {% endblock %}

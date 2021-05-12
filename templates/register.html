@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 class="sr-only">Register form</h1>
-<div class="row no-gutters">
+<div class="row no-gutters wide-offset mt-4">
+    <h1 class="sr-only">Register form</h1>
     <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
-    <div class="card col-sm-12 col-lg-10 offset-lg-1">
-        <img class="card-img-top" src="static/images/unsplash-simon-zRxLgc-o56I.jpg" alt="Form image">
+    <div class="card col-12">
+        <img class="card-img-top register-image" src="../static/images/programming14.jpg" alt="Form image">
         <!-- Form from: https://mdbootstrap.com/docs/b4/jquery/components/cards/ -->
         <form method="POST" action="{{ url_for('register') }}">
             <div class="card-body elegant-color amber-text text-center rounded-bottom">
                 <!-- title -->
-                <h4 class="card-title">Join our community today!</h4>
+                <h1 class="card-title">Join our community today!</h4>
                 <hr class="hr-light">
                 <!-- first name -->
                 <div class="row my-3">
@@ -61,12 +61,12 @@
                 <!-- register button -->
                 <div class="row my-3">
                     <div class="col-sm-8 offset-sm-2">
-                    <button type="submit" class="col-sm-12 btn btn-amber black-text">Register
+                    <button type="submit" class="col-sm-12 btn">Register
                         <i class="fas fa-sign-in-alt ml-3"></i>
                     </button>
                     </div>
                 </div>
-                <p class="card-text white-text mb-4">If you have an account please <a href="{{ url_for('login') }}">Log In</a>.</p>
+                <p class="card-text mb-4">If you have an account please <a href="{{ url_for('login') }}">Log In</a>.</p>
             </div>
         </form>
     </div>

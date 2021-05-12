@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 class="sr-only">Log In</h1>
-<div class="row no-gutters">
+
+<div class="row no-gutters wide-offset mt-4">
+    <h1 class="sr-only">Log In</h1>
     <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
-    <div class="card col-sm-12 col-lg-10 offset-lg-1">
+    <div class="card col-sm-12">
         <div>
-            <img class="card-img-top" src="static/images/unsplash-simon-zRxLgc-o56I.jpg" alt="Form image">
+            <img class="card-img-top login-image" src="../static/images/programming2.jpg" alt="Form image">
         </div>
         <!-- Form from: https://mdbootstrap.com/docs/b4/jquery/components/cards/ -->
-        <form class="card-body elegant-color amber-text text-center rounded-bottom" method="POST" action="{{ url_for('login') }}">
+        <form class="card-body elegant-color text-center rounded-bottom" method="POST" action="{{ url_for('login') }}">
             <!-- title -->
-            <h4 class="card-title">Welcome back!</h4>
+            <h1 class="card-title">Welcome back!</h1>
             <hr class="hr-light">
             <!-- email -->
             <div class="row my-3">
@@ -39,13 +40,13 @@
             </div>
             <!-- login button -->
             <div class="row my-3">
-                <div class="col-sm-8 offset-sm-2">
-                <button type="submit" class="col-sm-12 btn btn-amber black-text">Log In
+                <div class="col-12">
+                <button type="submit" class="col-sm-12 btn">Log In
                     <i class="fas fa-sign-in-alt ml-3"></i>
                 </button>
                 </div>
             </div>
-            <p class="card-text white-text mb-4">If you don't have an account please <a href="{{ url_for('register') }}">Register</a> today.</p>
+            <p class="card-text mb-4">If you don't have an account please <a href="{{ url_for('register') }}">Register</a> today.</p>
         </form>
     </div>
 </div>
