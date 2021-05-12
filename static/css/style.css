@@ -1,5 +1,10 @@
 body{
-    color:red;
+    color:#1d2228;
+    background-color:#e1e2e2;
+}
+
+h1, h2, label, form i {
+    color: #fb8122;
 }
 
 .flashes h4{
@@ -12,8 +17,8 @@ body{
 }
 
 .wide-offset{
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 /* Home Page */
@@ -43,8 +48,8 @@ body{
 }
 
 #logo{
-    width:80%;
-    height:80%;
+    width:60%;
+    height:60%;
     padding:0px;
 }
 
@@ -54,14 +59,13 @@ a, .copyright{
 }
 
 a:hover{
-    color: #ffc107;
+    color: #fb8122;
 }
-
 
 /***Home Page***/
 
-.textsection-title {
-    color: #831717;
+.textsection-title, .title{
+    color: #fb8122;
     font-weight: bolder;
 }
 
@@ -70,12 +74,12 @@ a:hover{
 }
 
 .home-links {
-    color: #ff0606;
+    color: #fb8122;
     font-size: 1rem
 }
 
 a.anchor-links:hover {
-    color: #e26060;
+    color: #fb8122;
 }
 
 .small-text {
@@ -83,15 +87,19 @@ a.anchor-links:hover {
 }
 
 .homepage-images {
-    width: 100%;
-    height:100%;
-    border: 1px solid black;
+    width: 85%;
+    height: 85%;
+    border: 3px solid 12151f;
 }
 
 /*****Form****/
 
 .signupform, .loginform{
     max-width: 500px;
+}
+
+.btn{
+    color: #fb8122;
 }
 
 
@@ -102,7 +110,7 @@ a.anchor-links:hover {
 }
 
 .resources-bg{
-    background-color: #0e0e0e;
+    background-color: #12151f;
     padding-left: 0;
     padding-right: 0;
 }
@@ -114,10 +122,15 @@ a.anchor-links:hover {
     bottom: 0;
 }
 
+.card p, .card .card-body .card-text{
+    color:#fb8122;
+}
+
 /*******Contact******/
 
-.card-img-top{
-    width:100%;
-    height:100%;
+.login-image, .register-image,.contactform-image{
+    
+    height:450px;
+    display:block;
 }
 
