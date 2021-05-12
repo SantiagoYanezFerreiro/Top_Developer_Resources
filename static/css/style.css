@@ -6,10 +6,14 @@ body{
     line-height: 1.5;
 }
 
-
 .offset{
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.wide-offset{
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 /* Home Page */
@@ -53,9 +57,35 @@ a:hover{
     color: #ffc107;
 }
 
-img{
-    max-width:300px;
-    max-height:300px;
+
+/***Home Page***/
+
+.textsection-title {
+    color: #831717;
+    font-weight: bolder;
+}
+
+.textsection{
+    max-width:80ch;
+}
+
+.home-links {
+    color: #ff0606;
+    font-size: 1rem
+}
+
+a.anchor-links:hover {
+    color: #e26060;
+}
+
+.small-text {
+    font-size: 1rem;
+}
+
+.homepage-images {
+    width: 100%;
+    height:100%;
+    border: 1px solid black;
 }
 
 /*****Form****/
@@ -83,3 +113,11 @@ img{
     top: 0;
     bottom: 0;
 }
+
+/*******Contact******/
+
+.card-img-top{
+    width:100%;
+    height:100%;
+}
+
