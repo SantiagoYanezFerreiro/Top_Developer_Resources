@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="rounded hoverable py-sm-5 mb-4" id="search_img" >
+<div class="rounded hoverable py-sm-5 offset my-4" id="search_img">
 <h3 class="rgba-stylish-strong px-3 py-3 mb-0 text-center">Discover world's best developer learning resources</h3>
 <div class="container rounded rgba-white-strong hoverable py-md-5 my-md-5">
     <div class="row justify-content-center py-5 my-md-3">
@@ -23,55 +23,35 @@
 </div>
 </div>
 
-<div class="row ">
-    <div class="col-6 center-align">
-        <p class="landing-sub">Want to find the best learning resources used by Developers</p>
-        <p> Top Developer Resources is your one stop platform for Learning Resources. Whether you want to discover useful resources,
+<div class="row offset mb-1">
+    <div class="col-8 center-align">
+        <p class="textsection-title">Want to find the best learning resources used by Developers</p>
+        <p class="textsection"> Top Developer Resources is your one stop platform for Learning Resources. Whether you want to discover useful resources,
             share useful ones with the community or 
             advertise you own ones look no further!
         </p>
-        <span class="small-text">Want to find Resources? Simply <a href="{{ url_for('register') }}" class="anchor-links">sign up</a> and create an event!</span>
+        <span class="small-text">Want to find Resources? Simply <a href="{{ url_for('register') }}" class="home-links">sign up</a> and create an event!</span>
     </div>
-    <div class="col-6 center-align no-padding">
-        <figure>
-            <img src="../static/images/learning4.jpg" alt="Learning Resources image" 
-                class="center-align responsive-img event-images">
-        </figure>
+    <div class="col-4 center-align no-padding"> 
+        <img src="../static/images/learning4.jpg" alt="Learning Resources image" 
+                class="center-align responsive-img homepage-images">
     </div>
 </div>
-<div class="row ">
-    <div class="col-6 center-align">
-        <p class="landing-sub">Just want to add a Learning Resource to the Platform?</p>
-        <p> You can easily do it by creating an account and clicking on Add Resource Introducing all Required Info.
+<div class="row offset mb-1">
+    <div class="col-8 center-align">
+        <p class="textsection-title">Just want to add a Learning Resource to the Platform?</p>
+        <p class="textsection"> You can easily do it by creating an account and clicking on Add Resource Introducing all Required Info.
         </p>
-        <span class="small-text">Simply <a href="{{ url_for('register') }}" class="anchor-links">sign up</a> and create a Resource!</span>
+        <span class="small-text">Simply <a href="{{ url_for('register') }}" class="home-links">sign up</a> and create a Resource!</span>
     </div>
-    <div class="col-6 center-align no-padding">
-        <figure>
-            <img src="../static/images/learning5.jpg" alt="Learning Resources image" 
-                class="center-align responsive-img event-images">
-        </figure>
+    <div class="col-4 center-align no-padding">
+            <img src="../static/images/learning3.jpg" alt="Learning Resources image" 
+                class="center-align responsive-img homepage-images">
     </div>
 </div>
-<div class="row ">
-    <div class="col-6 center-align">
-        <p class="landing-sub">Want to find the best learning resources used by Developers</p>
-        <p>If you don't fancy a big event but want to find some fellow bikers for a local meet up or spin out, 
-            you can do that by selecting 'Local Meet' on the event drop down when creating a new event.
-        </p>
-        <span class="small-text">Want to arrange a Meet Up? Simply <a href="{{ url_for('register') }}" class="anchor-links">sign up</a> and create an event!</span>
-    </div>
-    <div class="col-6 center-align no-padding">
-        <figure>
-            <img src="../static/images/learning4.jpg" alt="Learning Resources image" 
-                class="center-align responsive-img event-images">
-            <figcaption>Local Meet Up - Hosted by Batman</figcaption>
-        </figure>
-    </div>
-</div>
-<div class="row">
+<div class="row offset homepage-textsection mb-1">
     <div class="col-12 center-align">
-        <p class="landing-sub" id="about">About Us</p>
+        <p class="textsection-title" id="about">About Us</p>
         <p>
             Top Developer Resources is a community website where people can share the top resources they used in their Software Development Learning 
             journey so that other people can profit from them and reach their Development goals faster (getting a job, learning a new language, etc).
