@@ -5,7 +5,6 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_wtf.csrf import CSRFProtect
 from datetime import datetime
 from flask_paginate import Pagination, get_page_args
 if os.path.exists("env.py"):
@@ -13,7 +12,7 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
-csrf = CSRFProtect(app)
+
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
