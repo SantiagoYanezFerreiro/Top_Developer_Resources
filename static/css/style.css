@@ -1,10 +1,19 @@
 body{
     color:#1d2228;
     background-color:#e1e2e2;
+    font-size:15px;
 }
 
 h1, h2, label, form i {
     color: #fb8122;
+}
+
+h1{
+    font-size:200%;
+}
+
+h2{
+    font-size:170%;
 }
 
 .flashes h4{
@@ -62,8 +71,6 @@ a:hover{
     color: #fb8122;
 }
 
-/***Home Page***/
-
 .textsection-title, .title{
     color: #fb8122;
     font-weight: bolder;
@@ -120,6 +127,11 @@ a.anchor-links:hover {
     height:300px;
     top: 0;
     bottom: 0;
+}
+
+.resourcelink{
+    font-size:70%;
+
 }
 
 .card p, .card .card-body .card-text{
