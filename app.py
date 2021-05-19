@@ -111,7 +111,7 @@ def logout():
         flash("You logged out succesfully")
         session.pop("user_email")
         return redirect(url_for("home"))
-    return render_template('404.html')
+    return render_template('home.html')
 
 
 # Profile 
@@ -171,7 +171,7 @@ def new_resource():
         # read data and sort in ascending order
         type = mongo.db.resource_type.find().sort("type", 1)
         return render_template("new_resource.html", type=type)
-    return redirect(url_for("home"))
+    return redirect(url_for("login"))
 
 
 # Edit resource
@@ -197,7 +197,7 @@ def edit_resource(id):
         # read data and sort ascendingly
         type = mongo.db.resource_type.find().sort("type", 1)
         return render_template("edit_resource.html", resource=resource, type=type)
-    return redirect(url_for("home"))
+    return redirect(url_for("login"))
 
 
 # Delete resource route
