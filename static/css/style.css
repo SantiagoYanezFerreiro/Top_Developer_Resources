@@ -32,6 +32,7 @@ h2{
 
 /* Home Page */
 
+
 #search_img{
     background-image: url('../images/learning2.jpg');
     background-repeat: no-repeat;
@@ -40,26 +41,31 @@ h2{
 }
 
 .navbar{
-    padding:0px;
+    margin-top:0px;
+    box-shadow:none;
+    background-color:black;
 }
-
-.navbar li a{
+.navbar li a, .companylogo{
     font-size:150%;
     font-weight:700;
+    padding-top:10px;
+    color:white;
 }
 
 .nav-item{
     margin-right:20px;
+    margin-top:0px;
 }
 
 .nav-item:last-child{
     margin-right:20px;
 }
 
-#logo{
-    width:60%;
+.companylogo{
     height:60%;
     padding:0px;
+    text-transform:uppercase;
+    padding-top:20px;
 }
 
 a, .copyright{
