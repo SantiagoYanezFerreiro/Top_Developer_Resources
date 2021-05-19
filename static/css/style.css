@@ -135,14 +135,17 @@ a.anchor-links:hover {
     bottom: 0;
 }
 
-.resourcelink{
-    font-size:70%;
-
-}
 
 .card p, .card .card-body .card-text{
     color:#fb8122;
 }
+
+a .resourcelink{
+    font-size:70%;
+    text-decoration:underline;
+    color:#fff;
+}
+
 
 /*******Contact******/
 
