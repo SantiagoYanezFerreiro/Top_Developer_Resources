@@ -3,61 +3,24 @@
 {% block content %}
 
 <div class="rounded hoverable py-sm-5 offset my-5" id="search_img">
-<h3 class="rgba-stylish-strong px-3 py-3 mb-0 text-center title">Discover world's best developer learning resources</h3>
-<div class="container rounded rgba-white-strong hoverable py-md-5 my-md-5">
-    <div class="row justify-content-center py-5 my-md-3">
-        <div class="col col-md-8 col-xl-6 px-0">
-            <form class="input-card elegant-color z-depth-2 py-2 px-3" action="{{ url_for('search') }}" method="POST">
-                <div class="input-grey input-round input-group rgba-white-light my-2">
-                    <input type="search" class="form-control white-text bg-transparent border-0 z-depth-0" name="query" 
-                        id="query" placeholder="Search resources">
-                    <!-- search button -->
-                    <div class="input-group-append">
-                        <button class="btn btn-md btn-rounded btn-light m-0 px-3 py-2 z-depth-0" type="submit">
-                            Search<i class="fas fa-arrow-right pl-2"></i></button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+<h3 class="rgba-stylish-strong px-3 py-mb-0 text-center title">Discover world's best developer learning resources</h3>
 </div>
 
-<div class="row offset mb-1">
-    <div class="col-8 center-align">
-        <p class="textsection-title">Want to find the best learning resources used by Developers</p>
-        <p class="textsection"> Top Developer Resources is your one stop platform for Learning Resources. Whether you want to discover useful resources,
-            share useful ones with the community or 
-            advertise you own ones look no further!
-        </p>
-        <span class="small-text">Want to find Resources? Simply <a href="{{ url_for('register') }}" class="home-links">sign up</a> and create an event!</span>
-    </div>
-    <div class="col-4 center-align no-padding"> 
-        <img src="../static/images/learning4.jpg" alt="Learning Resources image" 
-                class="center-align responsive-img homepage-images">
-    </div>
-</div>
-<div class="row offset mb-1">
-    <div class="col-8 center-align">
-        <p class="textsection-title">Just want to add a Learning Resource to the Platform?</p>
-        <p class="textsection"> You can easily do it by creating an account and clicking on Add Resource Introducing all Required Info.
-        </p>
-        <span class="small-text">Simply <a href="{{ url_for('register') }}" class="home-links">sign up</a> and create a Resource!</span>
-    </div>
-    <div class="col-4 center-align no-padding">
-            <img src="../static/images/learning3.jpg" alt="Learning Resources image" 
-                class="center-align responsive-img homepage-images">
+
+<div class="row justify-content-center py-2 my-md-3">
+    <div class="col col-md-8 col-xl-6 px-0">
+        <form class="input-card elegant-color z-depth-2 py-2 px-3" action="{{ url_for('search') }}" method="POST">
+            <div class="input-grey input-round input-group rgba-white-light my-2">
+                <input type="search" class="form-control white-text bg-transparent border-0 z-depth-0" name="query" 
+                    id="query" placeholder="Search resources">
+                <!-- search button -->
+                <div class="input-group-append">
+                    <button class="btn btn-md btn-rounded btn-light m-0 px-3 py-2 z-depth-0" type="submit">
+                        Search<i class="fas fa-arrow-right pl-2"></i></button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
-<div class="row offset homepage-textsection mb-1">
-    <div class="col-12 center-align">
-        <p class="textsection-title" id="about">About Us</p>
-        <p>
-            Top Developer Resources is a community website where people can share the top resources they used in their Software Development Learning 
-            journey so that other people can profit from them and reach their Development goals faster (getting a job, learning a new language, etc).
-            Our aim is to create a community where developers can help each other so that everybody benefits from the experience.
-        </p>
-        <span class="small-text">Got any suggestion? <a href="{{ url_for('contact') }}" class="home-links">Contact us</a></span>
-    </div>
-</div>
+
 {% endblock %}
