@@ -60,12 +60,15 @@ Crud Operation Module
 
 ### Colour Scheme
 
+The main colors user on the site are grey (#e1e2e2), used for the background, , orange, mainly used for the text, (#fb8122) and black which was used for the nav bar.
+
 ### Typography
 
 The Lato font is the main font of the website with Arial and sans-seriff as fallback. I opted for Lato because it's a sans-seriff that looks stylish and is easy to read.
 
 ### Imagery
 
+The images used are mmainly from Unsplash and Pexels.
 
 ## Wireframes
 
@@ -73,6 +76,9 @@ I have included all Wireframes in another separate file:
 ![Wireframes File](wireframes.md)
 
 ## Modifications from the Original Wireframes
+
+- Moved informative content from the index page to a specially created Abous Us page.
+- Moved the search box and put it below the image on the home page to make it stand out more.
 
 ## Website Structure
 
@@ -93,7 +99,6 @@ Library of Learning Resources. Used pagination of the bottom to organise them in
 ### Log In
 
 To allow users to log in. After succesfully having logged in, users get redirected to the profile page. A Register button for non-users can be found on this page.
-
 
 ### Register
 
@@ -117,6 +122,9 @@ Profile Link
 Log Out option to close the session and go back to the home page.
 Log Out Link
 
+### About Us
+
+Section with general info about the site
 
 ## Existing Features
 
@@ -134,7 +142,6 @@ Log Out Link
 
 • ****Contact Page - Users can contact through the form with the company regarding requests/doubts. 
 
-
 ## Database schema
 
 The Database consists of  3 tables:
@@ -151,9 +158,9 @@ database schema:
 
 ## Features to Implement in the future
 
-Option to purchase the learning resources from the page
-Courses Recommendations based on the user profile
-Blog & Relevant News Section about Software Development
+Transform the urls from the resources into affiliate links so that they will be profitable for the company.
+Courses Recommendations based on the user profile.
+Blog & Relevant News Section about Software Development.
 
 ## Technologies Used
 • HTML, CSS & JavaScript Programming Languages
@@ -181,6 +188,52 @@ The code was validated with the W3C Markup, W3C CSS and JSHint Validator Service
 The website passed all tests succesfully with no errors. An excel file with info about the tests performed was included in the repository.
 
 ### User Story Testing 
+
+General User Goals
+
+- Users expect the site to have a clear purpose so that they can understand what it is intended for upon entering.
+It is clear from the site that is a go-to website for people that want to find resources to improve their coding skills
+
+- Users want to easily navigate the site and find the desired content quickly and easily.
+
+- Users expect the site to be responsive across all devices. 
+Tested on desktop, tablet and medium and small-sized devices.
+
+- Users want to have the option to contact the site owner to have their questions/requests answered. 
+They can do it using the contact form.
+
+Sign in/Signup Module.
+
+- Register easily and being able to login immediately after registration.
+They just need to fill the data and click login.
+
+- View/Edit personal details on their profile after having logged in. 
+Easily done by clicking on the edit button and changing the desired info.
+
+User Action Module
+
+- Discover New High Quality Learning Resources.
+All of the resources are displayed on the Resources page, which all users can access. 
+
+- Being able to do searches based on user criteria to find suited resources.
+Can be done by using the search box and typing there related keywords.
+
+- User’s ability to review learning resources from the site with info about each of them.
+
+
+Crud Operation Module
+
+- Users should be able to add new resources to the to the site. 
+Can be done using the Ad Resource Functionaly and inputing the required details of the resource.
+
+- Users should be able to edit their added learning resources in the site. 
+Can be done clicking on edit on the resource.
+
+- Users should be able to Delete them. 
+Users can do this by clicking on delete and confirming their choice.
+
+- Users should be getting a confirmation message on every action (Triggering email on action performed).
+Functionality done with Flash Messages.
 
 ### High Level Test Classes
 ![High Level Test Classes]()
