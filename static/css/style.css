@@ -126,9 +126,13 @@ a.anchor-links:hover {
     color:#000;
 }
 
-.loginlink, .registerlink{
+.loginlink, .registerlink, .informative-text{
     color:#fff;
     font-size:110%;
+}
+
+.informative-text{
+    font-size:80%;
 }
 
 
