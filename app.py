@@ -11,6 +11,7 @@ if os.path.exists("env.py"):
     import env
 
 
+
 app = Flask(__name__)
 
 
@@ -98,7 +99,7 @@ def login():
                 return redirect(url_for("login"))
         else:
             # username doesn't exist
-            flash("Incorrect Username and/or Password")
+            ("Incorrect Username and/or Password")
             return redirect(url_for("login"))
     return render_template("login.html")
 
