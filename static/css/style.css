@@ -126,6 +126,11 @@ a.anchor-links:hover {
     color:#000;
 }
 
+.loginlink, .signuplink{
+    color:#fff;
+    font-size:110%;
+}
+
 
 /************resources******/
 
