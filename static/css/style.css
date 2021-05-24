@@ -169,9 +169,25 @@ a .resourcelink{
 
 /*******Contact******/
 
-.login-image, .register-image,.contactform-image{
-    
-    height:450px;
+.login-image, .register-image{
     display:block;
 }
+
+.login-image, .register-image{
+    height:350px;
+}
+
+/*******
+.contactform-image{
+    height:450px;
+}
+*/
+
+.contactbg{
+    background-image: url("../images/programming14.jpg");
+    background-size:1000px;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
 
