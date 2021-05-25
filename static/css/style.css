@@ -117,11 +117,17 @@ a.anchor-links:hover {
     max-width: 500px;
 }
 
+label{
+    font-weight:900px;
+    font-size:120%;
+    color:#fff;
+}
+
 .btn{
     color: #fb8122;
 }
 
-.signup-btn, .login-btn{
+.signup-btn, .login-btn, .contact-btn{
     background-color:#fb8122;
     color:#000;
 }
@@ -184,7 +190,7 @@ a .resourcelink{
 */
 
 .contactbg{
-    background-image: url("../images/programming14.jpg");
+    background-image: url("../images/programming5.jpg");
     background-size:1000px;
     background-position: top;
     background-repeat: no-repeat;
