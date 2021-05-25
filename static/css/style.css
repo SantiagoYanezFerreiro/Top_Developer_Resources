@@ -80,8 +80,9 @@ a:hover{
 }
 
 .textsection-title, .title{
-    color: #fb8122;
+    color: #000;
     font-weight: bolder;
+    font-size:170%;
 }
 
 .homepage-title{
@@ -89,12 +90,16 @@ a:hover{
 }
 
 .textsection{
-    max-width:80ch;
+    max-width:90ch;
+    font-size:110%;
+    line-height:2;
+    color: #000;
 }
 
 .home-links {
     color: #fb8122;
-    font-size: 1rem
+    font-size: 1rem;
+    font-weight:700;
 }
   
 a.anchor-links:hover {
