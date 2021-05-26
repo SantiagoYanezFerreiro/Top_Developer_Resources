@@ -179,6 +179,23 @@ a .resourcelink{
     color:#fff;
 }
 
+/*******Profile Page******/
+
+.profile-section{
+    margin-top:50px;
+}
+
+.profile-title{
+    color:#000;
+}
+
+.profile-img{
+    height:300px;
+}
+
+.profile-label{
+    font-size:110%;
+}
 
 /*******Contact******/
 

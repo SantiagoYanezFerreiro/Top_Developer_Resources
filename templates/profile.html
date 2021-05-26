@@ -1,7 +1,138 @@
 {% extends "base.html" %}
-
 {% block content %}
 
 
+{% for data in users %}
+    {% if data.email == user_email %}
+        <div class="row no-gutters profile-section">
+             <div class="card col-sm-12 col-lg-10 offset-lg-1">
+                <div>
+                    <img class="card-img-top profile-img" src="../static/images/programming14.jpg" alt="Profile Img">
+                </div>
+                <div class="card-body elegant-color amber-text text-center p-left text-transfer pb-0">
+                    <h4 class="card-title text-uppercase">Your profile details</h4>
+                    <hr class="hr-light">
+                    <div class="row my-3">
+                        <div class="col">
+                            <p class="profile-label text-right"><i class="fas fa-user-tie mx-3"></i>First name:</p>
+                        </div>
+                        <div class="col">
+                            <p class="profile-label text-left ml-sm-4">{{ data.first_name.capitalize() }}</p>
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col">
+                            <p class="profile-label text-right"><i class="fas fa-user-tie mx-3"></i>Last name:</p>
+                        </div>
+                        <div class="col">
+                            <p class="profile-label text-left ml-sm-4">{{ data.last_name.capitalize() }}</p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <p class="profile-label text-right"><i class="fas fa-envelope mx-2"></i>Email address:</p>
+                        </div>
+                        <div class="col">
+                            <p class="profile-label text-left ml-sm-4">{{ data.email }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body elegant-color amber-text text-center rounded-bottom pt-0">
+                    <hr class="hr-light">
+                    <h4 class="card-title text-uppercase">Your resources:</h4>
+                    <!-- Add Resource -->
+                    <a href="{{ url_for('new_resource') }}" class="btn btn-grey col col-md-3 px-md-3 mt-0 mx-0">Add New resource</a>
+                    <!-- show resources -->
+                    <a type="button" class="btn btn-grey col col-md-3 mt-0 mx-0" id="show_resources_btn" href="#user_resources">Show resources</a>
+                    <!-- hide resources  -->
+                    <button type="button" class="btn btn-grey col col-md-3 mt-0 mx-0" id="hide_resources_btn">Hide resources</button>
+                    <hr class="hr-light">
+                    <div class="card-deck no-gutters" id="user_resources">
+                        {% for resource in resources %}
+                        {% if (session.user_email|lower == resource.created_by|lower) %}
+                        <div class="col-md-6">
+                            <div class="card mb-4 black">
+                                <div class="mx-auto" style="height: 15rem">
+                                    <img class="my-lg-auto rounded-circle" style="width: 15rem" src="{{ resource.image }}" alt="{{ resource.name }}">
+                                </div>
+                                <div class="card-body px-2 grey darken-4">
+                                    <!-- display description -->
+                                    <a id="{{ loop.index }}" class="resource_link">
+                                        <h4 class="card-title fixed-height mb-0" required>{{ resource.description }}</h4>
+                                        <small class="text-muted">Click here to view more details</small>
+                                    </a>
+                                    <hr class="hr-light">
+                                    <!-- display other details when user decide to show them-->
+                                    <div class="row profile-label">
+                                        <div class="col-4">
+                                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Type:</p>
+                                        </div>
+                                        <div class="col-7">
+                                            <p >{{ resource.resource_category }}</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Description:</p>
+                                        </div>
+                                        <div class="col-7">
+                                            <p>{{ resource.description }}</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Link:</p>
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="{{ resource.link }}"><p class="resourcelink">{{ resource.link }}</p></a>
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Created By:</p>
+                                        </div>
+                                        <div class="col-7">
+                                            <p>{{ resource.created_by }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="row mx-2 mb-3">
+                                        <div class="col btn-group px-0 mx-0" role="group" aria-label="edit and delete buttons">
+                                            <!-- Edit button -->
+                                            <a href="{{ url_for('edit_resource', id=resource._id) }}" class="col btn btn-mdb-color px-4 mt-0 mx-0">Edit</a>
+                                            <!-- Delete button -->
+                                            <button type="button" class="col btn btn-blue-grey px-4 mt-0 mx-0"
+                                                data-toggle="modal" data-target="#modal{{resource._id}}">Delete</button>
+                                            <!-- Delete modal template from: https://mdbootstrap.com/docs/b4/jquery/modals/additional/-->
+                                            <div class="modal modal-notify fade mt-5" id="modal{{resource._id}}" tabindex="-1"
+                                                role="dialog" aria-labelledby="delete-modal" aria-hidden="true">
+                                                <div class="modal-dialog modal-sm modal-notify modal-info mt-5" role="document">
+                                                    <div class="modal-content bg-light text-center">
+                                                        <div class="modal-header justify-content-center">
+                                                            <p class="heading">Do you realy want to delete?</p>
+                                                        </div>
+                                                        <div class="mt-3 justify-content-center">
+                                                            <p class="heading text-dark"> {{ resource.description }} </p>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <i class="fas fa-times fa-4x animated rotateIn blue-grey-text"></i>
+                                                        </div>
+                                                        <div class="modal-footer flex-center">
+                                                            <a href="{{ url_for('delete_resource', id=resource._id) }}"
+                                                                class="btn btn-outline-blue-grey bg-primary text-warning waves-effect">Yes</a>
+                                                            <a type="button" class="btn btn btn-blue-grey waves-effect" data-dismiss="modal">No</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
 {% endblock %}
-
