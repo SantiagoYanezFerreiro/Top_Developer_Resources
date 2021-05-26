@@ -1,7 +1,68 @@
 {% extends "base.html" %}
-
 {% block content %}
 
 
-{% endblock %}
+<div class="row no-gutters add-resource-section">
+    <h1 class="sr-only">Add new resource</h1>
+    <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
+    <form class="card col offset"  method="POST" action="{{ url_for('new_resource') }}">
+        <div class="card-body elegant-color amber-text text-center rounded">
+            <!-- title -->
+            <h4 class="card-title text-uppercase">Add new resource</h4>
+            <hr class="hr-light mb-3 mb-sm-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- resource name -->
+                    <div class="row my-3">
+                        <label for="name" class="col-sm-3 px-1 col-form-label">Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="resource name" minlength="5" maxlength="30" required>
+                        </div>
+                    </div>
+                    <!-- resource type -->
+                    <div class="row my-3 mdl-selectfield">
+                        <label for="type" class="col-sm-3 px-1 col-form-label">Type</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="type" name="type" required>
+                                <option disabled>resource type</option>
+                                {% for option in type %}
+                                    <option value="{{ option.type }}">{{ option.type }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <!-- resource description -->
+                    <div class="row mt-3">
+                        <label for="description" class="col-sm-3 px-1 col-form-label">Description</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="description" name="description" placeholder="Description" minlength="5" maxlength="80" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- resource image -->
+                    <div class="row my-3">
+                        <label for="image" class="col-sm-3 px-1 col-lg-1 mx-lg-3 col-form-label">Image</label>
+                        <div class="col-sm-9 col-lg-10 pl-lg-4 pr-lg-0">
+                            <input type="url" class="form-control" id="image" name="image" placeholder="Image" required>
+                            <small class="text-muted mr-md-5">PLEASE INSERT URL LINK</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- buttons -->
+            <div class="row mx-0 my-3">
+                <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 btn-group px-0" role="group" aria-label="add resource and reset buttons">
+                    <!-- Add resource button -->
+                    <button type="submit" class="btn btn-blue-grey mx-1 mx-md-2 mx-xl-4 px-2">Add resource</button>
+                    <!-- Reset button -->
+                    <button type="reset" class="btn btn-mdb-color mx-1 mx-md-2 mx-xl-4 px-2">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 
+{% endblock %}
