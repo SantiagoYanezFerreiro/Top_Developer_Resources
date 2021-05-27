@@ -246,6 +246,7 @@ def new_type():
             return render_template("new_type.html")
     return redirect(url_for("home"))
 
+
 # Edit Type route
 @app.route("/edit_type/<id>", methods=["GET", "POST"])
 def edit_type(id):
@@ -288,7 +289,6 @@ def aboutus():
     Renders About page
     """
     return render_template("aboutus.html")
-
 
 
 @app.errorhandler(404)
