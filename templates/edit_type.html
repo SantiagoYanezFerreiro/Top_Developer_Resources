@@ -4,7 +4,7 @@
 <h1 class="sr-only">Edit resource type</h1>
 <div class="row no-gutters">
     <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
-    <form class="card col offset"  method="POST" action="{{ url_for('edit_type', id=type._id) }}">
+    <form class="card col offset"  method="POST" action="{{ url_for('edit_resource', id=type._id) }}">
         <div class="card-body elegant-color amber-text text-center rounded">
             <!-- title -->
             <h4 class="card-title text-uppercase">Edit resource type</h4>
@@ -15,7 +15,7 @@
                     <div class="row my-3 mx-sm-3 ml-md-2">
                         <label for="type" class="col-sm-3 col-form-label text-center">Type</label>
                         <div class="col-sm-9 col-xl-8">
-                            <input type="text" class="form-control" id="type" name="type" minlength="2" maxlength="25" value="{{ type.type }}" required>
+                            <input type="text" class="form-control" id="type" name="type" minlength="2" maxlength="25" value="{{ resource.resource_category }}" required>
                         </div>
                     </div>
                 </div>

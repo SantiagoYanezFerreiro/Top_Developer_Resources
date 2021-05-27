@@ -25,12 +25,12 @@
                         <div class="col-sm-9">
                             <select class="form-control" id="type" name="type" required>
                                 <option disabled>resource type</option>
-                                {% for option in type %}
+                                {% for option in resource_category %}
                                     <!-- compare resources and resource_type tables and display corect data -->
-                                    {% if option.type == resource.type %}
-                                        <option value="{{ option.type }}" selected>{{ option.type }}</option>
+                                    {% if option.resource_category == resource.type %}
+                                        <option value="{{ option.resource_category }}" selected>{{ option.resource_category }}</option>
                                     {% else %}
-                                        <option value="{{ option.type }}">{{ option.type }}</option>
+                                        <option value="{{ option.resource_category }}">{{ option.resource_category }}</option>
                                     {% endif %}
                                 {% endfor %}
                             </select>
