@@ -170,8 +170,8 @@ def new_resource():
             flash("New Resource Successfully Added")
             return redirect(url_for("profile", user_email=email))
         # read data and sort in ascending order
-        type = mongo.db.resource_type.find().sort("type", 1)
-        return render_template("new_resource.html", type=type)
+        resource_category = mongo.db.resource_type.find().sort("resource_category", 1)
+        return render_template("new_resource.html", resource_category=resource_category)
     return redirect(url_for("login"))
 
 
@@ -196,8 +196,8 @@ def edit_resource(id):
             return redirect(url_for("profile", user_email=email))
         resource = mongo.db.resources.find_one({"_id": ObjectId(id)})
         # read data and sort ascendingly
-        type = mongo.db.resource_type.find().sort("type", 1)
-        return render_template("edit_resource.html", resource=resource, type=type)
+        resource_category = mongo.db.resource_type.find().sort("resource_category", 1)
+        return render_template("edit_resource.html", resource_category=resource_category)
     return redirect(url_for("login"))
 
 
@@ -215,6 +215,63 @@ def delete_resource(id):
         else:
             return redirect(url_for(
                 "profile", user_email=session["user_email"]))
+
+
+# Types route
+@app.route("/types")
+def types():
+    if 'user_email' in session:
+        # check for admin email address
+        if session['user_email'] == "admin@coinscatalog.info":
+            # read type data from database and sort ascending
+            resource_category = list(mongo.db.coin_type.find().sort("resource_category", 1))
+            return render_template("types.html", resource_category=resource_category)
+    return redirect(url_for("home"))
+
+
+# Add Type route
+@app.route("/new_type", methods=["GET", "POST"])
+def new_type():
+    if 'user_email' in session:
+        # check for admin email address
+        if session['user_email'] == "admin@coinscatalog.info":
+            if request.method == "POST":
+                type = {
+                    "type": request.form.get("type")
+                }
+                # insert new type into database
+                mongo.db.coin_type.insert_one(type)
+                flash("New type added")
+                return redirect(url_for("types"))
+            return render_template("new_type.html")
+    return redirect(url_for("home"))
+
+# Edit Type route
+@app.route("/edit_type/<id>", methods=["GET", "POST"])
+def edit_type(id):
+    if 'user_email' in session:
+        # check for admin email address
+        if session['user_email'] == "admin@coinscatalog.info":
+            if request.method == "POST":
+                edit_type = {
+                    "type": request.form.get("type")
+                    }
+                # update type into database
+                mongo.db.coin_type.update({"_id": ObjectId(id)}, type_edit)
+                flash("Resource Type updated")
+                return redirect(url_for("types"))
+            # read type data from database
+            type = mongo.db.coin_type.find_one({"_id": ObjectId(id)})
+            return render_template("edit_type.html", type=type)
+    return redirect(url_for("home"))
+
+
+# Delete Type route
+@app.route("/delete_type/<id>")
+def delete_type(id):
+    mongo.db.coin_type.remove({"_id": ObjectId(id)})
+    flash("Resource type deleted")
+    return redirect(url_for("types.html"))
 
 
 @app.route("/contact")
