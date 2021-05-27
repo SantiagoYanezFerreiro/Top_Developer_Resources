@@ -24,9 +24,9 @@
                         <label for="type" class="col-sm-5 px-1 col-form-label">Type</label>
                         <div class="col-sm-5">
                             <select class="form-control" id="type" name="type" required>
-                                <option disabled>resource type</option>
-                                {% for option in type %}
-                                    <option value="{{ option.type }}">{{ option.type }}</option>
+                                <option disabled>resource category</option>
+                                {% for option in resource_category %}
+                                    <option value="{{option.resource_category}}">{{option.resource_category}}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -51,7 +51,6 @@
             <div class="row mx-0 my-3">
                 <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 btn-group px-0" role="group" aria-label="add resource and reset buttons">
                     <!-- Add resource button -->
-                
                     <button type="submit" class="btn btn-grey mx-1 mx-md-2 mx-xl-4 px-2">Add resource</button>
                     <!-- Reset button -->
                     <button type="reset" class="btn btn-grey mx-1 mx-md-2 mx-xl-4 px-2">Reset</button>
