@@ -18,6 +18,10 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.0/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        (function () { emailjs.init("user_59rL8k6Ivj5HRFMFHHbkg"); })();
+    </script>
     {% block styles %}
     {% endblock %}
     <title>Top Developer Resources</title>
