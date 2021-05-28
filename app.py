@@ -40,7 +40,7 @@ def register():
         registered_user = mongo.db.users.find_one(
             {"email": request.form.get("email").lower()})
         if  registered_user:
-            flash("Email already in use")
+            flash("Email already in use", "error")
             return redirect(url_for("register"))
         # Create a New Account
         newuseraccount = {
@@ -53,7 +53,7 @@ def register():
         mongo.db.users.insert_one(newuseraccount)
         # put the new user into 'session' cookie
         session["user_email"] = request.form.get("email").lower()
-        flash("Account Successfully Created!")
+        flash("Account Successfully Created!", "correct")
         return redirect(url_for("profile", user_email=session["user_email"]))
     return render_template("register.html")
 
@@ -69,7 +69,7 @@ def search():
     users = list(mongo.db.users.find())
     # check for search results
     if len(resources) == 0:
-        flash("No results, Please try again!")
+        flash("No results, Please try again!", "error")
         return redirect(url_for("home"))
     return render_template(
         "home.html", resources=resources, resources_list=resources_list, user_list=users)
@@ -95,7 +95,7 @@ def login():
                     "profile", user_email=session["user_email"]))
             else:
                 # invalid password match
-                flash("Incorrect Username and/or Password")
+                flash("Incorrect Username and/or Password", "error")
                 return redirect(url_for("login"))
         else:
             # username doesn't exist
@@ -109,7 +109,7 @@ def login():
 def logout():
     # remove user session and redirect to the login page
     if 'user_email' in session:
-        flash("You logged out succesfully")
+        flash("You logged out succesfully", "correct")
         session.pop("user_email")
         return redirect(url_for("home"))
     return render_template('home.html')
@@ -167,7 +167,7 @@ def new_resource():
             # insert resource on the database
             mongo.db.resources.insert_one(resource)
             email = session['user_email']
-            flash("New Resource Successfully Added")
+            flash("New Resource Successfully Added", "correct")
             return redirect(url_for("profile", user_email=email))
         # read data and sort in ascending order
         resource_category = mongo.db.resource_type.find().sort("resource_category", 1)
@@ -192,7 +192,7 @@ def edit_resource(id):
             # update resource in DDBB
             mongo.db.resources.update({"_id": ObjectId(id)}, resource_edit)
             email = session['user_email']
-            flash("resource details updated")
+            flash("resource details updated", "correct")
             return redirect(url_for("profile", user_email=email))
         resource = mongo.db.resources.find_one({"_id": ObjectId(id)})
         # read data and sort ascendingly
@@ -207,9 +207,9 @@ def delete_resource(id):
     # allow users to delete resources if they are logged in
     if 'user_email' in session:
         mongo.db.resources.remove({"_id": ObjectId(id)})
-        flash("resource deleted")
+        flash("resource deleted", "correct")
         # administrators are allowed to delete all resources 
-        if session['user_email'] == "admin@resourcesresources.info":
+        if session['user_email'] == "admin@topdevresources.com":
             return redirect(url_for("resources"))
         # if user redirect to users profile
         else:
@@ -222,7 +222,7 @@ def delete_resource(id):
 def types():
     if 'user_email' in session:
         # check for admin email address
-        if session['user_email'] == "admin@coinscatalog.info":
+        if session['user_email'] == "admin@topdevresources.com":
             # read type data from database and sort ascending
             resource_category = list(mongo.db.coin_type.find().sort("resource_category", 1))
             return render_template("types.html", resource_category=resource_category)
@@ -234,14 +234,14 @@ def types():
 def new_type():
     if 'user_email' in session:
         # check for admin email address
-        if session['user_email'] == "admin@coinscatalog.info":
+        if session['user_email'] == "admin@topdevresources.com":
             if request.method == "POST":
                 type = {
                     "type": request.form.get("type")
                 }
                 # insert new type into database
                 mongo.db.coin_type.insert_one(type)
-                flash("New type added")
+                flash("New type added", "correct")
                 return redirect(url_for("types"))
             return render_template("new_type.html")
     return redirect(url_for("home"))
@@ -252,14 +252,14 @@ def new_type():
 def edit_type(id):
     if 'user_email' in session:
         # check for admin email address
-        if session['user_email'] == "admin@coinscatalog.info":
+        if session['user_email'] == "admin@topdevresources.com":
             if request.method == "POST":
                 edit_type = {
                     "type": request.form.get("type")
                     }
                 # update type into database
                 mongo.db.coin_type.update({"_id": ObjectId(id)}, type_edit)
-                flash("Resource Type updated")
+                flash("Resource Type updated", "correct")
                 return redirect(url_for("types"))
             # read type data from database
             type = mongo.db.coin_type.find_one({"_id": ObjectId(id)})
@@ -271,7 +271,7 @@ def edit_type(id):
 @app.route("/delete_type/<id>")
 def delete_type(id):
     mongo.db.coin_type.remove({"_id": ObjectId(id)})
-    flash("Resource type deleted")
+    flash("Resource type deleted", "correct")
     return redirect(url_for("types.html"))
 
 

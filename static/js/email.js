@@ -1,10 +1,10 @@
 //use to receive the info submitted on the form in my personal email using EmailJS API
 
-function sendForm(contactForm) {
+function sendForm(contactform) {
     emailjs.send("service_zbsju9a", "topdevelopmenttemplate", {
-      "from_name": contactForm.name.value,
-      "from_email": contactForm.email.value,
-      "message": contactForm.request.value
+      "from_name": contactform.name.value,
+      "from_email": contactform.email.value,
+      "message": contactform.comments.value
     })
       //if the information is succesfully submited an alert will be displayed 
       .then(
