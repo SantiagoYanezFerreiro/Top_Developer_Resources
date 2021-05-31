@@ -21,6 +21,12 @@ h2{
     line-height: 1.5;
 }
 
+.flashmessage-text{
+    color:#fff;
+    background-color: 1d2228;
+    padding: 20px 0;
+}
+
 .offset{
     margin-left: 10%;
     margin-right: 10%;
@@ -29,6 +35,11 @@ h2{
 .wide-offset{
     margin-left: 20%;
     margin-right: 20%;
+}
+
+.big-offset{
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
 /* Home Page */
