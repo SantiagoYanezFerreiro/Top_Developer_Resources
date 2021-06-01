@@ -29,8 +29,7 @@ def home():
     Renders Home Page
     """
     resources = mongo.db.resources.find()
-    users = list(mongo.db.users.find())
-    return render_template("index.html", resources_list=resources_list, user_list=users)
+    return render_template("index.html", resources=resources)
     
 
 @app.route("/register", methods=["GET", "POST"])
@@ -65,14 +64,12 @@ def search():
     query = request.form.get("query")
     resources = list(mongo.db.resources.find({"$text": {"$search": query}}))
     # resources_list & users are for welcome screen for users that are not logged in
-    resources_list = list(mongo.db.resources.find())
-    users = list(mongo.db.users.find())
     # check for search results
     if len(resources) == 0:
         flash("No results, Please try again!", "error")
         return redirect(url_for("home"))
     return render_template(
-        "index.html", resources=resources, resources_list=resources_list, user_list=users)
+        "index.html", resources=resources)
 
 
 # Login route
