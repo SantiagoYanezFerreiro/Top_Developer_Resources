@@ -28,8 +28,7 @@ def home():
     """
     Renders Home Page
     """
-    resources = mongo.db.resources.find()
-    return render_template("index.html", resources=resources)
+    return render_template("index.html")
     
 
 @app.route("/register", methods=["GET", "POST"])
@@ -61,7 +60,7 @@ def register():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     # queries
-    query = request.form.get("query")
+    query = request.args.get("query")
     resources = list(mongo.db.resources.find({"$text": {"$search": query}}))
     # resources_list & users are for welcome screen for users that are not logged in
     # check for search results
