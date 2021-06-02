@@ -68,7 +68,7 @@ The Lato font is the main font of the website with Arial and sans-seriff as fall
 
 ### Imagery
 
-The images used are mmainly from Unsplash and Pexels.
+The images used are mainly from Unsplash and Pexels.
 
 ## Wireframes
 
@@ -84,47 +84,49 @@ I have included all Wireframes in another separate file:
 
 ### Home
 
-Home Page contains 3 sections:
-
-Search bar where user can search for resources.
-
-Call to Action for non registered Users -> Join Us Now! with the option to register.
-
-Latest Resources -> Latest Added Resources Displayed.
+Contains mainly a Search Bar within an Image Background that users can employ to search for learning resources. I used a Mongo DB Search Index to allow users based on the description and name of the learning resources. 
 
 ### Resources
 
-Library of Learning Resources. Used pagination of the bottom to organise them into pages.
+Library of Learning Resources. Used pagination of the bottom to organise them into pages. 
+
+Every learning resource is displayed on a card, being the picture on the left and the info about its type, description, link and created_by on the right
 
 ### Log In
 
-To allow users to log in. After succesfully having logged in, users get redirected to the profile page. A Register button for non-users can be found on this page.
+To allow users to log in. Users need to submit their email and password to do it. After succesfully having logged in, users get redirected to the profile page. A Register button for non-users can be found on this page.
 
 ### Register
 
-Page where is possible to create an account. A Login link is  also displayed for visitors that already have an account.
+Page where is possible to create an account by inputing First and Last Name, Email and a Password. A Login link is  also displayed for visitors that already have an account.
 
 ### Ad Resource
 
-Page used to add Learning Resources. All fields must be filled to complete the process. 
+Page used to add Learning Resources. All fields (Name, Type, Description and Image) must be filled to complete the process. 
 The form is validated and when submited succesfully the user gets redirected to their profile page. 
-There is also a reset button to clear all info.
-
-Ad Resource Link
+There is also a reset button to clear all inputted info.
 
 ### Profile
 
-User can see their profile details on this page User's added resources can be displayed under show learning resources button. Information can be edited and deletedd.
-Profile Link
+Users must have logged in to be able to access their profile page.
+On the top of the page there is a Welcome message including the name of the user.
+Then there is an image and a section with the user's details (First and Last name and Email Address).
+Below that, there is the section Your Resources with 3 Buttons to Add New Resources, Show all of Them and Hide Them.
 
 ### Log Out
 
 Log Out option to close the session and go back to the home page.
-Log Out Link
+
 
 ### About Us
 
-Section with general info about the site
+Section with general info about the site: Its purpose, how to use it and general information about the site.
+
+### Common Elements
+
+Refering to the Elements inherited from the base.html Template.
+
+They are the Flash Messages, the navigation menu with Links to the other pages and the footer with Social Media Links.
 
 ## Existing Features
 
@@ -284,8 +286,10 @@ It is an .xlsx file and will a compatible program like excel or google docs to o
 All links function and all images are in the Gitpod repository.
 
 ## Bugs & Problems found during Testing
-• 
+
+• Had problems implementing the search function logic and had to fix several syntax mistakes to make it work. But at the end, I got to fully understand the logic behind.  
 •
+
 
 ### Further Testing
 
