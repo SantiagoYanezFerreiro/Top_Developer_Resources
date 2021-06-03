@@ -191,91 +191,52 @@ The website passed all tests succesfully with no errors. An excel file with info
 
 ### User Story Testing 
 
-General User Goals
-
-- Users expect the site to have a clear purpose so that they can understand what it is intended for upon entering.
-It is clear from the site that is a go-to website for people that want to find resources to improve their coding skills
-
-- Users want to easily navigate the site and find the desired content quickly and easily.
-
-- Users expect the site to be responsive across all devices. 
-Tested on desktop, tablet and medium and small-sized devices.
-
-- Users want to have the option to contact the site owner to have their questions/requests answered. 
-They can do it using the contact form.
-
-Sign in/Signup Module.
-
-- Register easily and being able to login immediately after registration.
-They just need to fill the data and click login.
-
-- View/Edit personal details on their profile after having logged in. 
-Easily done by clicking on the edit button and changing the desired info.
-
-User Action Module
-
-- Discover New High Quality Learning Resources.
-All of the resources are displayed on the Resources page, which all users can access. 
-
-- Being able to do searches based on user criteria to find suited resources.
-Can be done by using the search box and typing there related keywords.
-
-- User’s ability to review learning resources from the site with info about each of them.
-
-
-Crud Operation Module
-
-- Users should be able to add new resources to the to the site. 
-Can be done using the Ad Resource Functionaly and inputing the required details of the resource.
-
-- Users should be able to edit their added learning resources in the site. 
-Can be done clicking on edit on the resource.
-
-- Users should be able to Delete them. 
-Users can do this by clicking on delete and confirming their choice.
-
-- Users should be getting a confirmation message on every action (Triggering email on action performed).
-Functionality done with Flash Messages.
-
-### High Level Test Classes
-![High Level Test Classes]()
+Done using the Test Cases present in the Excel Sheet (Refered as TC-Number)
 
 #### General User Goals
 
 - Users expect the site to have a clear purpose so that they can understand what it is intended for upon entering.
+It is clear from the site that is a go-to website for people that want to find resources to improve their coding skills
 
-- Users want to easily navigate the site and find the desired content quickly and easily.
+- Users want to easily navigate the site and find the desired content quickly and easily. Can be done by accessing the resources page and using the search function.
 
-- Users expect the site to be responsive across all devices.
+- Users expect the site to be responsive across all devices. TC001, TC002, TC003.
 
-- Users want to have the option to contact the site owner to have their questions/requests answered.
+- Users want to have the option to contact the site owner to have their questions/requests answered. TC011, TC012.
 
 #### Sign in/Signup Module.
 
-- Register easily and being able to login immediately after registration.
+- Register easily and being able to login immediately after registration. TC009.
 
-- View/Edit personal details on their profile after having logged in. 
+- View/Edit personal details on their profile after having logged in. TC014, TC015, TC016, TC017,TC018 & TC019. 
+
 
 #### User Action Module
 
-- Discover New High Quality Learning Resources 
+- Discover New High Quality Learning Resources. TC006, TC007 & TC008. 
 
-- Being able to do searches based on user criteria to find suited resources.
+- Being able to do searches based on user criteria to find suited resources. TC006.
 
-- User’s ability to review learning resources from the site with info about each of them
 
-#### CRUD Operation Module
+#### Crud Operation Module
 
-- Users should be able to add new resources to the to the site. 
+- Users should be able to add new resources to the to the site. TC015.
 
-- Users should be able to edit their added learning resources in the site. 
 
-- Users should be able to Delete them. 
+- Users should be able to edit their added learning resources in the site. TC018.
 
-- Users should be get a confirmation message on every action (Triggering email on action performed).
+
+- Users should be able to Delete them. TC019.
+
+
+- Users should be getting a confirmation message on every action (Triggering email on action performed).TC013.
+
+
+### High Level Test Classes
+![High Level Test Classes](https://github.com/SantiagoYanezFerreiro/Top_Developer_Resources/blob/master/Test_Results_MS3.xlsx)
 
 ### Test Results
-![Test Results]()
+![Test Results](static/images/TestResultsMS3.PNG)
 
 Complete Test Info can be found here ()
 
