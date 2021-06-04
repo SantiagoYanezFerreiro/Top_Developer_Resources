@@ -246,8 +246,7 @@ All links function and all images are in the Gitpod repository.
 ## Bugs & Problems found during Testing
 
 • Had problems implementing the search function logic and had to fix several syntax mistakes to make it work. 
-•
-
+• Had problems with the image sizes, needed to give it a though to decide how to make the resources card look as good as possible.
 
 ### Further Testing
 
