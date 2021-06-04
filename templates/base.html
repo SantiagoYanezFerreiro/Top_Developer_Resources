@@ -38,10 +38,16 @@
             <div id="Collapsiblenav" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto main-nav navbar-right">
                     <li class="nav-item"><a href="{{ url_for('resources') }}">Resources </a></li>
-                    <li class="nav-item"><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li class="nav-item"><a href="{{ url_for('register') }}">Register</a></li>
                     <li class="nav-item"><a href="{{ url_for('aboutus') }}">About Us</a></li>
                     <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+                    {% if session.user_email %} <!-- Displayed if user is logged in-->
+                    <li class="nav-item"><a href="{{ url_for('new_resource') }}">New Resource </a></li>
+                    <li class="nav-item"><a href="{{ url_for('profile', user_email=session['user_email']) }}">Profile</a></li>
+                    <li class="nav-item"><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% else %}    <!-- Displayed if user is not logged in-->
+                    <li class="nav-item"><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li class="nav-item"><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
