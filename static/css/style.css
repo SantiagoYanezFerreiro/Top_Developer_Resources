@@ -37,6 +37,11 @@ h2{
     margin-right: 20%;
 }
 
+.verywide-offset{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 .big-offset{
     margin-left: 35%;
     margin-right: 35%;
@@ -50,7 +55,7 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height:250px;
+    height:350px;
 }
 
 .navbar{
