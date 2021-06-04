@@ -232,13 +232,10 @@ It is clear from the site that is a go-to website for people that want to find r
 - Users should be getting a confirmation message on every action (Triggering email on action performed).TC013.
 
 
-### High Level Test Classes
-![High Level Test Classes](https://github.com/SantiagoYanezFerreiro/Top_Developer_Resources/blob/master/Test_Results_MS3.xlsx)
-
 ### Test Results
 ![Test Results](static/images/TestResultsMS3.PNG)
 
-Complete Test Info can be found here ()
+Complete Test Info can be found here (https://github.com/SantiagoYanezFerreiro/Top_Developer_Resources/blob/master/Test_Results_MS3.xlsx)
 
 It is an .xlsx file and will a compatible program like excel or google docs to open the file.
 
@@ -248,7 +245,7 @@ All links function and all images are in the Gitpod repository.
 
 ## Bugs & Problems found during Testing
 
-• Had problems implementing the search function logic and had to fix several syntax mistakes to make it work. But at the end, I got to fully understand the logic behind.  
+• Had problems implementing the search function logic and had to fix several syntax mistakes to make it work. 
 •
 
 
