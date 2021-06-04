@@ -321,7 +321,7 @@ it will get cloned.
 ## Media
 • Pictures are from Unsplash.com and Google Images.
 
-• The favicon was created using the resource ![Favicon](https://realfavicongenerator.net/)
+• The RealFavIconGenerator Page was created using the resource.
 
 ## Code
 
