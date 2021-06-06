@@ -2,10 +2,6 @@ $(document).ready(function () {
      // Hide Resources in the Profile Page
     $('#user_resources').hide();
     $('#hide_resources_btn').hide();
-    // Counter
-    $('.count-up').counter();
-    $('.count1').counter();
-    $('.count2').counter();
     // bootstrap tooltip functionality
     $('[data-toggle="tooltip"]').tooltip(); 
 });
