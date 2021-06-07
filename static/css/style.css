@@ -117,8 +117,8 @@ a:hover{
 }
 
 .textsection{
-    max-width:90ch;
-    font-size:110%;
+    max-width:80ch;
+    font-size:10%;
     line-height:2;
     color: #000;
 }
@@ -137,9 +137,9 @@ a.anchor-links:hover {
     font-size: 1rem;
 }
 
-.homepage-images {
+.aboutus-images {
     width: 85%;
-    height: 85%;
+    height: 90%;
     border: 3px solid 12151f;
 }
 
@@ -240,7 +240,7 @@ a .resourcelink{
 
 .contactbg{
     background-image: url("../images/programming5.jpg");
-    background-size:1000px;
+    background-size:1400px;
     background-position: top;
     background-repeat: no-repeat;
 }
