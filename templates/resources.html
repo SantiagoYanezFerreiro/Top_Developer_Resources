@@ -4,8 +4,7 @@
 
 <h1 class="sr-only">Catalog</h1>
 <div class="card wide-offset elegant-color rounded pt-3 mb-4 mt-4">
-    <h1 class="text-center text-capitalize mb-0">Development Resources catalog</h1>
-    <hr class="hr-light mx-4 mx-md-5">
+    <h1 class="text-center text-capitalize mb-3">Development Resources catalog</h1>
 </div>
 
 {% for resource in resources %}
@@ -21,25 +20,25 @@
                     <h2 class="card-title text-center my-4 col-12">{{ resource.name }}</h2>
                     <div class="row col-form-label">
                         <div class="col-4">
-                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Type:</p>
+                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Type</p>
                         </div>
                         <div class="col-7">
                             <p >{{ resource.resource_category }}</p>
                         </div>
                         <div class="col-4">
-                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Description:</p>
+                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Description</p>
                         </div>
                         <div class="col-7">
                             <p>{{ resource.description }}</p>
                         </div>
                         <div class="col-4">
-                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Link:</p>
+                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Link</p>
                         </div>
                         <div class="col-7">
                             <a href="{{ resource.link }}"><p class="resourcelink">{{ resource.link }}</p></a>
                         </div>
                         <div class="col-4">
-                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Created By:</p>
+                            <p class="ml-1 ml-sm-5 mx-lg-3 ml-xl-5">Created By</p>
                         </div>
                         <div class="col-7">
                             <p>{{ resource.created_by }}</p>
