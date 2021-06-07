@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="row offset my-5">
+<div class="row offset my-5 mb-3">
     <div class="col-8 center-align">
         <h1 class="textsection-title">Want to find the best learning resources used by Developers</h1>
         <p class="textsection"> Top Developer Resources is your one stop platform for Learning Resources. Whether you want to discover useful resources,
@@ -13,23 +13,23 @@
     </div>
     <div class="col-4 center-align no-padding"> 
         <img src="../static/images/learning4.jpg" alt="Learning Resources image" 
-                class="center-align responsive-img homepage-images">
+                class="center-align responsive-img aboutus-images">
     </div>
 </div>
-<div class="row offset mb-1">
+    <div class="row offset mb-3">
+        <div class="col-4 center-align no-padding">
+            <img src="../static/images/learning3.jpg" alt="Learning Resources image" 
+                class="center-align responsive-img aboutus-images">
+    </div>
     <div class="col-8 center-align">
         <h2 class="textsection-title">Just want to add a Learning Resource to the Platform?</h2>
         <p class="textsection"> You can easily do it by creating an account and clicking on Add Resource Introducing all Required Info.
         </p>
         <span class="textsection">Simply <a href="{{ url_for('register') }}" class="home-links">sign up</a> and create a Resource!</span>
     </div>
-    <div class="col-4 center-align no-padding">
-            <img src="../static/images/learning3.jpg" alt="Learning Resources image" 
-                class="center-align responsive-img homepage-images">
-    </div>
 </div>
-<div class="row offset homepage-textsection mb-1">
-    <div class="col-12 center-align">
+<div class="row offset homepage-textsection mb-3">
+    <div class="col-8 center-align">
         <h2 class="textsection-title" id="about">Who We Are</h2>
         <p class="textsection">
             Top Developer Resources is a community website where people can share the top resources they used in their Software Development Learning 
@@ -37,6 +37,10 @@
             Our aim is to create a community where developers can help each other so that everybody benefits from the experience.
         </p>
         <span class="textsection">Got any suggestion? <a href="{{ url_for('contact') }}" class="home-links">Contact us</a></span>
+    </div>
+    <div class="col-4 center-align no-padding">
+        <img src="../static/images/programming5.jpg" alt="Learning Resources image" 
+            class="center-align responsive-img aboutus-images">
     </div>
 </div>
 
