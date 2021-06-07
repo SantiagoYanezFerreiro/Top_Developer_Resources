@@ -55,7 +55,16 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height:350px;
+    height:300px;
+}
+
+.search-btn{
+    width:100px;
+}
+
+.form-control::placeholder{
+    font-weight:900;
+    color:#fff;
 }
 
 .navbar{
