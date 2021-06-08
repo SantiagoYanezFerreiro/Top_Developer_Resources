@@ -47,13 +47,7 @@ User Action Module
 - User’s ability to review learning resources from the site with info about each of them
 
 Crud Operation Module
-
-- Users should be able to add new resources to the to the site. 
-
-- Users should be able to edit their added learning resources in the site. 
-
-- Users should be able to Delete them. 
-
+te
 - Users should be get a confirmation message on every action (Triggering email on action performed).
 
 ## Design
@@ -72,7 +66,8 @@ The images used are mainly from Unsplash and Pexels.
 
 ## Wireframes
 
-I have included all Wireframes in another separate file: [Wireframes File](Readme/Testing Files/wireframes.md)
+I have included all Wireframes in another separate file: 
+![Wireframes File](Readme/Testing Files/wireframes.md)
 
 ## Modifications from the Original Wireframes
 
@@ -232,7 +227,7 @@ It is clear from the site that is a go-to website for people that want to find r
 
 
 ### Test Results
-[Test Results](static/images/TestResultsMS3.PNG)
+![Test Results](static/images/TestResultsMS3.PNG)
 
 Complete Test Info can be found here (/workspace/Top_Developer_Resources/Readme/Testing Files/Test_Results_MS3.xlsx)
 
