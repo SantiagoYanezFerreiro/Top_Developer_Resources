@@ -14,7 +14,7 @@ function sendForm(contactform) {
           window.location.href="https://8080-jade-hawk-h4llo5iu.ws-eu08.gitpod.io/";
         },
         function (error) {
-          console.log("Sth weng wrong, please try again", error);
+          console.log("Something weng wrong, please try again", error);
         },
     );
     return false; // To prevent a new page from loading
