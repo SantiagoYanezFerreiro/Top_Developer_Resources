@@ -117,7 +117,7 @@ a:hover{
 
 .textsection{
     max-width:80ch;
-    font-size:10%;
+    font-size:110%;
     line-height:2;
     color: #000;
 }
@@ -140,6 +140,20 @@ a.anchor-links:hover {
     width: 85%;
     height: 90%;
     border: 3px solid 12151f;
+}
+
+/* push footer to the bottom of the page*/
+
+.content{
+    min-height: calc(80vh - 100px);
+}
+
+footer{
+    height: 100px;
+}
+
+footer .container{
+    margin-bottom:20px;
 }
 
 /*****Forms****/

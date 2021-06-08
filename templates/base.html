@@ -27,6 +27,7 @@
     <title>Top Developer Resources</title>
 </head>
 <body>
+    <section class="content">
     <header>
         <nav id="fullnavmenu" class="navbar navbar-expand-md navmenu">
             <a href="{{ url_for('home') }}" class="companylogo">
@@ -71,7 +72,7 @@
     <!--<h1>Top Developer Resources</h1>-->
     {% block content %}
     {% endblock %}
-
+    </section>
     <footer class="py-5 pt-2">
          <div class="container">
             <div class="row">
@@ -94,7 +95,7 @@
             </div>
             <p class="m-0 text-center btn-color copyright">Copyright &copy; Top Developer Resources 2021</p>
          </div>
-      </footer>
+    </footer>
 
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
