@@ -67,7 +67,7 @@ The images used are mainly from Unsplash and Pexels.
 ## Wireframes
 
 I have included all Wireframes in another separate file: 
-![Wireframes File](Readme/Testing Files/wireframes.md)
+![Wireframes File](ReadmeFiles/wireframes.md)
 
 ## Modifications from the Original Wireframes
 
@@ -229,7 +229,8 @@ It is clear from the site that is a go-to website for people that want to find r
 ### Test Results
 ![Test Results](static/images/TestResultsMS3.PNG)
 
-Complete Test Info can be found here (/workspace/Top_Developer_Resources/Readme/Testing Files/Test_Results_MS3.xlsx)
+Complete Test Info can be found here 
+![Test Results File](ReadmeFiles/Test_Results_MS3.xlsx)
 
 It is an .xlsx file and will a compatible program like excel or google docs to open the file.
 
