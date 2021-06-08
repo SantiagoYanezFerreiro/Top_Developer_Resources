@@ -49,7 +49,7 @@ h2{
 
 /* Home Page */
 
-#search_img{
+.search_img{
     background-image: url('../images/learning2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -194,7 +194,7 @@ label{
 /************resources******/
 
 .transparent-bg{
-    background-color:transparent !important;
+    background-color:transparent;
 }
 
 .resources-bg{
