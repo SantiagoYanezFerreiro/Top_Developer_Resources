@@ -270,3 +270,8 @@ a .resourcelink{
     color:#000;
     font-weight:500;
 }
+
+.main-content{
+    padding-top:5%;
+    padding-bottom:5%;
+}
