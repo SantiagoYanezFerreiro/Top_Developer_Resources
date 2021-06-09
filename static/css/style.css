@@ -257,9 +257,14 @@ a .resourcelink{
 
 .contactbg{
     background-image: url("../images/programming5.jpg");
-    background-size:1400px;
-    background-position: top;
+    background-size:100% 100%;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
+.title-form{
+    font-weight:900;
+}
 
+
+contact-form{}

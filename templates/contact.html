@@ -2,16 +2,17 @@
 {% block content %}
 
 
-<div class="row no-gutters wide-offset mt-5">
-    <div class="card col-sm-12 contactbg">
-        <h1 class="sr-only">Contact Us</h1>
-        <div class="card-body elegant-color amber-text text-center p-left text-transfer pb-0">
-            <h1 class="card-title text-capitalize">Contact us!</h1>
+<div class="row no-gutters offset mt-5">
+    <div class="col-sm-12">
+        <div class="card-body elegant-color amber-text text-center text-transfer pb-1 wide-offset">
+            <h1 class="card-title title-form text-capitalize">Contact us!</h1>
         </div>
-        <div class="card-body contactform wide-offset">
+        <div class="card-body wide-offset">
             <form onsubmit="return sendForm(this);"> 
-                <div class="form row">
-                    <div class="col-sm-12">
+                <div class="form contact-form row">
+                    <div class="col-sm-6 contactbg">
+                    </div>
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" name="name"  id="name" required>
