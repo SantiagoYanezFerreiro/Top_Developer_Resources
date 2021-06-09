@@ -11,7 +11,7 @@ function sendForm(contactform) {
         function (response) {
           console.log("form succesfully submited", response);
           alert('Thank you for contacting us, we will get back to you soon!');
-          window.location.href="https://8080-jade-hawk-h4llo5iu.ws-eu08.gitpod.io/";
+          window.location.href="/";
         },
         function (error) {
           console.log("Something weng wrong, please try again", error);
