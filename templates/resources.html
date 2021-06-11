@@ -4,7 +4,7 @@
 
 <h1 class="sr-only">Catalog</h1>
 <div class="card wide-offset elegant-color rounded pt-3 mb-4 mt-4">
-    <h1 class="text-center text-capitalize mb-3">Development Resources catalog</h1>
+    <h1 class="text-center text-capitalize mb-3 resources-heading">Development Resources catalog</h1>
 </div>
 
 {% for resource in resources %}
@@ -16,7 +16,7 @@
                     <img class="my-lg-auto" src="{{ resource.image }}" alt="{{ resource.image }}">
                 </div>
                 <!--Card content-->
-                <div class="col elegant-color card-content">
+                <div class="col card-content">
                     <h2 class="card-title text-center my-4 col-12">{{ resource.name }}</h2>
                     <div class="row col-form-label">
                         <div class="col-4">
