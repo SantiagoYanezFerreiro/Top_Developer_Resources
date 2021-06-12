@@ -10,36 +10,36 @@
                     <img class="card-img-top profile-img" src="../static/images/programming14.jpg" alt="Profile Img">
                 </div>
                 <div class="card-body elegant-color amber-text text-center p-left text-transfer pb-0">
-                    <h4 class="card-title text-uppercase">Your profile details</h4>
+                    <h4 class="card-title text-capitalize">Your profile details</h4>
                     <hr class="hr-light">
                     <div class="row my-3">
                         <div class="col">
-                            <p class="profile-label text-right"><i class="fas fa-user-tie mx-3"></i>First name:</p>
+                            <p class="profile-label  text-right label-name"><i class="fas fa-user-tie mr-2"></i>First name:</p>
                         </div>
                         <div class="col">
-                            <p class="profile-label text-left ml-sm-4">{{ data.first_name.capitalize() }}</p>
+                            <p class="profile-label  text-left ml-sm-4 label-data">{{ data.first_name.capitalize() }}</p>
                         </div>
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <p class="profile-label text-right"><i class="fas fa-user-tie mx-3"></i>Last name:</p>
+                            <p class="profile-label  text-right label-name"><i class="fas fa-user-tie mr-2"></i>Last name:</p>
                         </div>
                         <div class="col">
-                            <p class="profile-label text-left ml-sm-4">{{ data.last_name.capitalize() }}</p>
+                            <p class="profile-label  text-left ml-sm-4 label-data">{{ data.last_name.capitalize() }}</p>
                         </div>
                     </div>
-                    <div class="row mt-3">
+                    <div class="row my-3">
                         <div class="col">
-                            <p class="profile-label text-right"><i class="fas fa-envelope mx-2"></i>Email address:</p>
+                            <p class="profile-label  text-right label-name"><i class="fas fa-envelope mr-2"></i>Email:</p>
                         </div>
                         <div class="col">
-                            <p class="profile-label text-left ml-sm-4">{{ data.email }}</p>
+                            <p class="profile-label  text-left ml-sm-4 label-data">{{ data.email }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="card-body elegant-color amber-text text-center rounded-bottom pt-0">
+                <div class="card-body elegant-color text-center rounded-bottom pt-0">
                     <hr class="hr-light">
-                    <h4 class="card-title text-uppercase">Your resources:</h4>
+                    <h4 class="card-title text-capitalize">Your resources</h4>
                     <!-- Add Resource -->
                     <a href="{{ url_for('new_resource') }}" class="btn btn-grey col col-md-3 px-md-3 mt-0 mx-0">Add New resource</a>
                     <!-- show resources -->
