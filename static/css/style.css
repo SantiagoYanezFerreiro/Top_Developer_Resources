@@ -66,11 +66,16 @@ h2{
     color:#fff;
 }
 
+.search-bar{
+    margin-left:20px;
+    margin-right:20px;
+}
+
 .navbar{
     margin-top:0px;
     box-shadow:none;
-    background-color:black;
 }
+
 .navbar li a, .companylogo{
     font-size:150%;
     font-weight:700;
@@ -97,6 +102,12 @@ h2{
 a, .copyright{
     color: #000;
     font-size:130%;
+}
+
+.navbar-toggler-icon{
+    color:white;
+    padding:10px;
+    display:block;
 }
 
 a:hover{
@@ -294,3 +305,55 @@ a .resourcelink{
     padding-top:10%;
     padding-bottom:0%;
 }
+
+
+
+/* Media Queries */
+
+/* ctalog*/
+
+/* Media Query for background image on large screens */
+@media (min-width: 1200px){
+    .img-backgrund img {
+        left: 2.25em;
+    }
+}
+
+@media (min-width: 992px){
+    .img-backgrund img {
+        position: absolute;
+        max-width: 367px;
+    }
+}
+
+@media (min-width: 768px){
+    .img-backgrund img {
+        max-width: 550px;
+    }
+}
+
+/* media edit */
+
+@media (max-width: 575px){
+    .offset label {
+        text-align: center;
+    }
+}
+
+/* profile */
+
+@media (max-width: 430px){
+    .text-transfer .text-right{
+        text-align: left !important;
+        width: 260px;
+        padding-left: 1em;
+    }
+    .text-right .fa-envelope{
+        padding-left: 0.5em;
+        padding-right: 0.2em;
+    }
+    .text-left{
+       padding-left: 3.85em;
+    }
+}
+
