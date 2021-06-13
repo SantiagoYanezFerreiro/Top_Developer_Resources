@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 class="sr-only">Edit resource</h1>
-<div class="row no-gutters">
+
+<div class="row no-gutters editresource-section mt-4">
+    <h1 class="sr-only mt-3">Edit resource</h1>
     <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
     <form class="card col offset"  method="POST" action="{{ url_for('edit_resource', id=resource._id) }}">
         <div class="card-body elegant-color amber-text text-center rounded">
@@ -10,19 +11,19 @@
             <h4 class="card-title text-uppercase">Edit resource</h4>
             <hr class="hr-light mb-3 mb-sm-5">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <!-- resource name -->
-                    <div class="row my-3">
-                        <label for="name" class="col-sm-3 px-1 col-form-label">Name</label>
-                        <div class="col-sm-9">
+                    <div class="row">
+                        <label for="name" class="col-sm-4 px-1 col-editresource-label">Name</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" id="name" name="name" placeholder="resource name" minlength="5"
                                 maxlength="30" value="{{ resource.name }}" required>
                         </div>
                     </div>
                     <!-- resource type -->
                     <div class="row my-3 mdl-selectfield">
-                        <label for="type" class="col-sm-3 px-1 col-form-label">Type</label>
-                        <div class="col-sm-9">
+                        <label for="type" class="col-sm-4 px-1 col-editresource-label">Type</label>
+                        <div class="col-sm-5">
                             <select class="form-control" id="type" name="type" required>
                                 <option disabled>resource type</option>
                                 {% for option in resource_category %}
@@ -37,25 +38,22 @@
                         </div>
                     </div>
                     <!-- resource description -->
-                    <div class="row mt-3">
-                        <label for="description" class="col-sm-3 px-1 col-form-label">Description</label>
-                        <div class="col-sm-9">
+                    <div class="row mt-3">            
+                        <label for="description" class="col-sm-4 px-1 col-editresource-label">Description</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" id="description" name="description"
                                 placeholder="Description" minlength="5" maxlength="80" value="{{ resource.description }}" required>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
                     <!-- resource image -->
-                    <div class="row my-3">
-                        <label for="image" class="col-sm-3 px-1 col-lg-1 mx-lg-3 col-form-label">Image</label>
-                        <div class="col-sm-9 col-lg-10 pl-lg-4 pr-lg-0">
+                    <div class="row mt-3 mb-3">
+                        <label for="image" class="col-sm-4 px-1 col-editresource-label">Image</label>
+                        <div class="col-sm-5">
                             <input type="url" class="form-control" id="image" name="image" placeholder="Image" value="{{ resource.image }}" required>
                             <small class="text-muted mr-md-5">PLEASE INSERT URL LINK</small>
                         </div>
                     </div>
+                     <!-- resource image -->
                 </div>
             </div>
             <!-- buttons -->

@@ -212,7 +212,7 @@ label{
     font-size:80%;
 }
 
-.col-newresource-label{
+.col-editresource-label, .col-editresource-label{
     text-align:right;
 }
 
@@ -396,7 +396,7 @@ a .resourcelink{
         max-width:200px;
         max-height:100px;
     }
-    .col-newresource-label {
+    .col-newresource-label, .col-editresource-label {
         text-align: center;
     }
     .register-section, .login-section, .flashmessage{
