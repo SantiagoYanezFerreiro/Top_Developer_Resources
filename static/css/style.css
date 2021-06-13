@@ -2,7 +2,7 @@ body{
     color:#1d2228;
     background-color:#e1e2e2;
     font-size:15px;
-    font-style: Arial, Sans-seriff;
+    font-family: Arial, Sans-seriff;
 }
 
 h1, h2, label, form i {
@@ -165,7 +165,7 @@ a.anchor-links:hover {
 .aboutus-images {
     width: 85%;
     height: 90%;
-    border: 3px solid 12151f;
+    border: 3px solid #12151f;
 }
 
 /* push footer to the bottom of the page*/
@@ -189,7 +189,7 @@ footer .container{
 }
 
 label{
-    font-weight:900px;
+    font-weight:900;
     font-size:120%;
     color:#fff;
 }

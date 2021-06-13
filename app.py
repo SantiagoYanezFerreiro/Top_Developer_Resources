@@ -187,12 +187,12 @@ def edit_resource(id):
             # update resource in DDBB
             mongo.db.resources.update({"_id": ObjectId(id)}, resource_edit)
             email = session['user_email']
-            flash("resource details updated", "correct")
+            flash("resource details updated")
             return redirect(url_for("profile", user_email=email))
         resource = mongo.db.resources.find_one({"_id": ObjectId(id)})
         # read data and sort ascendingly
         resource_category = mongo.db.resource_type.find().sort("resource_category", 1)
-        return render_template("edit_resource.html", resource_category=resource_category)
+        return render_template("edit_resource.html", resource_category=resource_category, resource=resource)
     return redirect(url_for("login"))
 
 
