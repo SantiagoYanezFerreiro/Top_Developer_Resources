@@ -376,6 +376,9 @@ a .resourcelink{
         max-width:200px;
         max-height:100px;
     }
+    .col-newresource-label {
+        text-align: center;
+    }
   }
     
   /*Small phones - from 0 to 480 px  */
@@ -383,7 +386,11 @@ a .resourcelink{
     .profile-label{
         font-size:60%;
     }
-   
+}
+
   /* VerySmall phones - from 0 to 430 px  
   
   @media only screen and (max-width:430px) {} */
+   
+
+}}
