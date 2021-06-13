@@ -86,9 +86,7 @@ Contains mainly a Search Bar within an Image Background that users can employ to
 
 ### Resources
 
-Library of Learning Resources. Used pagination of the bottom to organise them into pages. 
-
-Every learning resource is displayed on a card, being the picture on the left and the info about its type, description, link and created_by on the right
+Library of Learning Resources. Every learning resource is displayed on a card, being the picture on the left and the info about its type, description, link and created_by on the right
 
 ### Log In
 
@@ -114,7 +112,6 @@ Below that, there is the section Your Resources with 3 Buttons to Add New Resour
 ### Log Out
 
 Log Out option to close the session and go back to the home page.
-
 
 ### About Us
 
@@ -142,28 +139,63 @@ They are the Flash Messages, the navigation menu with Links to the other pages a
 
 • ****Contact Page - Users can contact through the form with the company regarding requests/doubts. 
 
-## Database schema
+## Database Design
 
-The Database consists of  3 tables:
+MongoDB Object format examples:
 
-resources
-resource_type
-users
+Collection: resources
+{
+    _id:605baeaf012daf172f09a4e4
+    resource_category: "Online Education"
+    name:"React - The Complete Guide (incl Hooks, React Router, Redux) "
+    description: "Learn React or dive deeper into it. Learn the theory, solve assignment..."
+    created_by: "SantiagoYanezDub"
+    link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bi..."
+}
 
-The tables and their fields can be seen in the following image:
+Collection: resource_type
+{
+    _id :608abaab4471e2698e7cc453
+    resource_category: "Presential Education"
+}
 
-![Database Schema](static/images/databaseworkschema.PNG)
+Collection: users
+{
+    _id :60a403e6995a56291422199c
+    first_name: "santiago"
+    last_name: "hernandez"
+    email: "santiagohernandez@gmail.com"
+    password :"asdasdasd21345!XDA"
+}
 
-database schema:
+Security
+
+Database connection details are in an env.py file for development. For security reasons this is not uploaded to GitHub so that database and connection details are not visible to users. 
 
 ## Features to Implement in the future
 
 Transform the urls from the resources into affiliate links so that they will be profitable for the company.
 Courses Recommendations based on the user profile.
 Blog & Relevant News Section about Software Development.
+Include an option to review the different resources and filter them based on the reviews.
 
 ## Technologies Used
 • HTML, CSS & JavaScript Programming Languages
+
+• Pytho Python was used for the back-end logic and the means to run/view the Website.
+Python Modules used:
+click==7.1.2
+DateTime==4.3
+dnspython==2.1.0
+Flask==1.1.2
+flask-paginate==0.8.1
+Flask-PyMongo==2.3.0
+itsdangerous==1.1.0
+pymongo==3.11.3
+pytz==2021.1
+Werkzeug==1.0.1
+zope.interface==5.4.0
 
 • GitPod – Used as the Development IDE.
 
@@ -238,7 +270,6 @@ Complete Test Info can be found here
 
 It is an .xlsx file and will a compatible program like excel or google docs to open the file.
 
-
 ## Links and images
 All links function and all images are in the Gitpod repository.
 
@@ -257,9 +288,8 @@ Then connected my GitHub account to Heroku and set up Automatic deployment in He
 To run this project follow below steps:
 
 MongoDb:
-    Setup MongoDB account, 
-    Setup atlas here
-    Create a cluster 
+    Setup MongoDB account and atlas.
+    Create a cluster.
     Create new Database learning_resources and add 3 collections: resources, resource_type, users.
 
 Github:
@@ -270,7 +300,6 @@ Github:
     Run the repository from your GitHub repository clicking on the Gitpod button.
 
 Gitpod:
-
     Create env.py file
 
     Add env.py file to gitignore
@@ -294,13 +323,11 @@ Gitpod:
 Deploy a project to Heroku:
 
     Create a Heroku account and Log in on it
-    From dashboard click new > create new app
-    Add the desired name in the App name field
+    From dashboard click new > create new app and add the desired name.
     When connected, click on settings > Config Vars and add key and value pairs. Variables shoud be the same as in the env.py file
     From Deploy open Automatic deployment and Connect to GitHub section, then click on github username and repository name
     Heroku will receive all info from your Github repository. Wait for the succesfully completed message.
     Click Open App from top right corner to view the app in a new window.
-
 
 ## Cloning
 
