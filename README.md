@@ -145,6 +145,7 @@ MongoDB Object format examples:
 
 Collection: resources
 {
+
     _id:605baeaf012daf172f09a4e4
 
     resource_category: "Online Education"
@@ -162,6 +163,7 @@ Collection: resources
 
 Collection: resource_type
 {
+
     _id :608abaab4471e2698e7cc453
 
     resource_category: "Presential Education"
@@ -169,6 +171,7 @@ Collection: resource_type
 
 Collection: users
 {
+    
     _id :60a403e6995a56291422199c
 
     first_name: "santiago"
@@ -176,7 +179,7 @@ Collection: users
     last_name: "hernandez"
 
     email: "santiagohernandez@gmail.com"
-    
+
     password :"asdasdasd21345!XDA"
 }
 
