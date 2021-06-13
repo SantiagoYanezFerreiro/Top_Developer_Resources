@@ -146,26 +146,37 @@ MongoDB Object format examples:
 Collection: resources
 {
     _id:605baeaf012daf172f09a4e4
+
     resource_category: "Online Education"
+
     name:"React - The Complete Guide (incl Hooks, React Router, Redux) "
+
     description: "Learn React or dive deeper into it. Learn the theory, solve assignment..."
+
     created_by: "SantiagoYanezDub"
+
     link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bi..."
 }
 
 Collection: resource_type
 {
     _id :608abaab4471e2698e7cc453
+
     resource_category: "Presential Education"
 }
 
 Collection: users
 {
     _id :60a403e6995a56291422199c
+
     first_name: "santiago"
+
     last_name: "hernandez"
+
     email: "santiagohernandez@gmail.com"
+    
     password :"asdasdasd21345!XDA"
 }
 
@@ -185,16 +196,27 @@ Include an option to review the different resources and filter them based on the
 
 • Pytho Python was used for the back-end logic and the means to run/view the Website.
 Python Modules used:
+
 click==7.1.2
+
 DateTime==4.3
+
 dnspython==2.1.0
+
 Flask==1.1.2
+
 flask-paginate==0.8.1
+
 Flask-PyMongo==2.3.0
+
 itsdangerous==1.1.0
+
 pymongo==3.11.3
+
 pytz==2021.1
+
 Werkzeug==1.0.1
+
 zope.interface==5.4.0
 
 • GitPod – Used as the Development IDE.
