@@ -10,15 +10,13 @@
 
 Top Developer Resources is a community website where people can share the top resources they used in their Software Development Learning journey so that other people can profit from them and reach their Development goals faster (getting a job, learning a new language, etc).
 
-It is a website where community can share useful materials they used to develop their skills. All users can search through dataset provided by community members. 
+It is a website where the community can share useful materials they used to develop their skills. All users can search through dataset provided by community members. 
 Registered users can create, edit or delete their own dataset. Upon registering, users can add assets to the website.  
 
 Only the admin has permission to delete assets. The goal of this is preventing malicious users from undoing the hard work of other users. 
-All users can read other users reviews  The user can read other users reviews and create, update and delete their own reviews. 
 
-User have a profile page where info about their username, bio and an icon are displayed.  
-My biggest hope is that Top Developer Resources will give valuable information to every person interested in developing their Coding Skills.
-This is an educational project only.
+User have a profile page where info about their account is displayed.  
+My biggest hope is that Top Developer Resources will give valuable information to every person interested in developing their Coding Skills. This is an educational project only.
 
 ## User Stories
 
@@ -47,8 +45,14 @@ User Action Module
 - User’s ability to review learning resources from the site with info about each of them
 
 Crud Operation Module
-te
-- Users should be get a confirmation message on every action (Triggering email on action performed).
+
+- Users should be able to add new resources to the to the site.
+
+- Users should be able to edit their added learning resources in the site. 
+
+- Users should be able to Delete them. 
+
+- Users should be getting a confirmation message on every action (Triggering email on action performed).
 
 ## Design
 
@@ -58,7 +62,7 @@ The main colors user on the site are grey (#e1e2e2), used for the background, , 
 
 ### Typography
 
-The Lato font is the main font of the website with Arial and sans-seriff as fallback. I opted for Lato because it's a sans-seriff that looks stylish and is easy to read.
+Arial is the main font used and sans-seriff as fallback. I opted for them because they looks stylish and are easy to read.
 
 ### Imagery
 

@@ -2,35 +2,35 @@
 
 ### Home Page
    
-![Home Page](static/images/wireframeadresource.png)
+![Home Page](../static/images/wireframeadresource.png)
 
 ### Home Page Mobile Layout
 
-![Home Page Mobile](static/images/wireframehomemobile.png)
+![Home Page Mobile](../static/images/wireframehomemobile.png)
 
 ### Resources
 
-![Resources Page](static/images/wireframeresources.png)
+![Resources Page](../static/images/wireframeresources.png)
 
 ### Resources Mobile Layout
 
-![Resources Mobile](static/images/wireframeresourcesmobile.png)
+![Resources Mobile](../static/images/wireframeresourcesmobile.png)
 
 ### Ad Resource Page
    
-![Ad Resource Page](static/images/wireframeadresource.png)
+![Ad Resource Page](../static/images/wireframeadresource.png)
 
 ### Ad Resource Page Mobile
    
-![Ad Resource Page Mobile](static/images/wireframeadresourcesmobile.png)
+![Ad Resource Page Mobile](../static/images/wireframeadresourcesmobile.png)
 
 ### Log In Layout
 
-![Log In Page](static/images/wireframelogin.png)
+![Log In Page](../static/images/wireframelogin.png)
 
 ### Log In Mobile Layout
 
-![Log In Page Mobile](static/images/wireframeloginmobile.png)
+![Log In Page Mobile](../static/images/wireframeloginmobile.png)
    
 ### Sign Up Page
    
