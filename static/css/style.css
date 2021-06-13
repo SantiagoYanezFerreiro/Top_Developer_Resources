@@ -357,13 +357,17 @@ a .resourcelink{
         max-width:250px;
         max-height:100px;
     }
+    .profile-section{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
   }
 
   /*Small phones to small tablets - from 481 to 767 px  */
   
   @media only screen and (max-width: 767px) {
     .profile-label{
-        font-size:60%;
+        font-size:85%;
     }
     .navbar li a, .companylogo{
         font-size:90%;
@@ -384,13 +388,12 @@ a .resourcelink{
   /*Small phones - from 0 to 480 px  */
   @media only screen and (max-width:480px) {
     .profile-label{
-        font-size:60%;
+        font-size:70%;
     }
 }
 
   /* VerySmall phones - from 0 to 430 px  
   
   @media only screen and (max-width:430px) {} */
-   
 
 }}
