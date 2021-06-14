@@ -71,6 +71,14 @@ h2{
     margin-right:20px;
 }
 
+.search-results .card-text{
+    line-height:1.5;
+}
+
+.search_details{
+    margin-right:20px;
+}
+
 .navbar{
     margin-top:0px;
     box-shadow:none;
@@ -230,14 +238,22 @@ label{
 }
 
 .resources-bg img{
-    max-width:250px;
+    max-width:300px;
     min-height:400px;
     top:0;
     bottom:0;
 }
 
+.resources-section span{
+    margin-right:10px;
+}
+
 .card-content, .resources-heading{
     background-color: #12151f;
+}
+
+.card-content{
+    margin:20px 40px;
 }
 
 .card p, .card .card-body .card-text{
@@ -319,7 +335,7 @@ a .resourcelink{
     margin-top:-100px;
     margin-right:0px;
   }
-   
+
   /*Small tablets to big tablets - from 768px to 1023px  */
   
   @media only screen and (max-width:1023px) {
@@ -352,12 +368,13 @@ a .resourcelink{
   .navbar li a, .companylogo{
     font-size:90%;
   }
-  .resources-heading, .resources-section{
+   .resources-section{
     margin-left: 10%;
     margin-right: 10%;
    }
+
     .resources-bg img{
-        max-width:250px;
+        width:300px;
         max-height:100px;
     }
     .profile-section{

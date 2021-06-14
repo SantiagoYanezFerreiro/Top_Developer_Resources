@@ -24,7 +24,7 @@
     </div>
 
     <!-- Display Results -->
-    <div class="container elegant-color amber-text text-center rounded mb-4">
+    <div class="container search-results elegant-color amber-text text-center rounded mb-4">
         <div class="row rounded mb-4">
             {% for resource in resources %}
                 <div class="col-md-6 col-lg-4 py-3">
@@ -36,12 +36,12 @@
                         <div class="card-body grey darken-4">
                             <!-- display description -->
                             <a id="{{ resource.link }}" class="resource_link">
-                                <h4 class="card-title fixed-height mb-0" required>{{ resource.description }}</h4>
-                                <small class="text-muted">Click here to view more details</small>
+                                <h4 class="card-text fixed-height mb-0" required>{{ resource.description }}</h4>
+                                <a href="{{ resource.link }}" target="_blank"><p class="resourcelink"><small class="">Click here to view more details</small></p></a>
                             </a>
                             <hr class="hr-light">
                             <!-- display other details when user decide to show them-->
-                            <div class="row col-form-label" id="resource_details{{ loop.index }}">
+                            <div class="row col-form-label search_details" id="resource_details{{ loop.index }}">
                                 <div class="col-5">
                                     <p class="ml-1 ml-sm-4 mx-lg-2 ml-xl-4">Name:</p>
                                 </div>
@@ -59,8 +59,8 @@
                         {% else %}
                         <div class="card-body grey darken-4">
                             <!-- display description -->
-                            <a id="{{ loop.index }}" class="resource_link" href="{{ url_for('register') }}">
-                                <h4 class="card-title fixed-height amber-text mb-0" required>{{ resource.description }}</h4>
+                            <a id="{{ loop.index }}" class="resource_link" href="{{ url_for('register') }}" target="_blank">
+                                <h4 class="card-text fixed-height mb-0" required>{{ resource.description }}</h4>
                                 <small class="text-muted">Register to view more details</small>
                             </a>
                             <hr class="hr-light">

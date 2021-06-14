@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="sr-only">Catalog</h1>
+<div class="wide-offset mt-3">
+    <h1 class="text-center text-capitalize resources-heading py-3">Development Resources catalog</h1>
+</div>
+
+{% for resource in resources %}
+    <div class="row wide-offset resources-section">
+        <div class="col-12 card transparent-bg my-3">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <!--Card image-->
+                <div class="d-none d-sm-block col-md-5 resources-bg">
+                    <img class="my-lg-auto" src="{{ resource.image }}" alt="{{ resource.image }}">
+                </div>
+                <!--Card content-->
+                <div class="col card-content">
+                    <h2 class="card-title text-center my-4 col-12">{{ resource.name }}</h2>
+                    <div class="row col-form-label">
+                        <div class="col-4">
+                            <p class="ml-2 data-type">Type</p>
+                        </div>
+                        <div class="col-7">
+                            <p >{{ resource.resource_category }}</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="ml-2 data-type">Description</p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{ resource.description }}</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="ml-2 data-type">Link</p>
+                        </div>
+                        <div class="col-7">
+                            <a href="{{ resource.link }}"><p class="resourcelink">{{ resource.link }}</p></a>
+                        </div>
+                        <div class="col-4">
+                            <p class="ml-2 data-type">Created By</p>
+                        </div>
+                        <div class="col-7">
+                            <p>{{ resource.created_by }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
