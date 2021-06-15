@@ -96,8 +96,7 @@
                 <div class="row mx-2 mb-3">
                     <div class="col btn-group role="group" aria-label="edit and delete buttons">
                         <!-- Edit button -->
-                        <button type="button" class="col-6 btn btn-dark mr-5"
-                        <a href="{{ url_for('edit_resource', id=resource._id) }}" class="col-4 btn btn-dark ">Edit</a></button>
+                        <a href="{{ url_for('edit_resource', id=resource._id) }}" class="col-6 btn btn-dark mr-4">Edit</a>
                         <!-- Delete button -->
                         <button type="button" class="col-6 btn btn-dark"
                             data-toggle="modal" data-target="#modal{{resource._id}}">Delete</button>

@@ -6,7 +6,7 @@
     <h1 class="sr-only mt-3">Edit resource</h1>
     <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
     <form class="card col offset"  method="POST" action="{{ url_for('edit_resource', id=resource._id) }}">
-        <div class="card-body elegant-color amber-text text-center rounded">
+        <div class="card-body elegant-color text-white text-center rounded">
             <!-- title -->
             <h4 class="card-title text-uppercase">Edit resource</h4>
             <hr class="hr-light mb-3 mb-sm-5">
@@ -66,9 +66,9 @@
             <div class="row mx-0 my-3">
                 <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 btn-group px-0" role="group" aria-label="update and cancel buttons">
                     <!-- Update button -->
-                    <button type="submit" class="btn btn-blue-grey mx-1 mx-md-2 mx-xl-4 px-2">Update</button>
+                    <button type="submit" class="btn btn-grey text-white mx-1 mx-md-2 mx-xl-4 px-2">Update</button>
                     <!-- Cancel button -->
-                    <a href="{{ url_for('profile', user_email=session['user_email']) }}" class="btn btn-mdb-color mx-1 mx-md-2 mx-xl-4 px-2">Cancel</a>
+                    <a href="{{ url_for('profile', user_email=session['user_email']) }}" class="btn btn-grey text-white mx-1 mx-md-2 mx-xl-4 px-2">Cancel</a>
                 </div>
             </div>
         </div>
