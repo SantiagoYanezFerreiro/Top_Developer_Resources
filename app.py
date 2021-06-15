@@ -150,6 +150,7 @@ def new_resource():
                 "name": request.form.get("name"),
                 "resource_category": request.form.get("resource_category"),
                 "description": request.form.get("description"),
+                "link": request.form.get("link"),
                 "created_by": session["user_email"],
                 "image": request.form.get("image"),
                 "timestamp": datetime.now()
@@ -160,7 +161,7 @@ def new_resource():
             flash("New Resource Successfully Added", "correct")
             return redirect(url_for("profile", user_email=email))
         # read data and sort in ascending order
-        resource_category = mongo.db.resource_type.find().sort("resource_category", 1)
+        resource_category = mongo.db.resource_category.find().sort("resource_category", 1)
         return render_template("new_resource.html", resource_category=resource_category)
     return redirect(url_for("login"))
 
@@ -175,6 +176,7 @@ def edit_resource(id):
                 "name": request.form.get("name"),
                 "resource_category": request.form.get("resource_category"),
                 "description": request.form.get("description"),
+                "link": request.form.get("link"),
                 "created_by": session["user_email"],
                 "image": request.form.get("image"),
                 "timestamp": datetime.now()
