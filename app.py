@@ -49,23 +49,20 @@ def register():
         }
         # add account to the database
         mongo.db.users.insert_one(newuseraccount)
-        # put the new user into 'session' cookie
         session["user_email"] = request.form.get("email").lower()
         flash("Account Successfully Created!", "correct")
         return redirect(url_for("profile", user_email=session["user_email"]))
     return render_template("register.html")
 
 
-# fix it
 @app.route("/search", methods=["GET", "POST"])
 def search():
     # queries
     query = request.args.get("query")
     resources = list(mongo.db.resources.find({"$text": {"$search": query}}))
-    # resources_list & users are for welcome screen for users that are not logged in
     # check for search results
     if len(resources) == 0:
-        flash("No results, Please try again!", "error")
+        flash("No results, try again pls", "error")
         return redirect(url_for("home"))
     return render_template(
         "index.html", resources=resources)
@@ -75,26 +72,25 @@ def search():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        # check for existing account
+        # check if account already exists
         existing_user = mongo.db.users.find_one(
             {"email": request.form.get("email").lower()})
         if existing_user:
-            # ensure hashed password matches user input
+            # check password
             if check_password_hash(
               existing_user["password"], request.form.get("password")):
                 session["user_email"] = request.form.get("email").lower()
-                # return first name and surname
                 flash("Welcome, {0} {1}".format(
                     existing_user["first_name"].capitalize(),
                     existing_user["last_name"].capitalize()))
                 return redirect(url_for(
                     "profile", user_email=session["user_email"]))
             else:
-                # invalid password match
+                # password does not match
                 flash("Incorrect Username and/or Password", "error")
                 return redirect(url_for("login"))
         else:
-            # username doesn't exist
+            # not an existing username
             ("Incorrect Username and/or Password")
             return redirect(url_for("login"))
     return render_template("login.html")
@@ -103,7 +99,7 @@ def login():
 # Logout 
 @app.route("/logout")
 def logout():
-    # remove user session and redirect to the login page
+    # to redirect to the login page
     if 'user_email' in session:
         flash("You logged out succesfully", "correct")
         session.pop("user_email")
@@ -125,11 +121,10 @@ def profile(user_email):
     return redirect(url_for("home"))
 
 
-# resources 
+# resources CHECK
 @app.route("/resources")
 def resources():
     resources = list(mongo.db.resources.find())
-    # 8 items per page
 
     def get_resources(offset=0, per_page=8):
         return resources[offset: offset + per_page]
@@ -203,10 +198,9 @@ def delete_resource(id):
     if 'user_email' in session:
         mongo.db.resources.remove({"_id": ObjectId(id)})
         flash("resource deleted", "correct")
-        # administrators are allowed to delete all resources 
+        # admins can delete all resources 
         if session['user_email'] == "admin@topdevresources.com":
             return redirect(url_for("resources"))
-        # if user redirect to users profile
         else:
             return redirect(url_for(
                 "profile", user_email=session["user_email"]))
