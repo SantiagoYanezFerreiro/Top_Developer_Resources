@@ -288,6 +288,10 @@ a .resourcelink{
     font-size:110%;
 }
 
+.label-name, .label-data{
+    color:#fff;
+}
+
 .profile-section .card-title{
     color:#e1e2e2;
 }

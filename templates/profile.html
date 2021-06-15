@@ -41,11 +41,11 @@
                     <hr class="hr-light">
                     <h4 class="card-title text-capitalize">Your resources</h4>
                     <!-- Add Resource -->
-                    <a href="{{ url_for('new_resource') }}" class="btn btn-grey col col-md-3 px-md-3 mt-0 mx-0">Add Resource</a>
+                    <a href="{{ url_for('new_resource') }}" class="btn btn-dark col col-md-3 px-md-3 mt-0 mx-0">Add Resource</a>
                     <!-- show resources -->
-                    <button type="button" class="btn btn-grey col col-md-3 px-md-3 mt-0 mx-0" id="show_resources_btn" href="#user_resources">Show resources</a>
+                    <button type="button" class="btn btn-dark col col-md-3 px-md-3 mt-0 mx-0" id="show_resources_btn" href="#user_resources">Show resources</a>
                     <!-- hide resources  -->
-                    <button type="button" class="btn btn-grey col col-md-3 px-md-3 mt-0 mx-0" id="hide_resources_btn">Hide resources</button>
+                    <button type="button" class="btn btn-dark col col-md-3 px-md-3 mt-0 mx-0" id="hide_resources_btn">Hide resources</button>
                     <hr class="hr-light">
                     <div class="card-deck no-gutters" id="user_resources">
                         {% for resource in resources %}
@@ -94,11 +94,12 @@
                         </div>
                     </div>
                 <div class="row mx-2 mb-3">
-                    <div class="col btn-group px-0 mx-0" role="group" aria-label="edit and delete buttons">
+                    <div class="col btn-group role="group" aria-label="edit and delete buttons">
                         <!-- Edit button -->
-                        <a href="{{ url_for('edit_resource', id=resource._id) }}" class="col btn btn-mdb-color px-4 mt-0 mx-0">Edit</a>
+                        <button type="button" class="col-6 btn btn-dark mr-5"
+                        <a href="{{ url_for('edit_resource', id=resource._id) }}" class="col-4 btn btn-dark ">Edit</a></button>
                         <!-- Delete button -->
-                        <button type="button" class="col btn btn-blue-grey px-4 mt-0 mx-0"
+                        <button type="button" class="col-6 btn btn-dark"
                             data-toggle="modal" data-target="#modal{{resource._id}}">Delete</button>
                         <!-- Delete modal template from: https://mdbootstrap.com/docs/b4/jquery/modals/additional/-->
                         <div class="modal modal-notify fade mt-5" id="modal{{resource._id}}" tabindex="-1"
