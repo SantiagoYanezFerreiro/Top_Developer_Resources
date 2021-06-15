@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<h1 class="sr-only">Error page</h1>
-    <div class="offset elegant-color text-center rounded py-3">
-        <h2 class="amber-text m-3">Error 404. Page not found.</h2>
+<div class="container mt-5 error-section">
+    <div class="offset py-3 elegant-color text-center rounded">
+        <h1 class="my-3">Error 404. Page not found.</h2>
         <p>Whoops, it looks like you are looking for a page that doesn't exist.</p>
-        <a href="{{ url_for('home') }}" class="btn btn-amber black-text m-3" role="button">Click here to go back to main page</a>
+        <a href="{{ url_for('home') }}" class="btn btn-orange black-text m-3" role="button">Click here to go back to main page</a>
     </div>
-
+</div>
 {% endblock %}
 

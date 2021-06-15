@@ -256,8 +256,12 @@ label{
     margin:20px 40px;
 }
 
-.card p, .card .card-body .card-text{
+.card .card-body .card-text,.data-type{
     color:#fb8122;
+}
+
+.resources-heading, .resources-data {
+    color:#fff;
 }
 
 a .resourcelink{
@@ -325,6 +329,11 @@ a .resourcelink{
     padding-bottom:0%;
 }
 
+/*******Errors******/
+
+.error-section h1, .error-section p{
+    color:#fff;
+}
 
 /*MEDIA QUERIES*/
 /*Big Tables to 1170px (container-fluid Bootstrap Class max-width */

@@ -18,17 +18,17 @@
         </div>
         <!--Card content-->
         <div class="col-sm-7 resources-bg">
-            <div class="card-content text-center">
-                <h2 class="card-title">{{ resource.name }}</h2>
+            <div class="card-content resources-card text-center">
+                <h2 class="card-title resources-data">{{ resource.name }}</h2>
                 <div class="col-form-label">
                     <p class="ml-2 data-type">Type:</p>
-                    <p>{{ resource.resource_category }}</p>
+                    <p class="resources-data">{{ resource.resource_category }}</p>
                 </div>
                 <div>
                     <p class="ml-2 data-type">Description:</p>
                 </div>
                 <div>
-                    <p>{{ resource.description }}</p>
+                    <p class="resources-data">{{ resource.description }}</p>
                 </div>
                 <div>
                     <p class="ml-2 data-type">Link:</p>
@@ -40,7 +40,7 @@
                     <p class="ml-2 data-type">Created By:</p>
                 </div>
                 <div class="">
-                    <p>{{ resource.created_by }}</p>
+                    <p class="resources-data">{{ resource.created_by }}</p>
                 </div>
             </div>
         </div>    
