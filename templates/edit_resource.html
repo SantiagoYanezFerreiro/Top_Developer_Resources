@@ -24,11 +24,11 @@
                     <div class="row my-3 mdl-selectfield">
                         <label for="type" class="col-sm-4 px-1 col-editresource-label">Type</label>
                         <div class="col-sm-5">
-                            <select class="form-control" id="type" name="type" required>
+                            <select class="form-control" id="resource_category" name="resource_category" required>
                                 <option disabled>resource type</option>
                                 {% for option in resource_category %}
                                     <!-- compare resources and resource_type tables and display corect data -->
-                                    {% if option.resource_category == resource.type %}
+                                    {% if option.resource_category == resource.resource_category %}
                                         <option value="{{ option.resource_category }}" selected>{{ option.resource_category }}</option>
                                     {% else %}
                                         <option value="{{ option.resource_category }}">{{ option.resource_category }}</option>
@@ -45,6 +45,13 @@
                                 placeholder="Description" minlength="5" maxlength="80" value="{{ resource.description }}" required>
                         </div>
                     </div>
+                    <!-- resource link -->
+                    <div class="row mt-3">            
+                        <label for="link" class="col-sm-4 px-1 col-editresource-label">Link</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="link" name="link" placeholder="link" minlength="5" maxlength="80" value="{{ resource.link }}" required>
+                        </div>
+                    </div>
                     <!-- resource image -->
                     <div class="row mt-3 mb-3">
                         <label for="image" class="col-sm-4 px-1 col-editresource-label">Image</label>
@@ -53,7 +60,6 @@
                             <small class="text-muted mr-md-5">PLEASE INSERT URL LINK</small>
                         </div>
                     </div>
-                     <!-- resource image -->
                 </div>
             </div>
             <!-- buttons -->
