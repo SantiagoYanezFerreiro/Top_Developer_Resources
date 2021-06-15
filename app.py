@@ -132,12 +132,9 @@ def resources():
                                            per_page_parameter='per_page')
     # check length
     total = len(resources)
-    # render up to 8 resources 
     paginate_resources = get_resources(offset=offset, per_page=per_page)
-    resourcespagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap4')
     return render_template("resources.html", resources=paginate_resources, page=page,
-                           per_page=per_page, resourcespagination=resourcespagination,)
+                           per_page=per_page, )
 
 
 # New resource route
