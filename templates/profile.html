@@ -63,30 +63,30 @@
                                     </a>
                                     <hr class="hr-light">
                                     <!-- display other details when user decide to show them-->
-                                    <div class="row profile-label">
+                                    <div class="row profile-label label-name">
                                         <div class="col-4">
-                                            <p class="">Type</p>
+                                            <p class="label-name">Type</p>
                                         </div>
                                         <div class="col-7">
-                                            <p >{{ resource.resource_category }}</p>
+                                            <p class="label-data">{{ resource.resource_category }}</p>
                                         </div>
                                         <div class="col-4">
-                                            <p class="">Description</p>
+                                            <p class="label-name">Description</p>
                                         </div>
                                         <div class="col-7">
-                                            <p>{{ resource.description }}</p>
+                                            <p class="label-data">{{ resource.description }}</p>
                                         </div>
                                         <div class="col-4">
-                                            <p class="">Link</p>
+                                            <p class="label-name">Link</p>
                                         </div>
                                         <div class="col-7">
                                             <a href="{{ resource.link }}"><p class="resourcelink">{{ resource.link }}</p></a>
                                         </div>
                                         <div class="col-4">
-                                            <p class="">Created By</p>
+                                            <p class="label-name">Created By</p>
                                         </div>
                                         <div class="col-7">
-                                            <p>{{ resource.created_by }}</p>
+                                            <p class="label-data">{{ resource.created_by }}</p>
                                         </div>
                                     </div>
                                 </div>
