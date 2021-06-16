@@ -4,49 +4,42 @@
 
 <div class="row no-gutters wide-offset mt-4 login-sectionpyt">
     <h1 class="sr-only">Log In</h1>
-    <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
     <div class="card col-sm-12">
         <div>
-            <img class="card-img-top login-image" src="../static/images/programming2.jpg" alt="Form image">
+            <img class="card-img-top login-image" src="../static/images/programming2.jpg" alt="Log In image">
         </div>
-        <!-- Form from: https://mdbootstrap.com/docs/b4/jquery/components/cards/ -->
-        <form class="card-body elegant-color text-center rounded-bottom" method="POST" action="{{ url_for('login') }}">
-            <!-- title -->
-            <h1 class="card-title">Welcome back!</h1>
+        <!-- Form similar to: https://mdbootstrap.com/docs/b4/jquery/components/cards/ -->
+        <form class="card-body elegant-color text-center" method="POST" action="{{ url_for('login') }}">
+            <h1 class="card-title">Welcome!</h1>
             <hr class="hr-light">
-            <!-- email -->
-            <div class="row my-3">
+            <div class="row my-1">
                 <div class="col-sm-5">
-                    <label for="email" class="col-form-label">Email address</label>
-                    <i class="fas fa-envelope mx-3"></i>
+                    <label for="email" class="col-form-label">Email</label>
+                    <i class="fas fa-envelope mx-1"></i>
                 </div>
                 <div class="col-sm-7">
-                    <input type="email" class="form-control loginform" id="email" name="email" placeholder="Email address" minlength="5"
-                        maxlength="35" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$" required>
-                        <!-- Regular expresion pattern from: http://www.regular-expressions.info/email.html -->
+                    <input type="email" class="form-control loginform" id="email" name="email" placeholder="Email" minlength="6"
+                        maxlength="50" required>
                 </div>
             </div>
-            <!-- password -->
-            <div class="row my-3">
+            <div class="row my-1">
                 <div class=" col-sm-5">
                     <label for="password" class="col-form-label">Password</label>
-                    <i class="fas fa-user-lock mx-3"></i>
+                    <i class="fas fa-lock mx-1"></i>
                 </div>
                 <div class="col-sm-7">
-                    <input type="password" class="form-control loginform" id="password" name="password" placeholder="Password" minlength="8"
-                        maxlength="20" pattern="^[a-zA-Z0-9._%+-]{8,15}$" aria-describedby="passwordHelpInline" required>
-                    <small id="passwordHelpInline" class="informative-text">Must be 8-20 characters long.</small>
+                    <input type="password" class="form-control loginform" id="password" name="password" placeholder="Password" minlength="6"
+                        maxlength="15" aria-describedby="passwordHelpInline" required>
+                    <small id="passwordHelpInline" class="informative-text">Must be 6-15 characters long.</small>
                 </div>
             </div>
-            <!-- login button -->
-            <div class="row my-3">
+            <div class="row my-1">
                 <div class="col-12">
                 <button type="submit" class="col-sm-6 btn login-btn">Log In
-                    <i class="fas fa-sign-in-alt ml-3"></i>
                 </button>
                 </div>
             </div>
-            <p class="card-text mb-4">If you don't have an account please <a class="loginlink" href="{{ url_for('register') }}">Register</a> today.</p>
+            <p class="card-text mb-4">Please <a class="loginlink" href="{{ url_for('register') }}">Register</a> today if you don't have an account yet.</p>
         </form>
     </div>
 </div>

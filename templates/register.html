@@ -2,55 +2,50 @@
 {% block content %}
 
 <div class="row no-gutters wide-offset mt-4 register-section">
-    <h1 class="sr-only">Register form</h1>
-    <!-- Card from: https://mdbootstrap.com/docs/b4/jquery/forms/inputs/-->
+    <h1 class="sr-only">Sign Up</h1>
     <div class="card col-12">
         <img class="card-img-top register-image" src="../static/images/programming1.jpg" alt="Form image">
-        <!-- Form from: https://mdbootstrap.com/docs/b4/jquery/components/cards/ -->
         <form method="POST" action="{{ url_for('register') }}">
-            <div class="card-body elegant-color amber-text text-center rounded-bottom">
-                <!-- title -->
-                <h1 class="card-title">Join our community today!</h4>
+            <div class="card-body elegant-color text-center white-text ">
+                <h1 class="card-title white-text">Join Us Now!</h4>
                 <hr class="hr-light">
-                <!-- first name -->
-                <div class="row my-3">
+                <div class="row my-2">
                     <div class="col-sm-5">
                         <label for="first_name" class="col-form-label">First Name</label>
-                        <i class="fas fa-user-tie mx-3"></i>
+                        <i class="fas fa-user mx-1"></i>
                     </div>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control signupform" id="first_name" name="first_name" placeholder="First Name" minlength="2"
-                            maxlength="20" pattern="^[a-zA-Z']{2,20}$" required>
+                        <input type="text" class="form-control signupform" id="first_name" name="first_name" placeholder="First Name" minlength="3"
+                            maxlength="12" pattern="^[a-zA-Z']{3,12}$" required>
                     </div>
                 </div>
-                <!-- last name -->
-                <div class="row my-3">
+                <!-- Last Name Field-->
+                <div class="row my-2">
                     <div class="col-sm-5">
                         <label for="last_name" class="col-form-label">Last Name</label>
-                        <i class="fas fa-user-tie mx-3"></i>
+                        <i class="fas fa-user mx-1"></i>
                     </div>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control signupform" id="last_name" name="last_name" placeholder="Last Name" minlength="2"
-                            maxlength="20" pattern="^[a-zA-Z']{2,20}$" required>
+                        <input type="text" class="form-control signupform" id="last_name" name="last_name" placeholder="Last Name" minlength="3"
+                            maxlength="12" pattern="^[a-zA-Z']{2,20}$" required>
                     </div>
                 </div>
-                <!-- email -->
-                <div class="row my-3">
+                <!-- email Address Field-->
+                <div class="row my-2">
                     <div class="col-sm-5">
                         <label for="email" class="col-form-label">Email address</label>
-                        <i class="fas fa-envelope mx-3"></i>
+                        <i class="fas fa-envelope mx-1"></i>
                     </div>
                     <div class="col-sm-7">
-                        <input type="email" class="form-control signupform" id="email" name="email" placeholder="Email address" minlength="5"
-                            maxlength="35" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$" required>
-                            <!-- Regular expresion pattern from: http://www.regular-expressions.info/email.html -->
+                        <input type="email" class="form-control signupform" id="email" name="email" placeholder="Email" minlength="6"
+                            maxlength="30" required>
                     </div>
                 </div>
-                <!-- password -->
-                <div class="row my-3">
+                <!-- password  Field-->
+                <div class="row my-2">
                     <div class=" col-sm-5">
                         <label for="password" class="col-form-label">Password</label>
-                        <i class="fas fa-user-lock mx-3"></i>
+                        <i class="fas fa-lock mx-3"></i>
                     </div>
                     <div class="col-sm-7">
                         <input type="password" class="form-control signupform" id="password" name="password" placeholder="Password" minlength="6"
@@ -58,15 +53,14 @@
                         <small id="passwordHelpInline" class="informative-text">Must be 6-30 characters long.</small>
                     </div>
                 </div>
-                <!-- register button -->
+                <!-- register Functionality -->
                 <div class="row my-3">
                     <div class="col-12">
                     <button type="submit" class="col-sm-6 btn signup-btn">Register
-                        <i class="fas fa-sign-in-alt ml-3"></i>
                     </button>
                     </div>
                 </div>
-                <p class="card-text mb-4">If you have an account please <a class="registerlink" href="{{ url_for('login') }}">Log In</a>.</p>
+                <p class="card-text mb-4">Please <a class="registerlink" href="{{ url_for('login') }}">Log In</a> if you already have an account.</p>
             </div>
         </form>
     </div>

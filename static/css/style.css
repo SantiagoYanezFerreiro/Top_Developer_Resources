@@ -6,7 +6,7 @@ body{
 }
 
 h1, h2, label, form i {
-    color: #fb8122;
+    color: #fff;
 }
 
 h1{
@@ -134,6 +134,22 @@ a:hover{
     font-weight:900;
 }
 
+/* push footer to the bottom of the page*/
+
+.content{
+    min-height: calc(80vh - 100px);
+}
+
+footer{
+    height: 100px;
+}
+
+footer .container{
+    margin-bottom:20px;
+}
+
+/* Home Page */
+
 .textsection{
     max-width:80ch;
     font-size:110%;
@@ -176,19 +192,6 @@ a.anchor-links:hover {
     border: 3px solid #12151f;
 }
 
-/* push footer to the bottom of the page*/
-
-.content{
-    min-height: calc(80vh - 100px);
-}
-
-footer{
-    height: 100px;
-}
-
-footer .container{
-    margin-bottom:20px;
-}
 
 /*****Forms****/
 
@@ -202,13 +205,17 @@ label{
     color:#fff;
 }
 
-.btn{
-    color: #fb8122;
+.btn, .btn i{
+    color:#fff;
+}
+
+.btn:hover{
+    color:#fb8122;
 }
 
 .signup-btn, .login-btn, .contact-btn{
-    background-color:#fb8122;
-    color:#000;
+    background-color:#000;
+    color:#fff;
 }
 
 .loginlink, .registerlink, .informative-text{
@@ -223,7 +230,6 @@ label{
 .col-editresource-label, .col-editresource-label{
     text-align:right;
 }
-
 
 /************resources******/
 
@@ -260,7 +266,7 @@ label{
     color:#fb8122;
 }
 
-.resources-heading, .resources-data {
+.card-text, .resources-heading, .resources-data {
     color:#fff;
 }
 
@@ -306,12 +312,6 @@ a .resourcelink{
     height:350px;
 }
 
-/*******
-.contactform-image{
-    height:450px;
-}
-*/
-
 .contactbg{
     background-image: url("../images/programming5.jpg");
     background-size:100% 100%;
@@ -351,7 +351,7 @@ a .resourcelink{
 
   /*Small tablets to big tablets - from 768px to 1023px  */
   
-  @media only screen and (max-width:1023px) {
+@media only screen and (max-width:1023px) {
   .navbar li a, .companylogo{
     font-size:130%;
   }
@@ -377,105 +377,112 @@ a .resourcelink{
     height: 250px;
 }
 
-  @media only screen and (max-width:900px) {
+@media only screen and (max-width:900px) {
   .navbar li a, .companylogo{
     font-size:90%;
-  }
-   .resources-section{
+}
+.resources-section{
     margin-left: 10%;
     margin-right: 10%;
-   }
+}
 
-    .resources-bg img{
-        width:300px;
-        max-height:100px;
-    }
-    .profile-section{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    .aboutus-firstsection img, .aboutus-secondsection img{
-        margin-top:20px !important;
-        text-align:center;
-    }
-    .aboutus-firstsection p, .aboutus-secondsection p, .aboutus-firstsection span, .aboutus-secondsection span{
-        margin-top:10px !important;
-        font-size:120%;
-    }
-    .who-we-are{
-        margin-left:5%;
-        margin-right:5%;
-        max-width:140ch;
-    }
+.resources-bg img{
+    width:300px;
+    max-height:100px;
+}
+
+.profile-section{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+    
+.aboutus-firstsection img, .aboutus-secondsection img{
+    margin-top:20px !important;
+    text-align:center;
+}
+    
+.aboutus-firstsection p, .aboutus-secondsection p, .aboutus-firstsection span, .aboutus-secondsection span{
+    margin-top:10px !important;
+    font-size:120%;
+}
+    
+.who-we-are{
+    margin-left:5%;
+    margin-right:5%;
+    max-width:140ch;
+}
+}
 
   /*Small phones to small tablets - from 481 to 767 px  */
   
-  @media only screen and (max-width: 767px) {
-    .profile-label{
-        font-size:85%;
-    }
-    .navbar li a, .companylogo{
-        font-size:90%;
-    }
-    .resources-heading, .resources-section{
-        margin-left:2%;
-        margin-right: 2%;
-    }
-    .resources-bg img{
-        max-width:200px;
-        max-height:100px;
-    }
-    .col-newresource-label, .col-editresource-label {
-        text-align: center;
-    }
-    .register-section, .login-section, .flashmessage{
-        margin-left:10%;
-        margin-right: 10%;
-    }
-
-    h3 .homepage-title{
-        font-size:120%;
-    }
-
-    .search_img{
-        margin-bottom:30px !important;
-    }
-
-    .copyright{
-        font-size:110%;
-    }
-
-    .aboutus-firstsection p, .aboutus-secondsection p, .aboutus-firstsection span, .aboutus-secondsection span, .who-we-are, .aboutus-thirdsection span{
-        margin-top:10px !important;
-        font-size:100%;
-    }
-
-    .textsection-title{
-        font-size:140%;
-    }
-
-    .who-we-are{
-        margin-left:5%;
-        margin-right:5%;
-        max-width:140ch;
-    }
-
-    .aboutus-images {
-        height: 70%;
-    }
-    
-  /*Small phones - from 0 to 480 px  */
-  @media only screen and (max-width:480px) {
-    .profile-label{
-        font-size:70%;
-    }
+@media only screen and (max-width: 767px) {
+.profile-label{
+    font-size:85%;
+}
+.navbar li a, .companylogo{
+    font-size:90%;
+}
+.resources-heading, .resources-section{
+    margin-left:2%;
+    margin-right: 2%;
+}
+.resources-bg img{
+    max-width:200px;
+    max-height:100px;
+}
+.col-newresource-label, .col-editresource-label {
+    text-align: center;
+}
+.register-section, .login-section, .flashmessage{
+    margin-left:10%;
+    margin-right: 10%;
 }
 
-  /* VerySmall phones - from 0 to 430 px  
-  
-  @media only screen and (max-width:430px) {} */
+h3 .homepage-title{
+    font-size:120%;
+}
 
+.search_img{
+    margin-bottom:30px !important;
+}
+
+.copyright{
+    font-size:110%;
+}
+
+.aboutus-firstsection p, .aboutus-secondsection p, .aboutus-firstsection span, .aboutus-secondsection span, .who-we-are, .aboutus-thirdsection span{
+    margin-top:10px !important;
+    font-size:100%;
+}
+
+.textsection-title{
+    font-size:140%;
+}
+
+.who-we-are{
+    margin-left:5%;
+    margin-right:5%;
+    max-width:140ch;
+}
+
+.aboutus-images {
+    height: 70%;
+}
+}
+
+/*Small phones - from 0 to 480 px  */
+@media only screen and (max-width:480px) {
+.profile-label{
+    font-size:70%;
 }
 }
 }
 }
+
+/* VerySmall phones - from 0 to 430 px  
+
+@media only screen and (max-width:430px) {} */
+
+
+
+
