@@ -230,12 +230,16 @@ label{
 }
 
 .loginlink, .registerlink, .informative-text{
-    color:#fff;
     font-size:110%;
+}
+
+.loginlink, .registerlink{
+    color:#fb8122;
 }
 
 .informative-text{
     font-size:80%;
+    color:#fff;
 }
 
 .col-editresource-label, .col-editresource-label{
