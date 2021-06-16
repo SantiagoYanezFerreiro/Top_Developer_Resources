@@ -24,32 +24,30 @@
     </div>
 
     <!-- Display Results -->
-    <div class="container search-results elegant-color amber-text text-center rounded mb-4">
-        <div class="row rounded mb-4">
+    <div class="container search-results elegant-color yellow-text text-center rounded mb-2">
+        <div class="row  mb-2">
             {% for resource in resources %}
                 <div class="col-md-6 col-lg-4 py-3">
-                    <div class="card mb-0 black">
-                        <div class="mx-auto" style="height: 15rem;">
-                            <img class="my-lg-auto rounded-circle" style="width: 15rem;" src="{{ resource.image }}" alt="{{ resource.name }}">
+                    <div class="card black">
+                        <div class="mx-auto" style="height: 18rem;">
+                            <img class="rounded-circle my-lg-auto " style="width: 16rem;" src="{{ resource.image }}" alt="{{ resource.name }}">
                         </div>
                         {% if 'user_email' in session %}
-                        <div class="card-body grey darken-4">
-                            <!-- display description -->
+                        <div class="card-body">
                             <a id="{{ resource.link }}" class="resource_link">
-                                <h4 class="card-text fixed-height mb-0" required>{{ resource.description }}</h4>
-                                <a href="{{ resource.link }}" target="_blank"><p class="resourcelink"><small class="">Click here to view more details</small></p></a>
+                                <h4 class="card-text mb-1 fixed-height" required>{{ resource.description }}</h4>
+                                <a href="{{ resource.link }}" target="_blank"><p class="resourcelink"><small class="">Click to get more info</small></p></a>
                             </a>
                             <hr class="hr-light">
-                            <!-- display other details when user decide to show them-->
                             <div class="row col-form-label search_details" id="resource_details{{ loop.index }}">
                                 <div class="col-5">
-                                    <p class="ml-1 ml-sm-4 mx-lg-2 ml-xl-4">Name:</p>
+                                    <p class="">Name:</p>
                                 </div>
                                 <div class="col-7">
                                     <p>{{ resource.name }}</p>
                                 </div>
                                 <div class="col-5">
-                                    <p class="ml-1 ml-sm-4 mx-lg-2 ml-xl-4">Type:</p>
+                                    <p class="">Type:</p>
                                 </div>
                                 <div class="col-7">
                                     <p>{{ resource.resource_category }}</p>
@@ -57,11 +55,10 @@
                             </div>
                         </div>
                         {% else %}
-                        <div class="card-body grey darken-4">
-                            <!-- display description -->
+                        <div class="card-body">
                             <a id="{{ loop.index }}" class="resource_link" href="{{ url_for('register') }}" target="_blank">
                                 <h4 class="card-text fixed-height mb-0" required>{{ resource.description }}</h4>
-                                <small class="text-muted">Register to view more details</small>
+                                <small class="text-muted">Sign Up to get more Information</small>
                             </a>
                             <hr class="hr-light">
                         </div>
