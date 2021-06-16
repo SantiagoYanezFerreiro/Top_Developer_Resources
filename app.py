@@ -158,7 +158,7 @@ def new_resource():
             flash("New Resource Successfully Added", "correct")
             return redirect(url_for("profile", user_email=email))
         # read data and sort in ascending order
-        resource_category = mongo.db.resource_category.find().sort("resource_category", 1)
+        resource_category = mongo.db.resources.find().sort("resource_category", 1)
         return render_template("new_resource.html", resource_category=resource_category)
     return redirect(url_for("login"))
 
@@ -232,4 +232,4 @@ def not_found_error(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
