@@ -12,9 +12,9 @@
                 <div class="card-body elegant-color text-center p-left text-transfer pb-0">
                     <h4 class="card-title text-capitalize">Your profile details</h4>
                     <hr class="hr-light">
-                    <div class="row my-3">
+                    <div class="row my-2">
                         <div class="col">
-                            <p class="profile-label  text-right label-name"><i class="fas fa-user-tie mr-2"></i>First name:</p>
+                            <p class="profile-label  text-right label-name"><i class="fas fa-user mr-2"></i>First Name:</p>
                         </div>
                         <div class="col">
                             <p class="profile-label  text-left ml-sm-4 label-data">{{ data.first_name.capitalize() }}</p>
@@ -22,7 +22,7 @@
                     </div>
                     <div class="row my-3">
                         <div class="col">
-                            <p class="profile-label  text-right label-name"><i class="fas fa-user-tie mr-2"></i>Last name:</p>
+                            <p class="profile-label  text-right label-name"><i class="fas fa-user mr-2"></i>Last Name:</p>
                         </div>
                         <div class="col">
                             <p class="profile-label  text-left ml-sm-4 label-data">{{ data.last_name.capitalize() }}</p>
@@ -37,29 +37,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body elegant-color text-center rounded-bottom pt-0">
+                <div class="card-body elegant-color text-center">
                     <hr class="hr-light">
                     <h4 class="card-title text-capitalize">Your resources</h4>
                     <!-- Add Resource -->
-                    <a href="{{ url_for('new_resource') }}" class="btn btn-dark col col-md-3 px-md-3 mt-0 mx-0">Add Resource</a>
+                    <a href="{{ url_for('new_resource') }}" class="btn btn-dark col col-md-3">Add Resource</a>
                     <!-- show resources -->
-                    <button type="button" class="btn btn-dark col col-md-3 px-md-3 mt-0 mx-0" id="show_resources_btn" href="#user_resources">Show resources</a>
+                    <button type="button" class="btn btn-dark col col-md-3" id="show_resources_btn" href="#user_resources">Show resources</a>
                     <!-- hide resources  -->
-                    <button type="button" class="btn btn-dark col col-md-3 px-md-3 mt-0 mx-0" id="hide_resources_btn">Hide resources</button>
+                    <button type="button" class="btn btn-dark col col-md-3" id="hide_resources_btn">Hide resources</button>
                     <hr class="hr-light">
                     <div class="card-deck no-gutters" id="user_resources">
                         {% for resource in resources %}
                         {% if (session.user_email|lower == resource.created_by|lower) %}
                         <div class="col-md-6">
                             <div class="card mb-4 black">
-                                <div class="mx-auto" style="height: 15rem">
-                                    <img class="my-lg-auto rounded-circle" style="width: 15rem" src="{{ resource.image }}" alt="{{ resource.name }}">
+                                <div class="mx-auto" style="height: 13rem">
+                                    <img class="my-lg-auto rounded" style="width: 15rem" src="{{ resource.image }}" alt="{{ resource.name }}">
                                 </div>
-                                <div class="card-body px-2 grey darken-4">
+                                <div class="card-body">
                                     <!-- display description -->
-                                    <a id="{{ loop.index }}" class="resource_link">
+                                    <a id="{{ loop.index }}" class="resource_link" href="{{ resource.link }}" target="_blank">
                                         <h4 class="card-title fixed-height mb-0" required>{{ resource.description }}</h4>
-                                        <small class="text-muted">Click here to view more details</small>
+                                        <a href="{{ resource.link }}" target="_blank"><p class="resourcelink"><small class="">Click here to view more details</small></p></a>
                                     </a>
                                     <hr class="hr-light">
                                     <!-- display other details when user decide to show them-->
@@ -80,7 +80,7 @@
                                             <p class="label-name">Link</p>
                                         </div>
                                         <div class="col-7">
-                                            <a href="{{ resource.link }}"><p class="resourcelink">{{ resource.link }}</p></a>
+                                            <a href="{{ resource.link }}" target="_blank"><p class="resourcelink">{{ resource.link }}</p></a>
                                         </div>
                                         <div class="col-4">
                                             <p class="label-name">Created By</p>
@@ -93,22 +93,22 @@
                             </div>
                         </div>
                     </div>
-                <div class="row mx-2 mb-3">
+                <div class="row my-2">
                     <div class="col btn-group role="group" aria-label="edit and delete buttons">
-                        <!-- Edit button -->
+                        <!-- Edit Functionality -->
                         <a href="{{ url_for('edit_resource', id=resource._id) }}" class="col-6 btn btn-dark mr-4">Edit</a>
-                        <!-- Delete button -->
+                        <!-- Delete Functionality -->
                         <button type="button" class="col-6 btn btn-dark"
                             data-toggle="modal" data-target="#modal{{resource._id}}">Delete</button>
-                        <!-- Delete modal template from: https://mdbootstrap.com/docs/b4/jquery/modals/additional/-->
+                        <!-- template from: https://mdbootstrap.com/docs/b4/jquery/modals/additional/-->
                         <div class="modal modal-notify fade mt-5" id="modal{{resource._id}}" tabindex="-1"
                             role="dialog" aria-labelledby="delete-modal" aria-hidden="true">
                             <div class="modal-dialog modal-sm modal-notify modal-info mt-5" role="document">
                                 <div class="modal-content bg-light text-center">
                                     <div class="modal-header justify-content-center">
-                                        <p class="heading">Do you realy want to delete?</p>
+                                        <p class="heading">Do you want to delete it?</p>
                                     </div>
-                                    <div class="mt-3 justify-content-center">
+                                    <div class="mt-2 justify-content-center">
                                         <p class="heading text-dark"> {{ resource.description }} </p>
                                     </div>
                                     <div class="modal-body">
