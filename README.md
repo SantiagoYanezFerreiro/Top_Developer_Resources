@@ -197,7 +197,7 @@ Include an option to review the different resources and filter them based on the
 ## Technologies Used
 • HTML, CSS & JavaScript Programming Languages
 
-• Pytho Python was used for the back-end logic and the means to run/view the Website.
+• Python was used for the back-end logic and the means to run/view the Website.
 Python Modules used:
 
 click==7.1.2
@@ -301,6 +301,7 @@ All links function and all images are in the Gitpod repository.
 ## Bugs & Problems found during Testing
 
 • Had problems implementing the search function logic and had to fix several syntax mistakes to make it work. 
+
 • Had problems with the image sizes, needed to give it a though to decide how to make the resources card look as good as possible.
 
 ### Further Testing
