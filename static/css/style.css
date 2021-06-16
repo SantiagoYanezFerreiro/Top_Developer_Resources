@@ -59,6 +59,7 @@ h2{
 
 .search-btn{
     width:100px;
+    color:#fb8122;
 }
 
 .form-control::placeholder{
@@ -73,6 +74,10 @@ h2{
 
 .search-results .card-text{
     line-height:1.5;
+}
+
+.search-results{
+    color:#fb8122;
 }
 
 .search_details{
@@ -189,6 +194,7 @@ a.anchor-links:hover {
 .aboutus-images {
     width: 85%;
     height: 90%;
+    max-height:300px;
     border: 3px solid #12151f;
 }
 
@@ -211,6 +217,11 @@ label{
 
 .btn:hover{
     color:#fb8122;
+}
+
+.search-btn, .search-btn i{
+    color:#000;
+    font-weight:700;
 }
 
 .signup-btn, .login-btn, .contact-btn{
@@ -330,6 +341,11 @@ a .resourcelink{
 
 .main-content{
     padding-top:10%;
+    padding-bottom:0%;
+}
+
+.main-content-contact{
+    padding-top:5%;
     padding-bottom:0%;
 }
 
