@@ -14,54 +14,54 @@
                 <div class="col-lg-12">
                     <!-- resource name -->
                     <div class="row">
-                        <label for="name" class="col-sm-4 px-1 col-newresource-label">First Name</label>
+                        <label for="name" class="col-sm-4 col-newresource-label">First Name</label>
                         <div class="col-sm-5">
                             <input type="text" class="form-control" id="name" name="name" placeholder="resource name" minlength="4" maxlength="20" required>
                         </div>
                     </div>
                     <!-- resource type -->
-                    <div class="row my-3 mdl-selectfield">
-                        <label for="type" class="col-sm-4 px-1 col-newresource-label">Type</label>
+                    <div class="row my-3">
+                        <label for="type" class="col-sm-4 col-newresource-label">Type</label>
                         <div class="col-sm-5">
                             <select class="form-control" id="resource_category" name="resource_category" required>
                                 <option selected></option>
                                 {% for option in resource_category %}
-                                    <option value="{{option.resource_category}}">{{option.resource_category}}</option>
+                                    <option value="{{ option.resource_category }}">{{ option.resource_category }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                     </div>
                     <!-- resource description -->
                     <div class="row mt-3">            
-                        <label for="description" class="col-sm-4 px-1 col-newresource-label">Description</label>
+                        <label for="description" class="col-sm-4 col-newresource-label">Description</label>
                         <div class="col-sm-5">
                             <input type="text" class="form-control" id="description" name="description" placeholder="Description" minlength="5" maxlength="80" required>
                         </div>
                     </div>
                     <!-- resource link -->
                     <div class="row mt-3">            
-                        <label for="link" class="col-sm-4 px-1 col-newresource-label">Link</label>
+                        <label for="link" class="col-sm-4 col-newresource-label">Link</label>
                         <div class="col-sm-5">
                             <input type="text" class="form-control" id="link" name="link" placeholder="link" minlength="5" maxlength="80" required>
                         </div>
                     </div>
                     <!-- resource image -->
                     <div class="row mt-3 mb-3">
-                        <label for="image" class="col-sm-4 px-1 col-newresource-label">Image</label>
+                        <label for="image" class="col-sm-4 col-newresource-label">Image</label>
                         <div class="col-sm-5">
                             <input type="url" class="form-control" id="image" name="image" placeholder="Image" required>
-                            <small class="text-muted mr-md-5">PLEASE INSERT URL LINK</small>
+                            <small class="text-muted mr-md-5">PLEASE INSERT AN URL LINK</small>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- buttons -->
-            <div class="row mx-0 my-3">
+            <div class="row my-2">
                 <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 btn-group px-0" role="group" aria-label="add resource and reset buttons">
                     <!-- Add resource button -->
-                    <button type="submit" class="btn btn-grey text-white mx-1 mx-md-2 mx-xl-4 px-2">Add resource</button>
+                    <button type="submit" class="btn btn-grey text-white mr-5">Add resource</button>
                     <!-- Reset button -->
-                    <button type="reset" class="btn btn-grey text-white mx-1 mx-md-2 mx-xl-4 px-2">Reset Form</button>
+                    <button type="reset" class="btn btn-grey text-white">Reset Form</button>
                 </div>
             </div>
         </div>
