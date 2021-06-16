@@ -1,36 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-<div class="row offset mt-5">
-    <div class="col-sm-12">
-        <div class="card-body elegant-color amber-text text-center text-transfer pb-1 offset">
-            <h1 class="card-title title-form text-capitalize text-white">Contact us!</h1>
-        </div>
-        <div class="card-body offset">
-            <form onsubmit="return sendForm(this);"> 
-                <div class="form contact-form row">
-                    <div class="col-sm-6 contactbg">
+<div class="main-content-contact">
+    <div class="row offset mt-5">
+        <div class="col-sm-12">
+            <div class="card-body elegant-color amber-text text-center text-transfer pb-1 offset">
+                <h1 class="card-title title-form text-capitalize text-white">Contact us!</h1>
+            </div>
+            <div class="card-body offset">
+                <form onsubmit="return sendForm(this);"> 
+                    <div class="form contact-form row">
+                        <div class="col-sm-6 contactbg">
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name"  id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email"  id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="comments">Message</label>
+                                <textarea class="form-control" id="comments" name="comments" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn contact-btn btn-dark white-text" type="submit" name="submit" value="submit">Leave Us a message <i class="fas fa-paper-plane white-text"></i></button>
+                            </div>                            
+                        </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" name="name"  id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email"  id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="comments">Message</label>
-                            <textarea class="form-control" id="comments" name="comments" rows="3" required></textarea>
-                        </div>
-                        <div class="form-group text-center">
-                            <button class="btn contact-btn btn-dark white-text" type="submit" name="submit" value="submit">Leave Us a message <i class="fas fa-paper-plane white-text"></i></button>
-                        </div>                            
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>
