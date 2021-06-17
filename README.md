@@ -2,11 +2,11 @@
 
 ![Site Logo](https://santiagoyanezferreiro.github.io/Top_Developer_Resources/static/images/logo.PNG)
 
-![Live Website Link]( )
+![Live Website Link](http://flask-top-developer-resources.herokuapp.com/home)
 
 [GitHub Repository Link](https://github.com/SantiagoYanezFerreiro/Top_Developer_Resources)
 
-![Top Developer Resources Responsive Design]()
+![Top Developer Resources Responsive Design](static/images/ResponsiveDesign.PNG)
 
 Top Developer Resources is a community website where people can share the top resources they used in their Software Development Learning journey so that other people can profit from them and reach their Development goals faster (getting a job, learning a new language, etc).
 
