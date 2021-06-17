@@ -2,7 +2,7 @@
 
 ![Site Logo](https://santiagoyanezferreiro.github.io/Top_Developer_Resources/static/images/logo.PNG)
 
-![Live Website Link](http://flask-top-developer-resources.herokuapp.com/home)
+[Live Website Link](http://flask-top-developer-resources.herokuapp.com/home)
 
 [GitHub Repository Link](https://github.com/SantiagoYanezFerreiro/Top_Developer_Resources)
 
