@@ -309,7 +309,7 @@ All links function and all images are in the Gitpod repository.
 ## Deployment
 The website was developed to Heroku, while using Gitpod a a development environment and commiting all changes to GitHub., committed to git and pushed to GitHub. It was then deployed with Github pages from its GitHub following these steps:
 
-Then connected my GitHub account to Heroku and set up Automatic deployment in Heroku under Deploy section in my coinscatalog app.
+Then connected my GitHub account to Heroku and set up Automatic deployment in Heroku under Deploy section in my app.
 
 To run this project follow below steps:
 
