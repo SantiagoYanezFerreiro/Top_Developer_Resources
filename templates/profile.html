@@ -52,18 +52,19 @@
                         {% if (session.user_email|lower == resource.created_by|lower) %}
                         <div class="col-md-6">
                             <div class="card mb-4 black">
-                                <div class="mx-auto" style="height: 13rem">
+                                <div class="mx-auto pb-2" style="height: 13rem">
                                     <img class="my-lg-auto rounded" style="width: 15rem" src="{{ resource.image }}" alt="{{ resource.name }}">
                                 </div>
                                 <div class="card-body">
-                                    <!-- display description -->
-                                    <a id="{{ loop.index }}" class="resource_link" href="{{ resource.link }}" target="_blank">
-                                        <h4 class="card-title fixed-height mb-0" required>{{ resource.description }}</h4>
-                                        <a href="{{ resource.link }}" target="_blank"><p class="resourcelink"><small class="">Click here to view more details</small></p></a>
-                                    </a>
                                     <hr class="hr-light">
                                     <!-- display other details when user decide to show them-->
                                     <div class="row profile-label label-name">
+                                        <div class="col-4">
+                                            <p class="label-name">Name</p>
+                                        </div>
+                                        <div class="col-7">
+                                            <p class="label-data">{{ resource.name }}</p>
+                                        </div>
                                         <div class="col-4">
                                             <p class="label-name">Type</p>
                                         </div>
