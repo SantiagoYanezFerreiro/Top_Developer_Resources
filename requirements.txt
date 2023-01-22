@@ -1,7 +1,7 @@
 click==7.1.2
 DateTime==4.3
 dnspython==2.1.0
-Flask==1.1.2
+Flask==2.1.0
 flask-paginate==0.8.1
 Flask-PyMongo==2.3.0
 itsdangerous==1.1.0
